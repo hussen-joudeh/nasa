@@ -1,0 +1,199 @@
+CHAPTER 4: IRRIGATION WATER NEEDS
+CHAPTER 4: IRRIGATION WATER NEEDS
+4.1 INTRODUCTION
+4.2 DETERMINATION
+OF THE EFFECTIVE RAINFALL*
+4.3 CALCULATION
+OF THE IRRIGATION WATER NEEDS
+4.4 IRRIGATION WATER
+NEED OF RICE
+4.1 INTRODUCTION
+In Chapter 3 it has been indicated how the crop water need (ET crop) is determined. This water can be supplied to the crops in various ways:
+· by rainfall
+· by irrigation
+· by a combination of irrigation and rainfall
+In some cases, part of the crop water need is supplied by the groundwater through capillary rise (see Volume 1, Section 2.5.3). For the purpose of this paper however, the contribution of capillary rise is not taken into account.
+In cases where all the water needed for optimal growth of the crop is provided by rainfall, irrigation is not required and the Irrigation water need (IN) equals zero: IN = 0.
+In cases where there is no rainfall at all during the growing season, all water has to be supplied by irrigation. Consequently, the irrigation water need (IN) equals the crop water need (ET crop): IN = ET crop.
+In most cases, however, part of the crop water need is supplied by rainfall and the remaining part by irrigation. In such cases the irrigation water need (IN) is the difference between the crop water need (ET crop) and that part of the rainfall which is effectively used by the plants (Pe). In formula: IN = ET crop - Pe.
+In summary:
+If sufficient rainfall |
+: IN = 0 |
+If no rainfall at all |
+: IN = ET crop |
+If partly irrigation, partly rainfall |
+: IN = ET crop - Pe |
+Section 4.2 provides a method to determine the effective rainfall, while Section 4.3 gives a calculation example for the irrigation water need. As the determination of the irrigation water need for paddy rice is a special case, it is discussed separately in Section 4.4.4.2 DETERMINATION OF THE EFFECTIVE RAINFALL*
+* For general information on rainfall: the amount, the intensity and the distribution, refer to Volume 1, Section 4.1.1, 4.1.2 and 4.1.3 respectively.
+When rain water ((1) in Fig. 16) falls on the soil surface, some of it infiltrates into the soil (2), some stagnates on the surface (3), while some flows over the surface as runoff (4).
+When the rainfall stops, some of the water stagnating on the surface (3) evaporates to the atmosphere (5), while the rest slowly infiltrates into the soil (6).
+From all the water that infiltrates into the soil ((2) and (6)), some percolates below the root zone (7), while the rest remains stored in the root zone (8).
+Fig. 16 Effective rainfall (8)=(1) - (4) = (5) = (7)
+In other words, the effective rainfall (8) is the total rainfall (1) minus runoff (4) minus evaporation (5) and minus deep percolation (7); only the water retained in the root zone (8) can be used by the plants, and represents what is called the effective part of the rainwater. The term effective rainfall is used to define this fraction of the total amount of rainwater useful for meeting the water need of the crops.
+For the purpose of this manual only 2 simple formulae are provided to estimate the fraction of the total rainfall which is used effectively. These formulae can be applied in areas with a maximum slope of 4-5%:
+Pe = 0.8 P 25 if P > 75 mm/month
+Pe = 0.6 P 10 if P < 75 mm/month |
+with |
+P = rainfall or precipitation (mm/month) |
+|
+Pe = effective rainfall or effective precipitation (mm/month) |
+NOTE: Pe is always equal to or larger than zero; never negative
+QUESTION
+Calculate the effective rainfall for the following monthly rainfall figures: P = 35, 90,116, 5, 260, 75 mm
+ANSWER
+P (mm/month) |
+Formula |
+Pe (mm/month) |
+35 |
+Pe = 0.6 P - 10 |
+11 |
+90 |
+Pe = 0.8 P - 25 |
+47 |
+116 |
+Pe = 0.8 P - 25 |
+68 |
+5 |
+Pe = 0.6 P - 10 |
+0 |
+260 |
+Pe = 0.8 P - 25 |
+183 |
+75 |
+Pe = 0.8 P - 25 or 0.6 P - 10 |
+35 |
+4.3 CALCULATION OF THE IRRIGATION WATER NEEDS
+The following example, which Illustrates the irrigation water need calculation method, is a continuation of the example from Section 3.3.2:
+Month |
+Feb |
+Mar |
+Apr |
+May |
+June |
+ET crop (mm/month) |
+69 |
+123 |
+180 |
+234 |
+180 |
+In addition, the following rainfall figures are given:
+P (mm/month) |
+20 |
+38 |
+40 |
+80 |
+16 |
+Step 1: Calculate for each month the effective rainfall using the formulae:
+Pe = 0.8 P 25 if P > 75 mm/month
+Pe = 0.6 P 10 if P < 75 mm/month |
+|
+Feb |
+Mar |
+Apr |
+May |
+June |
+P (mm/month) |
+20 |
+38 |
+40 |
+80 |
+16 |
+Pe (mm/month) |
+2 |
+13 |
+14 |
+39 |
+0 |
+Step 2: Calculate the irrigation water need, both in mm/month and mm/day, using the formula: IN = ET crop - Pe; e.g. Feb: IN = 69 - 2 = 67 mm, etc.
+|
+Feb |
+Mar |
+Apr |
+May |
+June |
+ET crop (mm/month) |
+69 |
+123 |
+180 |
+234 |
+180 |
+Pe (mm/month) |
+2 |
+13 |
+14 |
+39 |
+0 |
+IN (mm/month) |
+67 |
+110 |
+166 |
+195 |
+180 |
+IN (mm/day) |
+2.2 |
+3.7 |
+5.5 |
+6.5 |
+6.0 |
+Fig. 17 Irrigation water need
+DATA SHEET 6 Determination of Irrigation water needs (see also Data sheet 5)4.4 IRRIGATION WATER NEED OF RICE
+For all field crops, as has been explained in the previous section, the irrigation water need (IN) is determined as follows:
+Step 1: Determine the reference crop evapotranspiration: ETo
+Step 2: Determine the crop factors: Kc
+Step 3: Calculate the crop water need: ET crop = ETo × Kc
+Step 4: Determine the effective rainfall: Pe
+Step 5: Calculate the irrigation water need: IN = ET crop - Pe
+Paddy rice, growing with "its feet in the water", is an exception. Not only has the crop water need (ET crop) to be supplied by irrigation or rainfall, but also water is needed for:
+· saturation of the soil before planting
+· percolation and seepage losses
+· establishment of a water layer
+In summary, the determination of the irrigation water need for paddy rice requires the following steps:
+Step 1: Determine the reference crop evapotranspiration: ETo
+Step 2: Determine the crop factors: Kc
+Step 3: Calculate the crop water need: ET crop = ETo × Kc
+Step 4: Determine the amount of water needed to saturate the soil for land preparation by puddling: SAT
+Step 5: Determine the amount of percolation and seepage losses: PERC
+Step 6: Determine the amount of water needed to establish a water layer: WL
+Step 7: Determine the effective rainfall: Pe
+Step 8: Calculate the irrigation water need: IN = ET crop + SAT + PERC + WL - Pe
+These steps are discussed in detail below.
+Step 1, 2 and 3: Determine ETo, Kc and ET crop
+ET crop is determined similarly to all other field crops as discussed in Sections 3.1 to 3.3
+Step 4: Determine the amount of water needed to saturate the soil for land preparation by puddling: SAT
+In the month before sowing or transplanting, water is needed to saturate the root zone. The amount of water needed depends on the soil type and rooting depth. For the purpose of this manual it is however assumed that the amount of water needed to saturate the root zone is 200 mm. Thus:
+SAT = 200 mm |
+Step 5: Determine the amount of percolation and seepage losses: PERC
+The percolation and seepage losses depend on the type of soil. They will be low in very heavy, well-puddled clay soils and high in the case of sandy soils. The percolation and seepage losses vary between 4 and 8 mm/day.
+for heavy clay: PERC = 4 mm/day
+for sandy soils: PERC = 8 mm/day
+on average: PERC = 6 mm/day |
+Step 6: Determine the amount of water needed to establish a water layer: WL
+A water layer is established during transplanting or sowing and maintained throughout the growing season. The amount of water needed for maintaining the water layer has already been taken into account with the determination of the percolation and seepage losses. The amount of water needed to establish the water layer, however, still has to be considered. For the purpose of this manual it is assumed that a water layer of 100 mm is established. Thus:
+WL = 100 mm |
+Step 7: Determine the effective rainfall: Pe
+The effective rainfall is calculated using the same formulae as described in Section 4.2.
+Pe = 0.8 P - 25 if P > 75 mm/month
+Pe = 0.6 P - 10 if p < 75 mm/month |
+Step 8: Calculate the irrigation water need: IN = ET crop + SAT + PERC + WL - Pe
+The irrigation water need is calculated using the following formula;
+IN = ET crop + SAT + PERC + WL - Pe |
+CALCULATION EXAMPLE
+QUESTION
+Calculate the irrigation water need (IN) of paddy rice for the month of April when given:
+· ETo = 6 mm/day
+· Kc = 1.1
+· the root zone has already been saturated in the previous month
+· PERC = 5 mm/day
+· the water layer (100 mm) needs to be established during April
+· Pe = 135 mm/month
+ANSWER
+IN = ET crop + SAT + PERC + WL - Pe
+ET crop = ETo × Kc = 6 × 1.1 = 6.6 mm/day = 6.6 × 30 = 198 mm/month
+SAT = 0 mm
+PERC = 5 mm/day = 5 × 30 = 150 mm/month
+WL = 100 mm
+Pe = 135 mm/month
+IN = 198 + 0 + 150 + 100 - 135 = 313 mm/month = 10.4 mm/day
+Thus the irrigation water need during April is 313 mm or 10.4 mm/day.
+DATA SHEET 7 Determination of Irrigation water need of paddy rice
+Figure

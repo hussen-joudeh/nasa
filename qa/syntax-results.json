@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src/app.mjs",
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "file": "src/domain.mjs",
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "file": "src/i18n.mjs",
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "file": "scripts/local-server.mjs",
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "file": "scripts/build-local.mjs",
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

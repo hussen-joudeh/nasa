@@ -1,0 +1,13 @@
+export type Point = [number, number];
+export function parseCoordinates(text:string):Point;
+export function areaHa(points:Point[]):number;
+export function validatePolygon(points:Point[]):Point[];
+export function centerOf(points:Point[]):Point;
+export const crops:Record<string,{en:string;ar:string;family:string}>;
+export function rotationSummary(sequence:string[]):{diversity:number;legumes:number;repeats:number};
+export function parseWeather(json:unknown):{time:string;temperature:number|null;rain:number|null;wind:number|null;humidity:number|null;latitude:number|null;longitude:number|null;timezone:string;daily:unknown};
+export function parseClimate(json:unknown,country:string):number;
+export function climateUrl(country:string,scenario:string,period:string):string;
+export function fetchJson(url:string,signal?:AbortSignal):Promise<unknown>;
+export function readSaved(raw:string):{version:1;polygon:Point[];rotations:string[][];country:string;scenario:string;period:string};
+export function decodeTerrain(pixel:ArrayLike<number>):number;

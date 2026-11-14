@@ -1,0 +1,12 @@
+import {mkdir,readFile,writeFile,copyFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const files=['index.html','sources.html','src/app.mjs','src/domain.mjs','src/i18n.mjs','src/nasa-power.mjs','src/water-truth.mjs','src/preflight.mjs','src/preflight-view.mjs','src/decision-breakpoint.mjs','src/biofirewall.mjs','src/biofirewall-view.mjs','src/rotation-view.mjs','src/map-explorer.mjs','src/style.css'];
+for(const name of files.filter(x=>x.endsWith('.mjs')))execFileSync(process.execPath,['--check',path.join(root,name)]);
+await mkdir(path.join(root,'dist','src'),{recursive:true});
+for(const name of files)await copyFile(path.join(root,name),path.join(root,'dist',name));
+const sizes=await Promise.all(files.map(async name=>({name,bytes:(await readFile(path.join(root,name))).length})));
+await writeFile(path.join(root,'dist','build-manifest.json'),JSON.stringify({builtAt:new Date().toISOString(),files:sizes,external:['maplibre-gl@5.3.0 via unpkg','EOX tiles','AWS Terrain Tiles','Open-Meteo','World Bank CCKP']},null,2));
+console.log('Static local build: dist/ ('+sizes.reduce((s,x)=>s+x.bytes,0)+' bytes before remote MapLibre assets).');

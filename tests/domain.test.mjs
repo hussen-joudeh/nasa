@@ -1,0 +1,11 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { parseCoordinates, areaHa, validatePolygon, rotationSummary, parseWeather, parseClimate, climateUrl } from '../src/domain.mjs';
+test('coordinates validate bounds and order',()=>{assert.deepEqual(parseCoordinates('31.5, 35.1'),[35.1,31.5]);assert.throws(()=>parseCoordinates('95,10'));});
+test('spherical polygon area and winding',()=>{let p=[[0,0],[.01,0],[.01,.01],[0,.01]];assert.ok(Math.abs(areaHa(p)-123.643)<.01);assert.ok(Math.abs(areaHa(p)-areaHa([...p].reverse()))<.001);});
+test('reject crossing and duplicate polygons',()=>{assert.throws(()=>validatePolygon([[0,0],[1,1],[0,1],[1,0]]));assert.throws(()=>validatePolygon([[0,0],[0,0],[1,1]]));});
+test('rotation comparison counts family changes and legumes',()=>{assert.equal(rotationSummary(['wheat','maize','wheat']).repeats,2);assert.equal(rotationSummary(['wheat','soy','wheat']).repeats,0);assert.equal(rotationSummary(['wheat','soy','wheat']).legumes,1);});
+test('weather null remains unavailable, zero remains zero',()=>{const w=parseWeather({current:{time:'2026-01-01',temperature_2m:null,precipitation:0},current_units:{temperature_2m:'°C',precipitation:'mm'}});assert.equal(w.temperature,null);assert.equal(w.rain,0);assert.throws(()=>parseWeather({error:true}));});
+test('climate missing values never become zero',()=>{assert.equal(parseClimate({data:{tas:{USA:{'2040-07':2.1}}}},'USA'),2.1);assert.throws(()=>parseClimate({data:{tas:{USA:{'2040-07':null}}}},'USA'));assert.throws(()=>parseClimate({data:{tas:{USA:{'2040-07':2}}}},'EGY'));});
+test('parses the live single-variable CCKP country response shape',()=>{assert.equal(parseClimate({metadata:{status:'success'},data:{USA:{'2040-07':1.91}}},'USA'),1.91);});
+test('climate selectors alter real queries',()=>{assert.match(climateUrl('EGY','ssp585','2080-2099'),/2080-2099_median_ssp585/);assert.match(climateUrl('USA','ssp245','2040-2059'),/USA\?/);});

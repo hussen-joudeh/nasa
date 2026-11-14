@@ -1,0 +1,22 @@
+✔ all English messages have Arabic equivalents (1.8332ms)
+✔ terrain accepts real sea-level pixels but refuses voids and impossible heights (0.5127ms)
+✔ data client refuses HTTP errors and malformed JSON and respects abort (26.3267ms)
+✔ plan roundtrip validates user inputs and refuses malformed plans (0.6258ms)
+✔ polygon limits reject global extents, collinear and nonnumeric points (0.1848ms)
+✔ unexpected weather units and climate sentinels are unavailable (0.1778ms)
+✔ coordinates validate bounds and order (1.7504ms)
+✔ spherical polygon area and winding (0.3221ms)
+✔ reject crossing and duplicate polygons (1.0688ms)
+✔ rotation comparison counts family changes and legumes (0.275ms)
+✔ weather null remains unavailable, zero remains zero (0.2723ms)
+✔ climate missing values never become zero (0.2074ms)
+✔ climate selectors alter real queries (0.2817ms)
+✔ local runtime serves app but never workspace research or git files (37.9539ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 186.8642

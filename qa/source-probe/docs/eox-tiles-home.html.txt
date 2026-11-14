@@ -1,0 +1,89 @@
+EOX :: Maps
+EOX::Maps
+About
+Showcases
+Data
+Contact
+Heavy load
+Terrain Light
+Terrain Light
+Sentinel-2 cloudless 2025
+Sentinel-2 cloudless 2024
+Sentinel-2 cloudless 2023
+Sentinel-2 cloudless 2022
+Sentinel-2 cloudless 2021
+Sentinel-2 cloudless 2020
+Sentinel-2 cloudless 2019
+Sentinel-2 cloudless 2018
+Sentinel-2 cloudless 2016
+Terrain
+OpenStreetMap
+Blue Marble
+Black Marble
+Overlay
+About EOX::Maps
+EOX::Maps are our contribution to open data by offering global maps.
+Try out the interactive demo at the top of this page. We are actively working on making it nicer, faster, more stable, &hellip;, simply more awesome. The demo service is provided as is without any guarantee. Content and availability may change without notice although we try hard to keep this to a minimum.
+Do you want to use our maps as part of your application? Just feel free to use them. We just ask for a link back to EOX::Maps as well as appropriate attribution as done in the lower right corner of the demo map including the respective links e.g. Terrain { Data &copy; OpenStreetMap contributors and others, Rendering &copy; EOX }.
+Following special conditions are granted for the OpenStreetMap project: "We, EOX IT Services GmbH, explicitly allow use of Sentinel-2 Cloudless 2016 - 2025 layers as background imagery for the purpose of manually deriving geometries to be included in OpenStreetMap in non-commercial OpenStreetMap editing applications. Attribution as described at https://cloudless.eox.at/#license must be provided in a suitable OpenStreetMap changeset tag. EOX IT Services GmbH offers the layers as-is and as-available and makes no warranties of any kind concerning source or derived data. EOX IT Services GmbH does not claim any rights in data created under this provision."
+You are interested in a custom map? You need a map in your custom projection? You need an offline map for your app or internal network? Just get in touch with us, we gladly offer our professional support.
+You want to be mentioned as showcase? You have suggestions to make our maps more awesome?
+In any case, we'd love to hear from you .
+EOX::Maps Showcases
+Interactive demo
+The interactive demo at the top of this page offers the various background maps selectable at the top right of the map.
+Terrain Light
+Sentinel-2 cloudless 2025
+Sentinel-2 cloudless 2024
+Sentinel-2 cloudless 2023
+Sentinel-2 cloudless 2022
+Sentinel-2 cloudless 2021
+Sentinel-2 cloudless 2020
+Sentinel-2 cloudless 2019
+Sentinel-2 cloudless 2018
+Sentinel-2 cloudless 2016
+Terrain
+OpenStreetMap
+Blue Marble
+Black Marble
+Apart from the motivation to create beautiful maps one of the main drivers is to split background from overlay layers to enable embedding data properly in between. The reason is that both background and overlay provide spatial context in different ways. The background (e.g. Terrain Light) provides an idea of land usage and topography while the overlay adds labels and line features like borders or streets to provide more detailed information. Depending on the background map one of two overlays can be enabled. Over the Terrain map a dark version is used whereas a bright version for better visibility can be enabled over the marble background maps.
+VirES for Swarm service for
+The virtual research platform VirES for Swarm uses EOX::Maps to show Earth's magnetic field as observed by satellite in 3D.
+EOxCloudless
+An (almost) cloudless Sentinel-2 map of the world, crafted by EOX and made available for free.
+European Space Agency
+EOX::Maps are provided as a dedicated services to the European Space Agency (ESA) and used in several applications like the Copernicus Open Access Hub or the Copernicus Sentinel App.
+The Copernicus Open Access Hub uses EOX' background and overlay maps in its central map display to put search results of Earth Observation data in spatial context.
+Click on the image below to access the Copernicus Open Access Hub.
+The Copernicus Sentinel App is a gateway to knowing the Copernicus Sentinel satellites. It lets users track the satellites in real-time, discover their key elements, read the latest news and learn more about their products.
+Download the Copernicus Sentinel App for iOS
+Download the Copernicus Sentinel App for Android
+European Environment Agency
+EOX hosts a demo of an INSPIRE download service for the EU-DEM dataset of the European Environment Agency (EEA).
+EOX::Maps are used in its central map display to define spatial subsets for downloading the original data.
+Click on the image below for a demo.
+Data
+The following datasets are used to generate EOX::Maps. Note that most of these datasets are Open Data. The layers for which the dataset is used are indicated in brackets.
+Sentinel-2 provided by the European Commission (free, full and open access) [Sentinel-2 cloudless 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024 & 2025]
+OpenStreetMap &copy; OpenStreetMap contributors [Terrain Light, Terrain, OpenStreetMap, Overlay]
+NaturalEarth public domain [Terrain Light, Terrain, Overlay]
+EUDEM &copy; Produced using Copernicus data and information funded by the European Union [Terrain]
+ASTER GDEM is a product of METI and NASA [Terrain Light]
+SRTM &copy; NASA [Terrain]
+GTOPO30 Data available from the U.S. Geological Survey [Terrain Light, Terrain]
+CleanTOPO2 public domain [Terrain]
+GEBCO &copy; GEBCO [Terrain Light]
+GlobCover &copy; ESA [Terrain]
+Blue Marble &copy; NASA’s Earth Observatory [Blue Marble]
+Black Marble &copy; NASA’s Earth Observatory [Black Marble]
+The rendering is &copy; EOX [Terrain Light, Terrain, OpenStreetMap, Overlay] and MapServer [OpenStreetMap, Overlay].
+Contact
+Do you have any questions? Do you need more information? Feel free to contact us anytime.
+EOX IT Services GmbH
+Thurngasse 8/4
+1090 Wien
+office@eox.at
+Austria
+Heavy load
+Ever increasing interest in our free service results in heavy loads. We put measures in place to equally distribute the available resources. However, we had to start applying rate limiting. This is why you might end up getting HTTP errors and redirects to this page.
+Please get in touch if you're interested in a dedicated service under SLA.

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "weather",
+    "url": "https://api.open-meteo.com/v1/forecast?latitude=36.78&longitude=-119.95&current=temperature_2m,precipitation,wind_speed_10m,relative_humidity_2m&timezone=auto&forecast_days=1",
+    "error": "fetch failed",
+    "cause": "EACCES"
+  },
+  {
+    "name": "climate",
+    "url": "https://cckpapi.worldbank.org/cckp/v1/cmip6-x0.25_climatology_tas_anomaly_annual_2040-2059_median_ssp245_ensemble_all_mean/USA?_format=json",
+    "error": "fetch failed",
+    "cause": "EACCES"
+  },
+  {
+    "name": "map-library",
+    "url": "https://unpkg.com/maplibre-gl@5.3.0/dist/maplibre-gl.js",
+    "error": "fetch failed",
+    "cause": "EACCES"
+  }
+]

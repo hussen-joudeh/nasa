@@ -1,0 +1,38 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { access, copyFile, mkdir, mkdtemp, rm, readFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const inputs = [
+  'index.html', 'sources.html', 'scripts/build-local.mjs',
+  'src/app.mjs', 'src/domain.mjs', 'src/i18n.mjs', 'src/nasa-power.mjs',
+  'src/water-truth.mjs', 'src/preflight.mjs', 'src/preflight-view.mjs', 'src/decision-breakpoint.mjs', 'src/biofirewall.mjs', 'src/biofirewall-view.mjs', 'src/rotation-view.mjs', 'src/map-explorer.mjs', 'src/style.css',
+];
+
+test('local build includes every runtime module imported by the app', async () => {
+  const tempBase = process.env.TMPDIR || process.env.TEMP || tmpdir();
+  const root = await mkdtemp(path.join(tempBase, 'field-shift-build-'));
+  try {
+    for (const file of inputs) {
+      const target = path.join(root, file);
+      await mkdir(path.dirname(target), { recursive: true });
+      await copyFile(path.join(projectRoot, file), target);
+    }
+    execFileSync(process.execPath, [path.join(root, 'scripts', 'build-local.mjs')], {
+      cwd: root,
+      encoding: 'utf8',
+    });
+    const app = await readFile(path.join(root, 'src', 'app.mjs'), 'utf8');
+    const imports = [...app.matchAll(/from\s+['"]\.\/([^'"]+\.mjs)['"]/g)].map(([, name]) => name);
+    assert.ok(imports.length > 0, 'app should have local runtime imports');
+    for (const name of imports) {
+      await assert.doesNotReject(access(path.join(root, 'dist', 'src', name)), `missing built module: ${name}`);
+    }
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});

@@ -1,0 +1,50 @@
+[
+  {
+    "command": "test",
+    "code": 1,
+    "stdout": "\n> field-shift@0.1.0 test\n> vitest run\n\n",
+    "stderr": "'vitest' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+  },
+  {
+    "command": "test:live",
+    "code": 1,
+    "stdout": "\n> field-shift@0.1.0 test:live\n> vitest run --config vitest.live.config.ts\n\n",
+    "stderr": "'vitest' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+  },
+  {
+    "command": "typecheck",
+    "code": 1,
+    "stdout": "\n> field-shift@0.1.0 typecheck\n> tsc --noEmit -p tsconfig.json\n\n",
+    "stderr": "'tsc' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+  },
+  {
+    "command": "lint",
+    "code": 1,
+    "stdout": "\n> field-shift@0.1.0 lint\n> eslint .\n\n",
+    "stderr": "'eslint' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+  },
+  {
+    "command": "build",
+    "code": 1,
+    "stdout": "\n> field-shift@0.1.0 build\n> tsc --noEmit -p tsconfig.json && vite build\n\n",
+    "stderr": "'tsc' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+  },
+  {
+    "command": "qa:browser",
+    "code": 1,
+    "stdout": "\n> field-shift@0.1.0 qa:browser\n> node scripts/qa-browser.mjs\n\n",
+    "stderr": "node:internal/modules/cjs/loader:1451\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\Users\\husse\\Downloads\\field-shift\\scripts\\qa-browser.mjs'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1448:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1234:25)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.13.1\r\n"
+  },
+  {
+    "command": "test:local",
+    "code": 0,
+    "stdout": "\n> field-shift@0.1.0 test:local\n> node --test tests/*.test.mjs\n\n✔ all English messages have Arabic equivalents (0.9788ms)\n✔ terrain accepts real sea-level pixels but refuses voids and impossible heights (0.296ms)\n✔ data client refuses HTTP errors and malformed JSON and respects abort (19.2498ms)\n✔ plan roundtrip validates user inputs and refuses malformed plans (0.6049ms)\n✔ polygon limits reject global extents, collinear and nonnumeric points (0.1965ms)\n✔ unexpected weather units and climate sentinels are unavailable (0.2288ms)\n✔ coordinates validate bounds and order (1.209ms)\n✔ spherical polygon area and winding (0.2348ms)\n✔ reject crossing and duplicate polygons (0.7992ms)\n✔ rotation comparison counts family changes and legumes (0.2102ms)\n✔ weather null remains unavailable, zero remains zero (0.1818ms)\n✔ climate missing values never become zero (0.139ms)\n✔ climate selectors alter real queries (0.21ms)\n✔ local runtime serves app but never workspace research or git files (34.827ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 162.7849\n",
+    "stderr": ""
+  },
+  {
+    "command": "build:local",
+    "code": 0,
+    "stdout": "\n> field-shift@0.1.0 build:local\n> node scripts/build-local.mjs\n\nStatic local build: dist/ (68070 bytes before remote MapLibre assets).\n",
+    "stderr": ""
+  }
+]

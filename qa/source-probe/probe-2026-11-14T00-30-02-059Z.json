@@ -1,0 +1,471 @@
+{
+  "ranAt": "2026-11-14T00:30:02.059Z",
+  "origin": "http://localhost:5173",
+  "results": [
+    {
+      "id": "open-meteo-forecast",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=36.7378&longitude=-119.7871&current=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m,soil_temperature_0cm,soil_moisture_0_to_1cm,soil_moisture_1_to_3cm,soil_moisture_3_to_9cm,soil_moisture_9_to_27cm&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,et0_fao_evapotranspiration,weather_code&timezone=auto&forecast_days=7",
+      "status": 200,
+      "ms": 824,
+      "contentType": "application/json; charset=utf-8",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 1350,
+      "snippet": "{\"latitude\":36.74694,\"longitude\":-119.80077,\"generationtime_ms\":0.7944107055664062,\"utc_offset_seconds\":-28800,\"timezone\":\"America/Los_Angeles\",\"timezone_abbreviation\":\"GMT-8\",\"elevation\":91.0,\"current_units\":{\"time\":\"iso8601\",\"interval\":\"seconds\",\"temperature_2m\":\"°C\",\"relative_humidity_2m\":\"%\",\"precipitation\":\"mm\",\"wind_speed_10m\":\"km/h\",\"soil_temperature_0cm\":\"°C\",\"soil_moisture_0_to_1cm\":\"m³/m³\",\"soil_moisture_1_to_3cm\":\"m³/m³\",\"soil_moisture_3_to_9cm\":\"m³/m³\",\"soil_moisture_9_to_27cm\":\"m³/m³\"},\"current\":{\"time\":\"2026-11-13T16:15\",\"interval\":900,\"temperature_2m\":15.3,\"relative_humidity_2m\":87,\"precipitation\":3.20,\"wind_speed_10m\":9.6,\"soil_temperature_0cm\":15.6,\"soil_moisture_0_to_1cm\":0"
+    },
+    {
+      "id": "open-meteo-archive",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.7378&longitude=-119.7871&start_date=2024-01-01&end_date=2024-01-10&daily=temperature_2m_max,temperature_2m_min,temperature_2m_mean,precipitation_sum,et0_fao_evapotranspiration&timezone=auto",
+      "status": 200,
+      "ms": 595,
+      "contentType": "application/json; charset=utf-8",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 869,
+      "snippet": "{\"latitude\":36.731106,\"longitude\":-119.76378,\"generationtime_ms\":0.38826465606689453,\"utc_offset_seconds\":-28800,\"timezone\":\"America/Los_Angeles\",\"timezone_abbreviation\":\"GMT-8\",\"elevation\":91.0,\"daily_units\":{\"time\":\"iso8601\",\"temperature_2m_max\":\"°C\",\"temperature_2m_min\":\"°C\",\"temperature_2m_mean\":\"°C\",\"precipitation_sum\":\"mm\",\"et0_fao_evapotranspiration\":\"mm\"},\"daily\":{\"time\":[\"2024-01-01\",\"2024-01-02\",\"2024-01-03\",\"2024-01-04\",\"2024-01-05\",\"2024-01-06\",\"2024-01-07\",\"2024-01-08\",\"2024-01-09\",\"2024-01-10\"],\"temperature_2m_max\":[12.9,13.1,11.9,11.7,13.2,9.9,9.4,10.0,11.3,11.1],\"temperature_2m_min\":[5.1,3.7,5.0,3.0,2.8,1.3,0.7,-1.7,-0.3,4.1],\"temperature_2m_mean\":[9.0,8.1,8.8,6.4,6.7,5.8,4.7"
+    },
+    {
+      "id": "open-meteo-climate",
+      "url": "https://climate-api.open-meteo.com/v1/climate?latitude=36.7378&longitude=-119.7871&start_date=2045-01-01&end_date=2045-01-05&models=CMCC_CM2_VHR4,FGOALS_f3_H,HiRAM_SIT_HR,MRI_AGCM3_2_S,EC_Earth3P_HR,MPI_ESM1_2_XR,NICAM16_8S&daily=temperature_2m_max,temperature_2m_min,temperature_2m_mean,precipitation_sum,et0_fao_evapotranspiration_sum",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 30014
+    },
+    {
+      "id": "open-meteo-geocoding",
+      "url": "https://geocoding-api.open-meteo.com/v1/search?name=Fresno&count=5&language=en&format=json",
+      "status": 200,
+      "ms": 807,
+      "contentType": "application/json; charset=utf-8",
+      "acao": "*",
+      "cacheControl": "public, max-age=86400",
+      "bytes": 2151,
+      "snippet": "{\"results\":[{\"id\":5350937,\"name\":\"Fresno\",\"latitude\":36.74773,\"longitude\":-119.77237,\"elevation\":94.0,\"feature_code\":\"PPLA2\",\"country_code\":\"US\",\"admin1_id\":5332921,\"admin2_id\":5350964,\"timezone\":\"America/Los_Angeles\",\"population\":542107,\"postcodes\":[\"93650\",\"93701\",\"93702\",\"93703\",\"93704\",\"93705\",\"93706\",\"93707\",\"93708\",\"93709\",\"93710\",\"93711\",\"93712\",\"93714\",\"93715\",\"93716\",\"93717\",\"93718\",\"93720\",\"93721\",\"93722\",\"93724\",\"93725\",\"93726\",\"93727\",\"93728\",\"93729\",\"93740\",\"93741\",\"93744\",\"93745\",\"93747\",\"93750\",\"93755\",\"93760\",\"93761\",\"93764\",\"93765\",\"93771\",\"93772\",\"93773\",\"93774\",\"93775\",\"93776\",\"93777\",\"93778\",\"93779\",\"93786\",\"93790\",\"93791\",\"93792\",\"93793\",\"93794\",\"93844\",\"93888\"],\"country"
+    },
+    {
+      "id": "open-meteo-elevation",
+      "url": "https://api.open-meteo.com/v1/elevation?latitude=36.7378,36.8&longitude=-119.7871,-119.6",
+      "status": 200,
+      "ms": 672,
+      "contentType": "application/json",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 27,
+      "snippet": "{\"elevation\":[91.0, 117.0]}"
+    },
+    {
+      "id": "nominatim-search",
+      "url": "https://nominatim.openstreetmap.org/search?q=Fresno&format=jsonv2&limit=5&addressdetails=1&accept-language=en",
+      "status": 200,
+      "ms": 1268,
+      "contentType": "application/json; charset=utf-8",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 3055,
+      "snippet": "[{\"place_id\":317796911,\"licence\":\"Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright\",\"osm_type\":\"relation\",\"osm_id\":112443,\"lat\":\"36.7394421\",\"lon\":\"-119.7848300\",\"category\":\"boundary\",\"type\":\"administrative\",\"place_rank\":16,\"importance\":0.644640337248762,\"addresstype\":\"city\",\"name\":\"Fresno\",\"display_name\":\"Fresno, Fresno County, California, United States\",\"address\":{\"city\":\"Fresno\",\"county\":\"Fresno County\",\"state\":\"California\",\"ISO3166-2-lvl4\":\"US-CA\",\"country\":\"United States\",\"country_code\":\"us\"},\"boundingbox\":[\"36.6621620\",\"36.9089050\",\"-119.9343970\",\"-119.6505381\"]},{\"place_id\":320569587,\"licence\":\"Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright\""
+    },
+    {
+      "id": "nominatim-reverse",
+      "url": "https://nominatim.openstreetmap.org/reverse?lat=36.7378&lon=-119.7871&format=jsonv2&zoom=10&accept-language=ar",
+      "status": 200,
+      "ms": 306,
+      "contentType": "application/json; charset=utf-8",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 625,
+      "snippet": "{\"place_id\":320595907,\"licence\":\"Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright\",\"osm_type\":\"relation\",\"osm_id\":112443,\"lat\":\"36.7394421\",\"lon\":\"-119.7848300\",\"category\":\"boundary\",\"type\":\"administrative\",\"place_rank\":16,\"importance\":0.644640337248762,\"addresstype\":\"city\",\"name\":\"فريسنو\",\"display_name\":\"فريسنو, مقاطعة فريسنو, كاليفورنيا, الولايات المتّحدة الأمريكيّة\",\"address\":{\"city\":\"فريسنو\",\"county\":\"مقاطعة فريسنو\",\"state\":\"كاليفورنيا\",\"ISO3166-2-lvl4\":\"US-CA\",\"country\":\"الولايات المتّحدة الأمريكيّة\",\"country_code\":\"us\"},\"boundingbox\":[\"36.6621620\",\"36.9089050\",\"-119.9343970\",\"-119.6505381\"]}"
+    },
+    {
+      "id": "photon-search",
+      "url": "https://photon.komoot.io/api/?q=Fresno&limit=5&lang=en",
+      "status": 200,
+      "ms": 977,
+      "contentType": "application/json",
+      "acao": "*",
+      "cacheControl": "max-age=3600",
+      "bytes": 1804,
+      "snippet": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{\"osm_type\":\"R\",\"osm_id\":112443,\"osm_key\":\"place\",\"osm_value\":\"city\",\"type\":\"city\",\"name\":\"Fresno\",\"county\":\"Fresno\",\"state\":\"California\",\"country\":\"United States\",\"countrycode\":\"US\",\"extra\":{\"admin_level\":\"8\"},\"extent\":[-119.934397,36.908905,-119.6505381,36.662162]},\"geometry\":{\"type\":\"Point\",\"coordinates\":[-119.78483,36.7394421]}},{\"type\":\"Feature\",\"properties\":{\"osm_type\":\"R\",\"osm_id\":396492,\"osm_key\":\"place\",\"osm_value\":\"county\",\"type\":\"county\",\"name\":\"Fresno\",\"state\":\"California\",\"country\":\"United States\",\"countrycode\":\"US\",\"extra\":{\"admin_level\":\"6\"},\"extent\":[-120.9192485,37.586101,-118.3612791,35.9066756]},\"geomet"
+    },
+    {
+      "id": "soilgrids-properties",
+      "url": "https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-119.7871&lat=36.7378&property=phh2o&property=soc&property=clay&property=sand&property=silt&property=nitrogen&property=bdod&property=cec&depth=0-5cm&depth=5-15cm&depth=15-30cm&value=mean&value=Q0.05&value=Q0.5&value=Q0.95&value=uncertainty",
+      "status": 200,
+      "ms": 31907,
+      "contentType": "application/json",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 4960,
+      "snippet": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-119.7871,36.7378]},\"properties\":{\"layers\":[{\"name\":\"bdod\",\"unit_measure\":{\"d_factor\":100,\"mapped_units\":\"cg/cm³\",\"target_units\":\"kg/dm³\",\"uncertainty_unit\":\"\"},\"depths\":[{\"range\":{\"top_depth\":0,\"bottom_depth\":5,\"unit_depth\":\"cm\"},\"label\":\"0-5cm\",\"values\":{\"Q0.05\":null,\"Q0.5\":null,\"Q0.95\":null,\"mean\":null,\"uncertainty\":null}},{\"range\":{\"top_depth\":5,\"bottom_depth\":15,\"unit_depth\":\"cm\"},\"label\":\"5-15cm\",\"values\":{\"Q0.5\":null,\"Q0.05\":null,\"Q0.95\":null,\"mean\":null,\"uncertainty\":null}},{\"range\":{\"top_depth\":15,\"bottom_depth\":30,\"unit_depth\":\"cm\"},\"label\":\"15-30cm\",\"values\":{\"Q0.05\":null,\"Q0.5\":null,\"Q0.95\":null,\"mean\":null,\"uncertainty\""
+    },
+    {
+      "id": "soilgrids-classification",
+      "url": "https://rest.isric.org/soilgrids/v2.0/classification/query?lon=-119.7871&lat=36.7378&number_classes=5",
+      "status": 200,
+      "ms": 4643,
+      "contentType": "application/json",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 242,
+      "snippet": "{\"type\":\"Point\",\"coordinates\":[-119.7871,36.7378],\"query_time_s\":4.290310859680176,\"wrb_class_name\":\"Cambisols\",\"wrb_class_value\":6,\"wrb_class_probability\":[[\"Cambisols\",17],[\"Luvisols\",13],[\"Vertisols\",13],[\"Regosols\",12],[\"Kastanozems\",8]]}"
+    },
+    {
+      "id": "earth-search-stac",
+      "url": "https://earth-search.aws.element84.com/v1/search",
+      "status": 200,
+      "ms": 993,
+      "contentType": "application/geo+json; charset=utf-8",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 42508,
+      "snippet": "{\"type\":\"FeatureCollection\",\"stac_version\":\"1.0.0\",\"stac_extensions\":[],\"context\":{\"limit\":2,\"matched\":50,\"returned\":2},\"numberMatched\":50,\"numberReturned\":2,\"features\":[{\"type\":\"Feature\",\"stac_version\":\"1.0.0\",\"stac_extensions\":[\"https://stac-extensions.github.io/view/v1.0.0/schema.json\",\"https://stac-extensions.github.io/sentinel-2/v1.0.0/schema.json\",\"https://stac-extensions.github.io/projection/v1.1.0/schema.json\",\"https://stac-extensions.github.io/eo/v1.1.0/schema.json\",\"https://stac-extensions.github.io/grid/v1.1.0/schema.json\",\"https://stac-extensions.github.io/raster/v1.1.0/schema.json\",\"https://stac-extensions.github.io/mgrs/v1.0.0/schema.json\",\"https://stac-extensions.github.io/pro",
+      "item": {
+        "id": "S2B_10SGF_20250927_1_L2A",
+        "datetime": "2025-09-27T18:54:21.588000Z",
+        "cloud": 0.201064,
+        "epsg": 32610,
+        "boa": true,
+        "baseline": "05.11",
+        "assetKeys": [
+          "aot",
+          "blue",
+          "cloud",
+          "coastal",
+          "granule_metadata",
+          "green",
+          "nir",
+          "nir08",
+          "nir09",
+          "product_metadata",
+          "red",
+          "rededge1",
+          "rededge2",
+          "rededge3",
+          "scl",
+          "snow",
+          "swir16",
+          "swir22",
+          "tileinfo_metadata",
+          "visual",
+          "wvp",
+          "thumbnail",
+          "aot-jp2",
+          "blue-jp2",
+          "coastal-jp2",
+          "green-jp2",
+          "nir-jp2",
+          "nir08-jp2",
+          "nir09-jp2",
+          "red-jp2",
+          "rededge1-jp2",
+          "rededge2-jp2",
+          "rededge3-jp2",
+          "scl-jp2",
+          "swir16-jp2",
+          "swir22-jp2",
+          "visual-jp2",
+          "wvp-jp2"
+        ],
+        "red": {
+          "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/10/S/GF/2025/9/S2B_10SGF_20250927_1_L2A/B04.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "Red - 10m",
+          "eo:bands": [
+            {
+              "name": "B04",
+              "common_name": "red",
+              "center_wavelength": 0.665,
+              "full_width_half_max": 0.038
+            }
+          ],
+          "gsd": 10,
+          "proj:shape": [
+            10980,
+            10980
+          ],
+          "proj:transform": [
+            10,
+            0,
+            699960,
+            0,
+            -10,
+            4100040
+          ],
+          "raster:bands": [
+            {
+              "nodata": 0,
+              "data_type": "uint16",
+              "spatial_resolution": 10,
+              "scale": 0.0001,
+              "offset": -0.1
+            }
+          ],
+          "roles": [
+            "data",
+            "reflectance"
+          ]
+        },
+        "nir": {
+          "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/10/S/GF/2025/9/S2B_10SGF_20250927_1_L2A/B08.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "NIR 1 - 10m",
+          "eo:bands": [
+            {
+              "name": "B08",
+              "common_name": "nir",
+              "center_wavelength": 0.842,
+              "full_width_half_max": 0.145
+            }
+          ],
+          "gsd": 10,
+          "proj:shape": [
+            10980,
+            10980
+          ],
+          "proj:transform": [
+            10,
+            0,
+            699960,
+            0,
+            -10,
+            4100040
+          ],
+          "raster:bands": [
+            {
+              "nodata": 0,
+              "data_type": "uint16",
+              "spatial_resolution": 10,
+              "scale": 0.0001,
+              "offset": -0.1
+            }
+          ],
+          "roles": [
+            "data",
+            "reflectance"
+          ]
+        },
+        "scl": {
+          "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/10/S/GF/2025/9/S2B_10SGF_20250927_1_L2A/SCL.tif",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "title": "Scene classification map (SCL)",
+          "gsd": 20,
+          "proj:shape": [
+            5490,
+            5490
+          ],
+          "proj:transform": [
+            20,
+            0,
+            699960,
+            0,
+            -20,
+            4100040
+          ],
+          "raster:bands": [
+            {
+              "nodata": 0,
+              "data_type": "uint8",
+              "spatial_resolution": 20
+            }
+          ],
+          "roles": [
+            "data"
+          ]
+        }
+      },
+      "cogRange": {
+        "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/10/S/GF/2025/9/S2B_10SGF_20250927_1_L2A/B04.tif",
+        "status": 206,
+        "acao": "*",
+        "acah": null,
+        "contentRange": "bytes 0-1023/220032685",
+        "bytes": 1024
+      },
+      "cogPreflight": {
+        "status": 200,
+        "acao": "*",
+        "acam": "HEAD, GET",
+        "acah": "range"
+      }
+    },
+    {
+      "id": "aws-terrain-terrarium",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/176/403.png",
+      "status": 200,
+      "ms": 591,
+      "contentType": "image/png",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 57893
+    },
+    {
+      "id": "aws-terrain-terrarium-vhost",
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/10/176/403.png",
+      "status": 200,
+      "ms": 521,
+      "contentType": "image/png",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 57893
+    },
+    {
+      "id": "eox-capabilities",
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/WMTSCapabilities.xml",
+      "status": 200,
+      "ms": 472,
+      "contentType": "application/xml",
+      "acao": "http://localhost:5173",
+      "cacheControl": null,
+      "bytes": 67909,
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Capabilities xmlns=\"http://www.opengis.net/wmts/1.0\" xmlns:ows=\"http://www.opengis.net/ows/1.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:gml=\"http://www.opengis.net/gml\" xmlns:inspire_common=\"http://inspire.ec.europa.eu/schemas/common/1.0\" xmlns:inspire_vs=\"http://inspire.ec.europa.eu/schemas/inspire_vs_ows11/1.0\" xsi:schemaLocation=\"http://www.opengis.net/wmts/1.0 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd http://inspire.ec.europa.eu/schemas/inspire_vs_ows11/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs_ows11/1.0/inspire_vs_ows_11.xsd\" version=\"1.0.0\"><ows:Ser",
+      "identifiers": [
+        "s2cloudless-2025_3857",
+        "s2cloudless-2017_3857",
+        "overlay_bright",
+        "s2cloudless-2019_3857",
+        "overlay",
+        "s2cloudless-2017",
+        "s2cloudless-2018",
+        "s2cloudless-2019",
+        "terrain-light_3857",
+        "overlay_base_3857",
+        "s2cloudless",
+        "terrain",
+        "overlay_bright_3857",
+        "s2cloudless-2020_3857",
+        "terrain-light",
+        "overlay_base_bright",
+        "overlay_base",
+        "s2cloudless-2022_3857",
+        "s2cloudless-2024_3857",
+        "s2cloudless-2018_3857",
+        "s2cloudless-2020",
+        "s2cloudless-2021",
+        "s2cloudless-2022",
+        "s2cloudless-2023",
+        "s2cloudless-2024",
+        "s2cloudless_3857",
+        "s2cloudless-2025",
+        "terrain_3857",
+        "overlay_base_bright_3857",
+        "overlay_3857",
+        "s2cloudless-2021_3857",
+        "s2cloudless-2023_3857",
+        "GoogleMapsCompatible"
+      ]
+    },
+    {
+      "id": "eox-s2cloudless-2023",
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2023_3857/default/g/10/403/176.jpg",
+      "status": 200,
+      "ms": 146,
+      "contentType": "image/jpeg",
+      "acao": "http://localhost:5173",
+      "cacheControl": "max-age=604800",
+      "bytes": 15077
+    },
+    {
+      "id": "eox-s2cloudless-2024",
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/10/403/176.jpg",
+      "status": 200,
+      "ms": 312,
+      "contentType": "image/jpeg",
+      "acao": "http://localhost:5173",
+      "cacheControl": "max-age=604800",
+      "bytes": 15740
+    },
+    {
+      "id": "eox-s2cloudless-2016",
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/10/403/176.jpg",
+      "status": 200,
+      "ms": 150,
+      "contentType": "image/jpeg",
+      "acao": "http://localhost:5173",
+      "cacheControl": "max-age=604800",
+      "bytes": 17556
+    },
+    {
+      "id": "gibs-ndvi-tile",
+      "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_NDVI_8Day/default/2024-06-01/GoogleMapsCompatible_Level9/5/12/5.png",
+      "status": 404,
+      "ms": 533,
+      "contentType": "text/html; charset=iso-8859-1",
+      "acao": "*",
+      "cacheControl": "max-age=0, no-store, no-cache, must-revalidate",
+      "bytes": 196
+    },
+    {
+      "id": "worldbank-cckp",
+      "url": "https://cckpapi.worldbank.org/cckp/v1/cmip6-x0.25_climatology_tas,pr_climatology_annual_2040-2059_median_ssp245_ensemble_all_mean/USA?_format=json",
+      "status": 200,
+      "ms": 767,
+      "contentType": "application/json",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 138,
+      "snippet": "{\"metadata\":{\"apiVersion\":\"v1\",\"status\":\"success\",\"messages\":[]},\"data\":{\"pr\":{\"USA\":{\"2040-07\":856.62}},\"tas\":{\"USA\":{\"2040-07\":12.03}}}}"
+    },
+    {
+      "id": "ornl-modis-dates",
+      "url": "https://modis.ornl.gov/rst/api/v1/MOD13Q1/dates?latitude=36.7378&longitude=-119.7871",
+      "status": 200,
+      "ms": 1975,
+      "contentType": "application/json",
+      "acao": "http://localhost:5173",
+      "cacheControl": null,
+      "bytes": 36238,
+      "snippet": "{\"dates\": [{\"modis_date\": \"A2000049\", \"calendar_date\": \"2000-02-18\"}, {\"modis_date\": \"A2000065\", \"calendar_date\": \"2000-03-05\"}, {\"modis_date\": \"A2000081\", \"calendar_date\": \"2000-03-21\"}, {\"modis_date\": \"A2000097\", \"calendar_date\": \"2000-04-06\"}, {\"modis_date\": \"A2000113\", \"calendar_date\": \"2000-04-22\"}, {\"modis_date\": \"A2000129\", \"calendar_date\": \"2000-05-08\"}, {\"modis_date\": \"A2000145\", \"calendar_date\": \"2000-05-24\"}, {\"modis_date\": \"A2000161\", \"calendar_date\": \"2000-06-09\"}, {\"modis_date\": \"A2000177\", \"calendar_date\": \"2000-06-25\"}, {\"modis_date\": \"A2000193\", \"calendar_date\": \"2000-07-11\"}, {\"modis_date\": \"A2000209\", \"calendar_date\": \"2000-07-27\"}, {\"modis_date\": \"A2000225\", \"calendar_dat"
+    },
+    {
+      "id": "nasa-power-climatology",
+      "url": "https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=T2M,PRECTOTCORR&community=AG&longitude=-119.7871&latitude=36.7378&format=JSON",
+      "status": 200,
+      "ms": 959,
+      "contentType": "application/json",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 1049,
+      "snippet": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-119.787,36.738,141.07]},\"properties\":{\"parameter\":{\"PRECTOTCORR\":{\"JAN\":1.8,\"FEB\":1.74,\"MAR\":1.52,\"APR\":0.91,\"MAY\":0.39,\"JUN\":0.08,\"JUL\":0.03,\"AUG\":0.02,\"SEP\":0.05,\"OCT\":0.47,\"NOV\":0.88,\"DEC\":1.88,\"ANN\":0.81},\"T2M\":{\"JAN\":9.46,\"FEB\":10.65,\"MAR\":13.27,\"APR\":16.03,\"MAY\":21.06,\"JUN\":26.45,\"JUL\":30.24,\"AUG\":28.82,\"SEP\":25.7,\"OCT\":19.69,\"NOV\":13.48,\"DEC\":9.12,\"ANN\":18.7}}},\"header\":{\"title\":\"NASA/POWER Source Native Resolution Climatology Climatologies\",\"api\":{\"version\":\"v2.10.1\",\"name\":\"POWER Climatology API\"},\"sources\":[\"MERRA2\"],\"fill_value\":-999.0,\"time_standard\":\"LST\",\"range\":\"25-year Meteorological and Solar Monthly & Annual Clima"
+    },
+    {
+      "id": "openfreemap-style",
+      "url": "https://tiles.openfreemap.org/styles/liberty",
+      "status": 200,
+      "ms": 290,
+      "contentType": "application/json",
+      "acao": "*",
+      "cacheControl": "max-age=86400, public",
+      "bytes": 43311,
+      "snippet": "{\"version\":8,\"sources\":{\"ne2_shaded\":{\"maxzoom\":6,\"tileSize\":256,\"tiles\":[\"https://tiles.openfreemap.org/natural_earth/ne2sr/{z}/{x}/{y}.png\"],\"type\":\"raster\"},\"openmaptiles\":{\"type\":\"vector\",\"url\":\"https://tiles.openfreemap.org/planet\"}},\"sprite\":\"https://tiles.openfreemap.org/sprites/ofm_f384/ofm\",\"glyphs\":\"https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf\",\"layers\":[{\"id\":\"background\",\"type\":\"background\",\"paint\":{\"background-color\":\"#f8f4f0\"}},{\"id\":\"natural_earth\",\"type\":\"raster\",\"source\":\"ne2_shaded\",\"maxzoom\":7,\"paint\":{\"raster-opacity\":[\"interpolate\",[\"exponential\",1.5],[\"zoom\"],0,0.6,6,0.1]}},{\"id\":\"park\",\"type\":\"fill\",\"source\":\"openmaptiles\",\"source-layer\":\"park\",\"filter\":"
+    },
+    {
+      "id": "esri-world-imagery",
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/403/176",
+      "status": 200,
+      "ms": 677,
+      "contentType": "image/jpeg",
+      "acao": "*",
+      "cacheControl": "max-age=86400",
+      "bytes": 12137
+    },
+    {
+      "id": "osm-tile",
+      "url": "https://tile.openstreetmap.org/10/176/403.png",
+      "status": 200,
+      "ms": 341,
+      "contentType": "image/png",
+      "acao": "*",
+      "cacheControl": "max-age=91047, stale-while-revalidate=604800, stale-if-error=604800",
+      "bytes": 16341
+    },
+    {
+      "id": "fao56-chapter6",
+      "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+      "status": 200,
+      "ms": 166,
+      "contentType": "text/html",
+      "acao": "*",
+      "cacheControl": null,
+      "bytes": 235891,
+      "snippet": "<html>\r\n\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<title>Chapter 6 - ETc - Single crop coefficient (Kc)</title>\r\n<link REL=\"stylesheet\" TYPE=\"text/css\" HREF=\"fao.css\">\r\n</head>\r\n\r\n<body bgcolor=\"#FFFFFF\">\r\n<p><a NAME=\"TopOfPage\"></a>\r\n<p align=\"center\">\r\n<a href=\"x0490e0a.htm#TopOfPage\"><img src=\"back.gif\" width=\"43\" height=\"35\" alt=\"Previous Page\" border=\"0\"></a>\r\n<a href=\"x0490e00.htm#Contents\"><img src=\"toc.gif\" width=\"43\" height=\"35\" alt=\"Table of Contents\" border=\"0\"></a>\r\n<a href=\"x0490e0c.htm#TopOfPage\"><img src=\"next.gif\" width=\"43\" height=\"35\" alt=\"Next Page\" border=\"0\"></a>\r\n<hr>\r\n<H1><a name=\"chapter 6   etc   single crop coefficient (kc)\""
+    }
+  ]
+}

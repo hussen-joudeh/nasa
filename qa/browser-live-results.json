@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-14",
+  "local_url": "http://127.0.0.1:5173/",
+  "local_gates": {
+    "npm run test:local": {"status": "passed", "tests": 15, "failed": 0},
+    "npm run build:local": {"status": "passed", "static_source_asset_bytes": 68794},
+    "full_vite_vitest_lint_typecheck": "not verified in this environment; dependencies are absent and npm install previously failed EACCES"
+  },
+  "browser_qa": "manual, partial",
+  "checks": {
+    "desktop": {"viewport": "1440x1000", "status": "layout viewed; map tiles loaded in one earlier session but were intermittent in later fresh sessions"},
+    "location_search": {"query": "Fresno", "result_count": 5, "selected_status": "GeoNames / Open-Meteo · Fresno", "passed": true},
+    "boundary_editor": {
+      "coordinates_lat_lon": ["36.780, -119.955", "36.780, -119.945", "36.785, -119.945", "36.785, -119.955"],
+      "area_hectares": 49.51,
+      "area_acres": 122.35,
+      "center_lat_lon": "36.78250, -119.95000",
+      "apply_and_analyze_enabled": true
+    },
+    "weather": {
+      "temperature_c": 14.6,
+      "precipitation_mm": 0,
+      "wind_kmh": 17.5,
+      "humidity_percent": 93,
+      "model_time": "2026-11-13T17:30",
+      "timezone": "America/Los_Angeles",
+      "note": "Open-Meteo model sample at the vertex-average point, not a field average or sensor reading"
+    },
+    "climate": {
+      "regression": "live endpoint returned data.USA[2040-07], but the old parser expected data.tas.USA; the app displayed its no-data error",
+      "fixed_parser_supports": ["single-variable CCKP country response", "multi-variable response under data.tas"],
+      "live_results_c": {"USA_SSP245_2040-2059": 1.91, "USA_SSP126_2040-2059": 1.57, "PSE_SSP126_2040-2059": 1.48},
+      "ui_verified": "Palestine · SSP126 · 2040-2059; +1.48 °C",
+      "retrieved_at": "2026-11-14T02:08:45.872Z"
+    },
+    "crop_rotation": {"changed": "Rotation B, season 1: wheat to soybean", "counts_after": {"plant_families": 2, "legume_seasons": 2, "same_family_transitions": 1}, "restored_original": true},
+    "save_restore": {"passed": true, "schema_version": 1, "area_restored": true, "temporary_test_plan_removed": true},
+    "rtl_mobile": {"viewport": "390x844", "lang": "ar", "dir": "rtl", "scroll_width": 390, "client_width": 390, "map_loaded_in_one_session": true},
+    "terrain": {"3d_toggle_aria_pressed": true, "center_dem_tile_requested": true, "full_mesh_and_camera_orbit": "not fully verified"},
+    "map_selection": {"coordinate_editor": "verified", "direct_map_click_drawing": "not verified because later tile loads did not settle reliably", "undo_and_fit": "not fully verified"}
+  },
+  "remaining_checks": [
+    "Map-tile reliability and retry behavior across fresh sessions",
+    "Direct map-click polygon drawing and undo on a loaded map",
+    "Visual verification of the relief layer and full 3D orbit/DEM coverage",
+    "Browser export/import file flow",
+    "Keyboard-only and assistive-technology checks",
+    "Performance and contrast audits"
+  ],
+  "deployment": "not deployed; no commit or push"
+}

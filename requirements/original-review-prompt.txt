@@ -1,0 +1,34 @@
+Perform a comprehensive visual, technical, and functional review of the Field Shift application you just built.
+
+Compare the actual running website against my two original reference images.
+
+Evaluate:
+
+1. Visual fidelity and premium design quality.
+2. True 3D geographic functionality.
+3. Camera navigation and land selection.
+4. Accuracy and clarity of environmental data.
+5. Functionality of the crop rotation comparison.
+6. Functionality of climate scenario simulation.
+7. Responsive desktop and mobile experience.
+8. Accessibility and Arabic RTL compatibility.
+9. Performance, loading states, and errors.
+10. Completeness of the main user journey.
+
+Open the application in a browser and inspect the real rendered result if browser tools are available.
+
+Do not merely review source code.
+
+Identify every important visual and functional weakness.
+
+Fix the problems directly.
+
+Pay special attention to the 3D land-selection experience. It should look sophisticated, render real geographic terrain where data permits, and support actual interaction.
+
+Remove fake controls, placeholder functionality, misleading scientific metrics, and unfinished visual elements.
+
+Do not replace real data with invented numbers to make the interface look more impressive.
+
+Your objective is to transform the initial implementation into a polished, credible, competition-quality product.
+
+After making improvements, provide a clear summary of completed functionality, tested workflows, and remaining limitations.

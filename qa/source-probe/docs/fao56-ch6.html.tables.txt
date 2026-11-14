@@ -1,0 +1,467 @@
+
+##### TABLE BLOCK 1 (preceded by: … or for a specific crop variety using local observations. TABLE 11. Lengths of crop development stages* for various planting periods and climatic regions (days))
+Crop ; Init. (L ini ) ; Dev. (L dev ) ; Mid (L mid ) ; Late (L late ) ; Total ; Plant Date ; Region
+a. Small Vegetables
+Broccoli ; 35 ; 45 ; 40 ; 15 ; 135 ; Sept ; Calif. Desert, USA
+Cabbage ; 40 ; 60 ; 50 ; 15 ; 165 ; Sept ; Calif. Desert, USA
+Carrots ; 20 ; 30 ; 50/30 ; 20 ; 100 ; Oct/Jan ; Arid climate
+30 ; 40 ; 60 ; 20 ; 150 ; Feb/Mar ; Mediterranean
+30 ; 50 ; 90 ; 30 ; 200 ; Oct ; Calif. Desert, USA
+Cauliflower ; 35 ; 50 ; 40 ; 15 ; 140 ; Sept ; Calif. Desert, USA
+Celery ; 25 ; 40 ; 95 ; 20 ; 180 ; Oct ; (Semi) Arid
+25 ; 40 ; 45 ; 15 ; 125 ; April ; Mediterranean
+30 ; 55 ; 105 ; 20 ; 210 ; Jan ; (Semi) Arid
+Crucifers 1 ; 20 ; 30 ; 20 ; 10 ; 80 ; April ; Mediterranean
+25 ; 35 ; 25 ; 10 ; 95 ; February ; Mediterranean
+30 ; 35 ; 90 ; 40 ; 195 ; Oct/Nov ; Mediterranean
+Lettuce ; 20 ; 30 ; 15 ; 10 ; 75 ; April ; Mediterranean
+30 ; 40 ; 25 ; 10 ; 105 ; Nov/Jan ; Mediterranean
+25 ; 35 ; 30 ; 10 ; 100 ; Oct/Nov ; Arid Region
+35 ; 50 ; 45 ; 10 ; 140 ; Feb ; Mediterranean
+Onion (dry) ; 15 ; 25 ; 70 ; 40 ; 150 ; April ; Mediterranean
+20 ; 35 ; 110 ; 45 ; 210 ; Oct; Jan. ; Arid Region; Calif.
+Onion (green) ; 25 ; 30 ; 10 ; 5 ; 70 ; April/May ; Mediterranean
+20 ; 45 ; 20 ; 10 ; 95 ; October ; Arid Region
+30 ; 55 ; 55 ; 40 ; 180 ; March ; Calif., USA
+Onion (seed) ; 20 ; 45 ; 165 ; 45 ; 275 ; Sept ; Calif. Desert, USA
+Spinach ; 20 ; 20 ; 15/25 ; 5 ; 60/70 ; Apr; Sep/Oct ; Mediterranean
+20 ; 30 ; 40 ; 10 ; 100 ; November ; Arid Region
+Radish ; 5 ; 10 ; 15 ; 5 ; 35 ; Mar/Apr ; Medit.; Europe
+10 ; 10 ; 15 ; 5 ; 40 ; Winter ; Arid Region
+b. Vegetables - Solanum Family (Solanaceae)
+Egg plant ; 30 ; 40 ; 40 ; 20 ; 130\1 ; October ; Arid Region
+30 ; 45 ; 40 ; 25 ; 40 ; May/June ; Mediterranean
+Sweet peppers (bell) ; 25/30 ; 35 ; 40 ; 20 ; 125 ; April/June ; Europe and Medit.
+30 ; 40 ; 110 ; 30 ; 210 ; October ; Arid Region
+Tomato ; 30 ; 40 ; 40 ; 25 ; 135 ; January ; Arid Region
+35 ; 40 ; 50 ; 30 ; 155 ; Apr/May ; Calif., USA
+25 ; 40 ; 60 ; 30 ; 155 ; Jan ; Calif. Desert, USA
+35 ; 45 ; 70 ; 30 ; 180 ; Oct/Nov ; Arid Region
+30 ; 40 ; 45 ; 30 ; 145 ; April/May ; Mediterranean
+c. Vegetables - Cucumber Family (Cucurbitaceae)
+Cantaloupe ; 30 ; 45 ; 35 ; 10 ; 120 ; Jan ; Calif., USA
+10 ; 60 ; 25 ; 25 ; 120 ; Aug ; Calif., USA
+Cucumber ; 20 ; 30 ; 40 ; 15 ; 105 ; June/Aug ; Arid Region
+25 ; 35 ; 50 ; 20 ; 130 ; Nov; Feb ; Arid Region
+Pumpkin, Winter squash ; 20 ; 30 ; 30 ; 20 ; 100 ; Mar, Aug ; Mediterranean
+25 ; 35 ; 35 ; 25 ; 120 ; June ; Europe
+Squash, Zucchini ; 25 ; 35 ; 25 ; 15 ; 100 ; Apr; Dec. ; Medit.; Arid Reg.
+20 ; 30 ; 25 ; 15 ; 90 ; May/June ; Medit.; Europe
+Sweet melons ; 25 ; 35 ; 40 ; 20 ; 120 ; May ; Mediterranean
+30 ; 30 ; 50 ; 30 ; 140 ; March ; Calif., USA
+15 ; 40 ; 65 ; 15 ; 135 ; Aug ; Calif. Desert, USA
+30 ; 45 ; 65 ; 20 ; 160 ; Dec/Jan ; Arid Region
+Water melons ; 20 ; 30 ; 30 ; 30 ; 110 ; April ; Italy
+10 ; 20 ; 20 ; 30 ; 80 ; Mat/Aug ; Near East (desert)
+d. Roots and Tubers
+Beets, table ; 15 ; 25 ; 20 ; 10 ; 70 ; Apr/May ; Mediterranean
+25 ; 30 ; 25 ; 10 ; 90 ; Feb/Mar ; Mediterranean & Arid
+Cassava: year 1 ; 20 ; 40 ; 90 ; 60 ; 210 ; Rainy ; Tropical regions
+year 2 ; 150 ; 40 ; 110 ; 60 ; 360 ; season ; 
+Potato ; 25 ; 30 ; 30/45 ; 30 ; 115/130 ; Jan/Nov ; (Semi) Arid Climate
+25 ; 30 ; 45 ; 30 ; 130 ; May ; Continental Climate
+30 ; 35 ; 50 ; 30 ; 145 ; April ; Europe
+45 ; 30 ; 70 ; 20 ; 165 ; Apr/May ; Idaho, USA
+30 ; 35 ; 50 ; 25 ; 140 ; Dec ; Calif. Desert, USA
+Sweet potato ; 20 ; 30 ; 60 ; 40 ; 150 ; April ; Mediterranean
+15 ; 30 ; 50 ; 30 ; 125 ; Rainy seas. ; Tropical regions
+Sugarbeet ; 30 ; 45 ; 90 ; 15 ; 180 ; March ; Calif., USA
+25 ; 30 ; 90 ; 10 ; 155 ; June ; Calif., USA
+25 ; 65 ; 100 ; 65 ; 255 ; Sept ; Calif. Desert, USA
+50 ; 40 ; 50 ; 40 ; 180 ; April ; Idaho, USA
+25 ; 35 ; 50 ; 50 ; 160 ; May ; Mediterranean
+45 ; 75 ; 80 ; 30 ; 230 ; November ; Mediterranean
+35 ; 60 ; 70 ; 40 ; 205 ; November ; Arid Regions
+e. Legumes (Leguminosae)
+Beans (green) ; 20 ; 30 ; 30 ; 10 ; 90 ; Feb/Mar ; Calif., Mediterranean
+15 ; 25 ; 25 ; 10 ; 75 ; Aug/Sep ; Calif., Egypt, Lebanon
+Beans (dry) ; 20 ; 30 ; 40 ; 20 ; 110 ; May/June ; Continental Climates
+15 ; 25 ; 35 ; 20 ; 95 ; June ; Pakistan, Calif.
+25 ; 25 ; 30 ; 20 ; 100 ; June ; Idaho, USA
+Faba bean, broad bean ; 15 ; 25 ; 35 ; 15 ; 90 ; May ; Europe
+20 ; 30 ; 35 ; 15 ; 100 ; Mar/Apr ; Mediterranean
+ ; - dry ; 90 ; 45 ; 40 ; 60 ; 235 ; Nov ; Europe
+ ; - green ; 90 ; 45 ; 40 ; 0 ; 175 ; Nov ; Europe
+Green gram, cowpeas ; 20 ; 30 ; 30 ; 20 ; 110 ; March ; Mediterranean
+Groundnut ; 25 ; 35 ; 45 ; 25 ; 130 ; Dry ; West Africa
+35 ; 35 ; 35 ; 35 ; 140 ; season ; High Latitudes
+35 ; 45 ; 35 ; 25 ; 140 ; May May/June ; Mediterranean
+Lentil ; 20 ; 30 ; 60 ; 40 ; 150 ; April ; Europe
+25 ; 35 ; 70 ; 40 ; 170 ; Oct/Nov ; Arid Region
+Peas ; 15 ; 25 ; 35 ; 15 ; 90 ; May ; Europe
+20 ; 30 ; 35 ; 15 ; 100 ; Mar/Apr ; Mediterranean
+35 ; 25 ; 30 ; 20 ; 110 ; April ; Idaho, USA
+Soybeans ; 15 ; 15 ; 40 ; 15 ; 85 ; Dec ; Tropics
+20 ; 30/35 ; 60 ; 25 ; 140 ; May ; Central USA
+20 ; 25 ; 75 ; 30 ; 150 ; June ; Japan
+f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+Artichoke ; 40 ; 40 ; 250 ; 30 ; 360 ; Apr (1 st yr) ; California
+20 ; 25 ; 250 ; 30 ; 325 ; May (2 nd yr) ; (cut in May)
+Asparagus ; 50 ; 30 ; 100 ; 50 ; 230 ; Feb ; Warm Winter
+90 ; 30 ; 200 ; 45 ; 365 ; Feb ; Mediterranean
+g. Fibre Crops
+Cotton ; 30 ; 50 ; 60 ; 55 ; 195 ; Mar-May ; Egypt; Pakistan; Calif.
+45 ; 90 ; 45 ; 45 ; 225 ; Mar ; Calif. Desert, USA
+30 ; 50 ; 60 ; 55 ; 195 ; Sept ; Yemen
+30 ; 50 ; 55 ; 45 ; 180 ; April ; Texas
+Flax ; 25 ; 35 ; 50 ; 40 ; 150 ; April ; Europe
+30 ; 40 ; 100 ; 50 ; 220 ; October ; Arizona
+h. Oil Crops
+Castor beans ; 25 ; 40 ; 65 ; 50 ; 180 ; March ; (Semi) Arid Climates
+20 ; 40 ; 50 ; 25 ; 135 ; Nov. ; Indonesia
+Safflower ; 20 ; 35 ; 45 ; 25 ; 125 ; April ; California, USA
+25 ; 35 ; 55 ; 30 ; 145 ; Mar ; High Latitudes
+35 ; 55 ; 60 ; 40 ; 190 ; Oct/Nov ; Arid Region
+Sesame ; 20 ; 30 ; 40 ; 20 ; 100 ; June ; China
+Sunflower ; 25 ; 35 ; 45 ; 25 ; 130 ; April/May ; Medit.; California
+i. Cereals
+Barley/Oats/Wheat ; 15 ; 25 ; 50 ; 30 ; 120 ; November ; Central India
+20 ; 25 ; 60 ; 30 ; 135 ; March/Apr ; 35-45 °L
+15 ; 30 ; 65 ; 40 ; 150 ; July ; East Africa
+40 ; 30 ; 40 ; 20 ; 130 ; Apr ; 
+40 ; 60 ; 60 ; 40 ; 200 ; Nov ; 
+20 ; 50 ; 60 ; 30 ; 160 ; Dec ; Calif. Desert, USA
+Winter Wheat ; 20 2 ; 60 2 ; 70 ; 30 ; 180 ; December ; Calif., USA
+30 ; 140 ; 40 ; 30 ; 240 ; November ; Mediterranean
+160 ; 75 ; 75 ; 25 ; 335 ; October ; Idaho, USA
+Grains (small) ; 20 ; 30 ; 60 ; 40 ; 150 ; April ; Mediterranean
+25 ; 35 ; 65 ; 40 ; 165 ; Oct/Nov ; Pakistan; Arid Reg.
+Maize (grain) ; 30 ; 50 ; 60 ; 40 ; 180 ; April ; East Africa (alt.)
+25 ; 40 ; 45 ; 30 ; 140 ; Dec/Jan ; Arid Climate
+20 ; 35 ; 40 ; 30 ; 125 ; June ; Nigeria (humid)
+20 ; 35 ; 40 ; 30 ; 125 ; October ; India (dry, cool)
+30 ; 40 ; 50 ; 30 ; 150 ; April ; Spain (spr, sum.); Calif.
+30 ; 40 ; 50 ; 50 ; 170 ; April ; Idaho, USA
+Maize (sweet) ; 20 ; 20 ; 30 ; 10 ; 80 ; March ; Philippines
+20 ; 25 ; 25 ; 10 ; 80 ; May/June ; Mediterranean
+20 ; 30 ; 50/30 ; 10 ; 90 ; Oct/Dec ; Arid Climate
+30 ; 30 ; 30 ; 103 ; 110 ; April ; Idaho, USA
+20 ; 40 ; 70 ; 10 ; 140 ; Jan ; Calif. Desert, USA
+Millet ; 15 ; 25 ; 40 ; 25 ; 105 ; June ; Pakistan
+20 ; 30 ; 55 ; 35 ; 140 ; April ; Central USA
+Sorghum ; 20 ; 35 ; 40 ; 30 ; 130 ; May/June ; USA, Pakis., Med.
+20 ; 35 ; 45 ; 30 ; 140 ; Mar/April ; Arid Region
+Rice ; 30 ; 30 ; 60 ; 30 ; 150 ; Dec; May ; Tropics; Mediterranean
+30 ; 30. ; 80 ; 40 ; 180 ; May ; Tropics
+j. Forages
+Alfalfa, total season 4 ; 10 ; 30 ; var. ; var. ; var. ;  ; last -4°C in spring until first -4°C in fall
+Alfalfa 4 1 st cutting cycle ; 10 ; 20 ; 20 ; 10 ; 60 ; Jan Apr (last - 4°C) ; Calif., USA.
+10 ; 30 ; 25 ; 10 ; 75 ;  ; Idaho, USA.
+Alfalfa 4 , other cutting cycles ; 5 ; 10 ; 10 ; 5 ; 30 ; Mar ; Calif., USA.
+5 ; 20 ; 10 ; 10 ; 45 ; Jun ; Idaho, USA.
+Bermuda for seed ; 10 ; 25 ; 35 ; 35 ; 105 ; March ; Calif. Desert, USA
+Bermuda for hay (several cuttings) ; 10 ; 15 ; 75 ; 35 ; 135 ; --- ; Calif. Desert, USA
+Grass Pasture 4 ; 10 ; 20 ; -- ; -- ; -- ;  ; 7 days before last -4°C in spring until 7 days after first -4°C in fall
+Sudan, 1 st cutting cycle ; 25 ; 25 ; 15 ; 10 ; 75 ; Apr ; Calif. Desert, USA
+Sudan, other cutting cycles ; 3 ; 15 ; 12 ; 7 ; 37 ; June ; Calif. Desert, USA
+k. Sugar Cane
+Sugarcane, virgin ; 35 ; 60 ; 190 ; 120 ; 405 ;  ; Low Latitudes
+50 ; 70 ; 220 ; 140 ; 480 ;  ; Tropics
+75 ; 105 ; 330 ; 210 ; 720 ;  ; Hawaii, USA
+Sugarcane, ratoon ; 25 ; 70 ; 135 ; 50 ; 280 ;  ; Low Latitudes
+30 ; 50 ; 180 ; 60 ; 320 ;  ; Tropics
+35 ; 105 ; 210 ; 70 ; 420 ;  ; Hawaii, USA
+l. Tropical Fruits and Trees
+Banana, 1 st yr ; 120 ; 90 ; 120 ; 60 ; 390 ; Mar ; Mediterranean
+Banana, 2 nd yr ; 120 ; 60 ; 180 ; 5 ; 365 ; Feb ; Mediterranean
+Pineapple ; 60 ; 120 ; 600 ; 10 ; 790 ;  ; Hawaii, USA
+m. Grapes and Berries
+Grapes ; 20 ; 40 ; 120 ; 60 ; 240 ; April ; Low Latitudes
+20 ; 50 ; 75 ; 60 ; 205 ; Mar ; Calif., USA
+20 ; 50 ; 90 ; 20 ; 180 ; May ; High Latitudes
+30 ; 60 ; 40 ; 80 ; 210 ; April ; Mid Latitudes (wine)
+Hops ; 25 ; 40 ; 80 ; 10 ; 155 ; April ; Idaho, USA
+n. Fruit Trees
+Citrus ; 60 ; 90 ; 120 ; 95 ; 365 ; Jan ; Mediterranean
+Deciduous Orchard ; 20 ; 70 ; 90 ; 30 ; 210 ; March ; High Latitudes
+20 ; 70 ; 120 ; 60 ; 270 ; March ; Low Latitudes
+30 ; 50 ; 130 ; 30 ; 240 ; March ; Calif., USA
+Olives ; 30 ; 90 ; 60 ; 90 ; 2705 ; March ; Mediterranean
+Pistachios ; 20 ; 60 ; 30 ; 40 ; 150 ; Feb ; Mediterranean
+Walnuts ; 20 ; 10 ; 130 ; 30 ; 190 ; April ; Utah, USA
+o. Wetlands - Temperate Climate
+Wetlands (Cattails, Bulrush) ; 10 ; 30 ; 80 ; 20 ; 140 ; May ; Utah, USA; killing frost
+180 ; 60 ; 90 ; 35 ; 365 ; November ; Florida, USA
+Wetlands (short veg.) ; 180 ; 60 ; 90 ; 35 ; 365 ; November ; frost-free climate
+
+##### TABLE BLOCK 2 (preceded by: …and mean maximum plant heights for non stressed, well-managed crops in subhumid climates (RH min » 45%, u 2 » 2 m/s) for use with the FAO Penman-Monteith ET o .)
+Crop ;  ; K c mid ; K c end ; Maximum Crop Height (h) (m)
+a. Small Vegetables ; 0.7 ; 1.05 ; 0.95 ; 
+Broccoli ;  ; 1.05 ; 0.95 ; 0.3
+Brussel Sprouts ;  ; 1.05 ; 0.95 ; 0.4
+Cabbage ;  ; 1.05 ; 0.95 ; 0.4
+Carrots ;  ; 1.05 ; 0.95 ; 0.3
+Cauliflower ;  ; 1.05 ; 0.95 ; 0.4
+Celery ;  ; 1.05 ; 1.00 ; 0.6
+Garlic ;  ; 1.00 ; 0.70 ; 0.3
+Lettuce ;  ; 1.00 ; 0.95 ; 0.3
+Onions ;  ;  ;  ; 
+ ; - dry ;  ; 1.05 ; 0.75 ; 0.4
+ ; - green ;  ; 1.00 ; 1.00 ; 0.3
+ ; - seed ;  ; 1.05 ; 0.80 ; 0.5
+Spinach ;  ; 1.00 ; 0.95 ; 0.3
+Radish ;  ; 0.90 ; 0.85 ; 0.3
+b. Vegetables - Solanum Family (Solanaceae) ; 0.6 ; 1.15 ; 0.80 ; 
+Egg Plant ;  ; 1.05 ; 0.90 ; 0.8
+Sweet Peppers (bell) ;  ; 1.05 2 ; 0.90 ; 0.7
+Tomato ;  ; 1.15 2 ; 0.70-0.90 ; 0.6
+c. Vegetables - Cucumber Family (Cucurbitaceae) ; 0.5 ; 1.00 ; 0.80 ; 
+Cantaloupe ; 0.5 ; 0.85 ; 0.60 ; 0.3
+Cucumber ;  ;  ;  ; 
+ ; - Fresh Market ; 0.6 ; 1.00 2 ; 0.75 ; 0.3
+ ; - Machine harvest ; 0.5 ; 1.00 ; 0.90 ; 0.3
+Pumpkin, Winter Squash ;  ; 1.00 ; 0.80 ; 0.4
+Squash, Zucchini ;  ; 0.95 ; 0.75 ; 0.3
+Sweet Melons ;  ; 1.05 ; 0.75 ; 0.4
+Watermelon ; 0.4 ; 1.00 ; 0.75 ; 0.4
+d. Roots and Tubers ; 0.5 ; 1.10 ; 0.95 ; 
+Beets, table ;  ; 1.05 ; 0.95 ; 0.4
+Cassava ;  ;  ;  ; 
+ ; - year 1 ; 0.3 ; 0.80 3 ; 0.30 ; 1.0
+ ; - year 2 ; 0.3 ; 1.10 ; 0.50 ; 1.5
+Parsnip ; 0.5 ; 1.05 ; 0.95 ; 0.4
+Potato ;  ; 1.15 ; 0.75 4 ; 0.6
+Sweet Potato ;  ; 1.15 ; 0.65 ; 0.4
+Turnip (and Rutabaga) ;  ; 1.10 ; 0.95 ; 0.6
+Sugar Beet ; 0.35 ; 1.20 ; 0.70 5 ; 0.5
+e. Legumes (Leguminosae) ; 0.4 ; 1.15 ; 0.55 ; 
+Beans, green ; 0.5 ; 1.05 2 ; 0.90 ; 0.4
+Beans, dry and Pulses ; 0.4 ; 1.15 2 ; 0.35 ; 0.4
+Chick pea ;  ; 1.00 ; 0.35 ; 0.4
+Fababean (broad bean) ;  ;  ;  ; 
+ ; - Fresh ; 0.5 ; 1.15 2 ; 1.10 ; 0.8
+ ; - Dry/Seed ; 0.5 ; 1.15 2 ; 0.30 ; 0.8
+Grabanzo ; 0.4 ; 1.15 ; 0.35 ; 0.8
+Green Gram and Cowpeas ;  ; 1.05 ; 0.60-0.35 6 ; 0.4
+Groundnut (Peanut) ;  ; 1.15 ; 0.60 ; 0.4
+Lentil ;  ; 1.10 ; 0.30 ; 0.5
+Peas ;  ;  ;  ; 
+ ; - Fresh ; 0.5 ; 1.15 2 ; 1.10 ; 0.5
+ ; - Dry/Seed ;  ; 1.15 ; 0.30 ; 0.5
+Soybeans ;  ; 1.15 ; 0.50 ; 0.5-1.0
+f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil) ; 0.5 ; 1.00 ; 0.80 ; 
+Artichokes ; 0.5 ; 1.00 ; 0.95 ; 0.7
+Asparagus ; 0.5 ; 0.95 7 ; 0.30 ; 0.2-0.8
+Mint ; 0.60 ; 1.15 ; 1.10 ; 0.6-0.8
+Strawberries ; 0.40 ; 0.85 ; 0.75 ; 0.2
+g. Fibre Crops ; 0.35 ;  ;  ; 
+Cotton ;  ; 1.15-1.20 ; 0.70-0.50 ; 1.2-1.5
+Flax ;  ; 1.10 ; 0.25 ; 1.2
+Sisal 8 ;  ; 0.4-0.7 ; 0.4-0.7 ; 1.5
+h. Oil Crops ; 0.35 ; 1.15 ; 0.35 ; 
+Castorbean ( Ricinus ) ;  ; 1.15 ; 0.55 ; 0.3
+Rapeseed, Canola ;  ; 1.0-1.15 9 ; 0.35 ; 0.6
+Safflower ;  ; 1.0-1.15 9 ; 0.25 ; 0.8
+Sesame ;  ; 1.10 ; 0.25 ; 1.0
+Sunflower ;  ; 1.0-1.15 9 ; 0.35 ; 2.0
+i. Cereals ; 0.3 ; 1.15 ; 0.4 ; 
+Barley ;  ; 1.15 ; 0.25 ; 1
+Oats ;  ; 1.15 ; 0.25 ; 1
+Spring Wheat ;  ; 1.15 ; 0.25-0.4 10 ; 1
+Winter Wheat ;  ;  ;  ; 
+ ; - with frozen soils ; 0.4 ; 1.15 ; 0.25-0.4 10 ; 1
+ ; - with non-frozen soils ; 0.7 ; 1.15 ; 0.25-0.4 10 ; 
+Maize, Field (grain) (field corn) ;  ; 1.20 ; 0.60-0.35 11 ; 2
+Maize, Sweet (sweet corn) ;  ; 1.15 ; 1.05 12 ; 1.5
+Millet ;  ; 1.00 ; 0.30 ; 1.5
+Sorghum ;  ;  ;  ; 
+ ; - grain ;  ; 1.00-1.10 ; 0.55 ; 1-2
+ ; - sweet ;  ; 1.20 ; 1.05 ; 2-4
+Rice ; 1.05 ; 1.20 ; 0.90-0.60 ; 1
+j. Forages
+Alfalfa Hay ;  ;  ;  ; 
+ ; - averaged cutting effects ; 0.40 ; 0.95 13 ; 0.90 ; 0.7
+ ; - individual cutting periods ; 0.40 14 ; 1.20 14 ; 1.15 14 ; 0.7
+ ; - for seed ; 0.40 ; 0.50 ; 0.50 ; 0.7
+Bermuda hay ;  ;  ;  ; 
+ ; - averaged cutting effects ; 0.55 ; 1.00 13 ; 0.85 ; 0.35
+ ; - Spring crop for seed ; 0.35 ; 0.90 ; 0.65 ; 0.4
+Clover hay, Berseem ;  ;  ;  ; 
+ ; - averaged cutting effects ; 0.40 ; 0.90 13 ; 0.85 ; 0.6
+ ; - individual cutting periods ; 0.40 14 ; 1.15 14 ; 1.10 14 ; 0.6
+Rye Grass hay ;  ;  ;  ; 
+ ; - averaged cutting effects ; 0.95 ; 1.05 ; 1.00 ; 0.3
+Sudan Grass hay (annual) ;  ;  ;  ; 
+ ; - averaged cutting effects ; 0.50 ; 0.90 14 ; 0.85 ; 1.2
+ ; - individual cutting periods ; 0.50 14 ; 1.15 14 ; 1.10 14 ; 1.2
+Grazing Pasture ;  ;  ;  ; 
+ ; - Rotated Grazing ; 0.40 ; 0.85-1.05 ; 0.85 ; 0.15-0.30
+ ; - Extensive Grazing ; 0.30 ; 0.75 ; 0.75 ; 0.10
+Turf grass ;  ;  ;  ; 
+ ; - cool season 15 ; 0.90 ; 0.95 ; 0.95 ; 0.10
+ ; - warm season 15 ; 0.80 ; 0.85 ; 0.85 ; 0.10
+k. Sugar Cane ; 0.40 ; 1.25 ; 0.75 ; 3
+l. Tropical Fruits and Trees
+Banana ;  ;  ;  ; 
+ ; - 1 st year ; 0.50 ; 1.10 ; 1.00 ; 3
+ ; - 2 nd year ; 1.00 ; 1.20 ; 1.10 ; 4
+Cacao ; 1.00 ; 1.05 ; 1.05 ; 3
+Coffee ;  ;  ;  ; 
+ ; - bare ground cover ; 0.90 ; 0.95 ; 0.95 ; 2-3
+ ; - with weeds ; 1.05 ; 1.10 ; 1.10 ; 2-3
+Date Palms ; 0.90 ; 0.95 ; 0.95 ; 8
+Palm Trees ; 0.95 ; 1.00 ; 1.00 ; 8
+Pineapple 16 ;  ;  ;  ; 
+ ; - bare soil ; 0.50 ; 0.30 ; 0.30 ; 0.6-1.2
+ ; - with grass cover ; 0.50 ; 0.50 ; 0.50 ; 0.6-1.2
+Rubber Trees ; 0.95 ; 1.00 ; 1.00 ; 10
+Tea ;  ;  ;  ; 
+ ; - non-shaded ; 0.95 ; 1.00 ; 1.00 ; 1.5
+ ; - shaded 17 ; 1.10 ; 1.15 ; 1.15 ; 2
+m. Grapes and Berries
+Berries (bushes) ; 0.30 ; 1.05 ; 0.50 ; 1.5
+Grapes ;  ;  ;  ; 
+ ; - Table or Raisin ; 0.30 ; 0.85 ; 0.45 ; 2
+ ; - Wine ; 0.30 ; 0.70 ; 0.45 ; 1.5-2
+Hops ; 0.3 ; 1.05 ; 0.85 ; 5
+n. Fruit Trees
+Almonds, no ground cover ; 0.40 ; 0.90 ; 0.65 18 ; 5
+Apples, Cherries, Pears 19 ;  ;  ;  ; 
+ ; - no ground cover, killing frost ; 0.45 ; 0.95 ; 0.70 18 ; 4
+ ; - no ground cover, no frosts ; 0.60 ; 0.95 ; 0.75 18 ; 4
+ ; - active ground cover, killing frost ; 0.50 ; 1.20 ; 0.95 18 ; 4
+ ; - active ground cover, no frosts ; 0.80 ; 1.20 ; 0.85 18 ; 4
+Apricots, Peaches, Stone Fruit 19, 20 ;  ;  ;  ; 
+ ; - no ground cover, killing frost ; 0.45 ; 0.90 ; 0.65 18 ; 3
+ ; - no ground cover, no frosts ; 0.55 ; 0.90 ; 0.65 18 ; 3
+ ; - active ground cover, killing frost ; 0.50 ; 1.15 ; 0.90 18 ; 3
+ ; - active ground cover, no frosts ; 0.80 ; 1.15 ; 0.85 18 ; 3
+Avocado, no ground cover ; 0.60 ; 0.85 ; 0.75 ; 3
+Citrus, no ground cover 21 ;  ;  ;  ; 
+ ; - 70% canopy ; 0.70 ; 0.65 ; 0.70 ; 4
+ ; - 50% canopy ; 0.65 ; 0.60 ; 0.65 ; 3
+ ; - 20% canopy ; 0.50 ; 0.45 ; 0.55 ; 2
+Citrus, with active ground cover or weeds 22 ;  ;  ;  ; 
+ ; - 70% canopy ; 0.75 ; 0.70 ; 0.75 ; 4
+ ; - 50% canopy ; 0.80 ; 0.80 ; 0.80 ; 3
+ ; - 20% canopy ; 0.85 ; 0.85 ; 0.85 ; 2
+Conifer Trees 23 ; 1.00 ; 1.00 ; 1.00 ; 10
+Kiwi ; 0.40 ; 1.05 ; 1.05 ; 3
+Olives (40 to 60% ground coverage by canopy) 24 ; 0.65 ; 0.70 ; 0.70 ; 3-5
+Pistachios, no ground cover ; 0.40 ; 1.10 ; 0.45 ; 3-5
+Walnut Orchard 19 ; 0.50 ; 1.10 ; 0.6518 ; 4-5
+o. Wetlands - temperate climate
+Cattails, Bulrushes, killing frost ; 0.30 ; 1.20 ; 0.30 ; 2
+Cattails, Bulrushes, no frost ; 0.60 ; 1.20 ; 0.60 ; 2
+Short Veg., no frost ; 1.05 ; 1.10 ; 1.10 ; 0.3
+Reed Swamp, standing water ; 1.00 ; 1.20 ; 1.00 ; 1-3
+Reed Swamp, moist soil ; 0.90 ; 1.20 ; 0.70 ; 1-3
+p. Special
+Open Water, < 2 m depth or in subhumid climates or tropics ;  ; 1.05 ; 1.05 ; 
+Open Water, > 5 m depth, clear of turbidity, temperate climate ;  ; 0.6525 ; 1.2525 ; 
+
+##### TABLE BLOCK 3 (preceded by: …ypical for the region and time of the year, the number of rainy days and the mean wetting interval can be estimated. TABLE 13. Classification of rainfall depths)
+rain event ; depth
+Very light (drizzle) ; £ 3 mm
+Light (light showers) ; 5 mm
+Medium (showers) ; ³ 10 mm
+Heavy (rainstorms) ; ³ 40 mm
+
+##### TABLE BLOCK 4 (preceded by: …ere no estimate of the interval can be made, the user may refer to the values for K c ini of Table 12. EXAMPLE 23. Estimation of interval between wetting events)
+Estimate, from mean monthly rainfall data, the interval between rains during the rainy season for a station in a temperate climate (Paris, France: 50 mm/month), dry climate (Gafsa, Tunisia: 20 mm/month) and tropical climate (Calcutta, India: 300 mm/month).
+Station ; monthly rain (mm/month) ; typical rainfall (mm) ; number of rainy days ; interval between rains
+Paris ; 50 ; 3 ; 17 ; ~ 2 days
+Gafsa ; 20 ; 5 ; 4 ; weekly
+Calcutta ; 300 ; 20 ; 15 ; ~ 2 days
+
+##### TABLE BLOCK 5 (preceded by: … as microirrigation and centre pivot and light applications of about 10 mm or less per wetting event are applied. EXAMPLE 24. Graphical determination of K c ini)
+A silt loam soil receives irrigation every two days during the initial growth stage via a centre pivot irrigation system. The average depth applied by the centre pivot system is about 12 mm per event and the average ET o during the initial stage is 4 mm/day. Estimate the crop evapotranspiration during that stage.
+From Fig. 29 using the 2-day interval curve: ; K c ini = ; 0.85 ; -
+ ; ET c = K c ET o = 0.85 (4.0) = ; 3.4 ; mm/day
+The average crop evapotranspiration during the initial growth stage is 3.4 mm/day
+
+##### TABLE BLOCK 6 (preceded by: … or equal to 40 mm per wetting event, during the initial growth stage for coarse textured soils EXAMPLE 25. Interpolation between light and heavy wetting events)
+Small vegetables cultivated in a dry area on a coarse textured soil receive 20 mm of water twice a week by means of a sprinkler irrigation system. The average ET o during the initial stage is 5 mm/day. Estimate the crop evapotranspiration during that stage.
+For: ; 7/2= ; 3.5 ; day interval
+ET o = and a coarse textured soil ; 5 ; mm/day
+From Fig. 29: ; K c ini (Fig. 29) » ; 0.55 ; -
+From Fig. 30. a: ; K c ini (Fig. 30a) » ; 0.7 ; -
+For: ; I = ; 20 ; mm
+From Eq. 59: ; K c ini = 0.55 + [(20 - 10)/(40 - 10)] (0.7 - 0.55) = 0.55 + 0.33(0.15) = ; 0.60 ; 
+From Eq. 58: ; ET c = 0.60 (5) = ; 3.0 ; mm/day
+The average crop evapotranspiration during the initial growth stage for the small vegetables is 3.0 mm/day.
+
+##### TABLE BLOCK 7 (preceded by: … infiltration depth received by each type. FIGURE 31. Partial wetting by irrigation EXAMPLE 26. Determination of K c ini for partial wetting of the soil surface)
+Determine the evapotranspiration of the crop in Example 24 if it had been irrigated using a trickle system every two days (with 12 mm each application expressed as an equivalent depth over the field area), and where the average fraction of surface wet was 0.4, and where little or no precipitation occurred during the initial period.
+The average depth of infiltration per event in the wetted fraction of the surface:
+From Eq. 61; ; lw = I/f w = 12 mm/0.4 = ; 30 ; mm
+Therefore, one can interpolate between Fig. 29 representing light wetting events (~10 mm per event) and Fig. 30.b representing medium textured soil and large wetting events (~40 mm per event).
+For: ; ET o = 4 mm/day ; 4 ; mm/day
+and: ; a 2 day wetting interval: ; - ; -
+Fig. 29 produces: ; K c ini = 0.85 ; 0.85 ; -
+Fig. 30.b produces ; K c ini = 1.15 ; 1.15 ; -
+From Eq. 59: ; K c ini = 0.85 + [(30-10)/(40-10)] (1.15 - 0.85) = ; 1.05 ; -
+Because the fraction of soil surface wetted by the trickle system is 0.4, the actual K c ini for the trickle irrigation is calculated as:
+From Eq. 60: ; K c ini = f w K c ini Fig = 0.4 (1.05) = ; 0.42 ; -
+This value (0.42) represents the K c ini as applied over the entire field area. ;  ; 
+- ; ET c =K c ini ET o = 0.42(4) = ; 1.7 ; mm/day
+The average crop evapotranspiration during the initial growth stage for this trickle irrigated crop is 1.7 mm/day.
+
+##### TABLE BLOCK 8 (preceded by: … moderate wind speeds. The K c ini should be adjusted for the local climate as indicated in Table 14. TABLE 14. K c ini for rice for various climatic conditions)
+Humidity ; Wind speed
+ ; light ; moderate ; strong
+arid - semi-arid ; 1.10 ; 1.15 ; 1.20
+sub-humid - humid ; 1.05 ; 1.10 ; 1.15
+very humid ; 1.00 ; 1.05 ; 1.10
+
+##### TABLE BLOCK 9 (preceded by: …min should be accordingly taken as averages for these periods (see example, Annex 8). The limits expressed for parameters u 2 , RH min and h should be observed.)
+BOX 14. Demonstration of effect of climate on K c mid for wheat crop grown under field conditions
+From Table 12 for wheat: K c mid = 1.15 and h = 1.0 m
+For semi-arid to arid conditions
+- for strong wind (4 m/s) ; K c mid = 1.15 + 0.10 = 1.25
+- for moderate wind (2 m/s) ; K c mid = 1.15 + 0.05 = 1.20
+- for calm wind (1 m/s) ; K c mid = 1.15 + 0.00 = 1.17
+For sub-humid conditions
+- for strong wind (4 m/s) ; K c mid = 1.15 + 0.05 = 1.20
+- for moderate wind (2 m/s) ; K c mid = 1.15 + 0.00 = 1.15
+- for calm wind (1 m/s) ; K c mid = 1.15 - 0.05 = 1.12
+For humid and very humid conditions
+- for strong wind (4 m/s) ; K c mid = 1.15 - 0.05 = 1.10
+- for moderate wind (2 m/s) ; K c mid = 1.15 - 0.10 = 1.05
+- for calm wind (1 m/s) ; K c mid = 1.15 - 0.15 = 1.02
+Depending on the aridity of the climate and the wind conditions, the crop coefficient for wheat during the mid-season stage ranges from 1.02 (humid and calm wind) to 1.25 (arid and strong wind).
+
+##### TABLE BLOCK 10 (preceded by: …ble, the general classification for wind speed and humidity data given in Tables 15 and 16 can be used. TABLE 15. Empirical estimates of monthly wind speed data)
+description ; mean monthly wind speed at 2 m
+light wind ; ... £ 1.0 m/s
+light to moderate wind ; 2.0 m/s
+moderate to strong wind ; 4.0 m/s
+strong wind ; ... ³ 5.0 m/s
+general global conditions ; 2 m/s
+
+##### TABLE BLOCK 11 (preceded by: …N=CENTER>... ³ 5.0 m/s general global conditions 2 m/s TABLE 16. Typical values for RH min compared with RH mean for general climatic classifications)
+Climatic classification ; RH min (%) ; RH mean (%)
+Arid ; 20 ; 45
+Semi-arid ; 30 ; 55
+Sub-humid ; 45 ; 70
+Humid ; 70 ; 85
+Very humid ; 80 ; 90
+
+##### TABLE BLOCK 12 (preceded by: …s of the vegetation, especially where the irrigation system moistens an important fraction of the soil surface (f w > 0.3). EXAMPLE 27. Determination of K c mid)
+Calculate K c mid for maize crops near Taipei, Taiwan and near Mocha, Yemen. The average mean daily wind speed (u 2 ) during the mid-season stage at Taipei is about 1.3 m/s and the minimum relative humidity (RH min ) during this stage averages 75%. The average u 2 during the mid-season near Mocha is 4.6 m/s and the RH min during this stage averages 44%.
+From Table 12, the value for K c mid is 1.20 for maize. The value for h from Table 12 is 2 m. Using Eq. 62 For Taipei (humid climate): For Mocha (arid climate):
+The average crop coefficient predicted during the mid-season stage is 1.07 for Taipei and 1.30 for Mocha.
+
+##### TABLE BLOCK 13 (preceded by: …cade is considered to be the average K c of that 10 day period. Only the second decade of June, where the K c value changes abruptly, requires some calculation.)
+BOX 15. Case study of a dry bean crop at Kimberly, Idaho, the United States (single crop coefficient) An example application for using the K c procedure under average soil wetness conditions is presented for a dry bean crop planted on 23 May 1974 at Kimberly, Idaho, the United States (latitude = 42.4°N). The initial, development, mid-season and late season stage lengths are taken from Table 11 for a continental climate as 20, 30, 40 and 20 days (the stage lengths listed for southern Idaho were not used in this example in order to demonstrate the only approximate accuracy of values provided in Table 11 when values for the specific location are not available). Initial values for K c ini , K c mid and K c end are selected from Table 12 as 0.4, 1.15, and 0.35. The mean RH min and u 2 during both the mid-season and late season growth stages were 30% and 2.2 m/s. The maximum height suggested in Table 12 for dry beans is 0.4 m. Therefore, K c mid is adjusted using Eq. 62 as: As K c end = 0.35 is less than 0.45, no adjustment is made to K c end . The value for K c mid is not significantly different from that in Table 12 as u 2 » 2 m/s, RH min is just 15% lower than the 45% represented in Table 12, and the height of the beans is relatively short. The initial K c curve for dry beans in Idaho can be drawn, for initial, planning purposes, as shown in the graph (dotted line), where K c ini , K c mid and K c end are 0.4, 1.19 and 0.35 and the four lengths of growth stages are 20, 30, 40 and 20 days. Note that the K c ini = 0.4 taken from Table 12 serves only as an initial, approximate estimate for K c ini . Constructed K c curves using values from Tables 11 and 12 directly (dotted line) and modified using K c ini from Fig. 29 and L ini = 25, L dev = 25, L mid = 30, and L late = 20 days (heavy line) for dry beans at Kimberly, Idaho. Also shown are daily measured K c (lysimeter data from Wright, 1990). K c ini can be more accurately estimated using the approach described in this chapter. ET o during the initial period at Kimberly (late May - early June, 1974) averaged 5.3 mm/day, and the wetting interval during this period was approximately 14 days (2 rainfall events occurred averaging 5 mm per event). Therefore, as the wetting events were light (< 10 mm each), Fig. 29 is used. The soil texture at Kimberly, Idaho is silt loam. From Fig. 29, K c ini for the 14 day wetting interval and ET o = 5.3 mm/day is about 0.15. This value is substantially less than the general 0.4 value suggested by Table 12, and emphasizes the need to utilize local, actual precipitation and irrigation data when determining K c ini . Comparison of constructed curves with measurements Because the ET c data for the dry bean crop at Kimberly, Idaho were measured using a precision lysimeter system during 1974 by Wright (1990), the actual K c measurements can be compared with the constructed K c curves, where actual K c was calculated by dividing lysimeter measurements of ET c by daily ET o estimated using the FAO Penman-Monteith equation. As illustrated in the graph, the mid-season length as taken from Table 11 for the general, continental climate overestimated the true mid-season length for dry beans in southern Idaho, which averaged only about 30 days rather than 40 days as suggested by Table 11. This illustrates the importance of using the local observation of 30 days for mid-season period length rather than the general value from Table 11. The final, best estimate for the K c curve for the dry bean crop in southern Idaho is plotted (lower curve in graph) using K c values of 0.15, 1.19, and 0.35 and the actual observed lengths of growth stages equal to 25, 25, 30 and 20 days. Note the impact that the error in estimating mid-season length has on the area under the K c curve. This supports the need to obtain local observations of growth stage dates and lengths. The value calculated for K c mid (1.19) appears to have underestimated the measured value for K c during portions of the mid-season period at Kimberly. Some of this effect was due to effects of increased soil water evaporation following four irrigations during the 1974 mid-season which increased the effective K c . This is illustrated in Box 16, where the basal K cb + K e approach is introduced and demonstrated for this same example. The 0.15 value calculated for K c ini using Fig. 29 agrees closely with measured K c during the initial period. Measured K c during the development period exceeded the final K c curve during days on or following wetting events. The day to day variation in the lysimeter measured K c is normal and is caused by day to day variations in weather, in wind direction, by errors in prediction of R n and ET o , and by some random errors in the lysimeter measurements and weather measurements.
+
+##### TABLE BLOCK 14 (preceded by: …eration [days], S (L prev ) sum of the lengths of all previous stages [days]. Equation 66 applies to all four stages. EXAMPLE 28. Numerical determination of K c)
+Determine K c at day 20, 40, 70 and 95 for the dry bean crop (Figure 36).
+Crop growth stage ; Length (days) ; K c
+initial ; 25 ; K c ini = 0.15
+crop development ; 25 ; 0.15... 1.19
+mid-season ; 30 ; K c mid = 1.19
+late season ; 20 ; 1.19 .. K c end = 0.35
+
+##### TABLE BLOCK 15 (preceded by: …-season 30 K c mid = 1.19 late season 20 1.19 .. K c end = 0.35)
+At i = 20: ; initial stage, K c = K c ini = ; 0.15 ; -
+At i = 40 ; Crop development stage, ;  ; 
+For: ; S (L prev ) = L ini = ; 25 ; days
+and: ; L stage = L dev = ; 25 ; days
+From Eq. 66: ; K c = 0.15 + [(40 - 25)/25](1.19 - 0.15) = ; 0.77 ; -
+At i = 70: ; mid-season stage, K c = K c mid = ; 1.19 ; -
+At i = 95 ; late season stage, ;  ; 
+For: ; S (L prev ) = L ini + L dev + L mid = (25 + 25 + 30) = ; 80 ; days
+and: ; L stage = L late = ; 20 ; days
+From Eq. 66: ; K c = 1.19 + [(95-80)/20](0.35-1.19) = ; 0.56 ; -
+The crop coefficients at day 20, 40, 70 and 95 for the dry bean crop are 0.15, 0.77, 1.19 and 0.56 respectively.

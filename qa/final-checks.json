@@ -1,0 +1,17 @@
+[
+  {
+    "code": 0,
+    "stdout": "\n> field-shift@0.1.0 test:local\n> node --test tests/*.test.mjs\n\n✔ all English messages have Arabic equivalents (1.5975ms)\n✔ terrain accepts real sea-level pixels but refuses voids and impossible heights (0.3222ms)\n✔ data client refuses HTTP errors and malformed JSON and respects abort (20.3059ms)\n✔ plan roundtrip validates user inputs and refuses malformed plans (0.783ms)\n✔ polygon limits reject global extents, collinear and nonnumeric points (0.3477ms)\n✔ unexpected weather units and climate sentinels are unavailable (0.3252ms)\n✔ coordinates validate bounds and order (1.261ms)\n✔ spherical polygon area and winding (0.2481ms)\n✔ reject crossing and duplicate polygons (0.9822ms)\n✔ rotation comparison counts family changes and legumes (0.2387ms)\n✔ weather null remains unavailable, zero remains zero (0.1916ms)\n✔ climate missing values never become zero (0.153ms)\n✔ climate selectors alter real queries (0.2334ms)\n✔ local runtime serves app but never workspace research or git files (36.8973ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 174.4926\n",
+    "stderr": ""
+  },
+  {
+    "code": 0,
+    "stdout": "\n> field-shift@0.1.0 build:local\n> node scripts/build-local.mjs\n\nStatic local build: dist/ (68566 bytes before remote MapLibre assets).\n",
+    "stderr": ""
+  },
+  {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]
