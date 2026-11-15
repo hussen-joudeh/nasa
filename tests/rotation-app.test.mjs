@@ -6,7 +6,7 @@ import * as domain from '../src/domain.mjs';
 import * as view from '../src/rotation-view.mjs';
 import {runPreflight} from '../src/preflight.mjs';
 import * as biofirewall from '../src/biofirewall.mjs';
-import {renderPreflightPanel as renderPreflightPanelHtml} from '../src/preflight-view.mjs';
+import {renderPreflightPanel as renderPreflightPanelHtml,renderBudgetConfirmation,renderSeasonWaterReason,renderSeasonWaterChart} from '../src/preflight-view.mjs';
 import {messages} from '../src/i18n.mjs';
 import * as explorer from '../src/map-explorer.mjs';
 import * as farmerInputs from '../src/farmer-inputs.mjs';
@@ -20,7 +20,7 @@ const source=(await readFile(new URL('../src/app.mjs',import.meta.url),'utf8')).
 function harness(){
  const elements=new Map();
  const document={getElementById(id){if(!elements.has(id))elements.set(id,{innerHTML:'',value:'',classList:{toggle(){}},textContent:''});return elements.get(id);},querySelectorAll(){return [];}};
- const context=vm.createContext({DEMO_FIELD_ID,...explorer,...domain,...view,...biofirewall,...farmerInputs,...farmerInputView,...decisionTrace,...decisionSnapshot,...decisionSnapshotValidity,...decisionTraceView,runPreflight,renderPreflightPanelHtml,messages,document,Intl,URL,console});
+ const context=vm.createContext({DEMO_FIELD_ID,...explorer,...domain,...view,...biofirewall,...farmerInputs,...farmerInputView,...decisionTrace,...decisionSnapshot,...decisionSnapshotValidity,...decisionTraceView,runPreflight,renderPreflightPanelHtml,renderBudgetConfirmation,renderSeasonWaterReason,renderSeasonWaterChart,messages,document,Intl,URL,console});
  vm.runInContext(source,context);return {context,elements,run:code=>vm.runInContext(code,context)};
 }
 test('app renders decisions and comparison, persists history and clears climate evidence',()=>{

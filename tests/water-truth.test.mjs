@@ -74,6 +74,12 @@ test('a confirmed budget deficit is reported instead of hidden by the estimate',
 });
 
 test('missing water budget or climate observations produces UNKNOWN, never PASS',()=>{
+  const blankBudget=estimateWaterTruth(['maize','maize','maize'],context({waterBudget:{amount:'',unit:'mm',period:'perSeason'}}),power());
+  const balance=blankBudget.checks.find(check=>check.ruleId==='water.balance'&&check.season===1);
+  assert.equal(balance.status,'UNKNOWN');
+  assert.ok(balance.missingInformation.includes('availableIrrigationBudget'));
+  assert.ok(!balance.missingInformation.includes('planLevelBudget'));
+  assert.match(balance.explanation,/missing/i);
   const noBudget=estimateWaterTruth(['maize','maize','maize'],context({waterBudget:null}),power());
   assert.equal(noBudget.status,'UNKNOWN');
   const missingDay=estimateWaterTruth(['maize','maize','maize'],context(),power({missing:['20250201']}));

@@ -5,7 +5,7 @@ import {parseCoordinates,areaHa,validatePolygon,centerOf,crops,defaultRotations,
 import {compareRotations} from './domain.mjs';
 import {renderPlanLane,renderFamilyLegend,renderDecisionComparison,planChange} from './rotation-view.mjs';
 import {fetchPowerClimate} from './nasa-power.mjs';
-import {renderPreflightPanel as renderPreflightPanelHtml,renderStalePreflightResults,renderPreflightResultsSection} from './preflight-view.mjs';
+import {renderPreflightPanel as renderPreflightPanelHtml,renderStalePreflightResults,renderPreflightResultsSection,renderBudgetConfirmation,renderSeasonWaterReason,renderSeasonWaterChart} from './preflight-view.mjs';
 import {analyzeDecisionSensitivity} from './decision-breakpoint.mjs';
 import {emptyBioFirewall,normalizeBioFirewall} from './biofirewall.mjs';
 import {emptyFarmerInputs,normalizeFarmerInputs,migrateLegacyPreviousCrop,enginePreviousCrop,fieldScopeKey,validateWaterBudgetDraft,summarizeFarmerImpact} from './farmer-inputs.mjs';
@@ -24,7 +24,9 @@ let farmerInputImpact=null;
 let decisionTraces=null;
 let decisionSnapshot=null,historicalSnapshot=null,snapshotValidity=null;
 let demoSelection=null,demoSupplement=null,demoRequest=0;
-let mobileView='explore', cinematicOpen=true, inspectorOpen=true,preflightRotationFocus=0;
+let cinematicOpen=true, inspectorOpen=true,preflightRotationFocus=0;
+let workspaceScreen='field',fieldLoading=false;
+let dashboardTab='overview';
 let biofirewallMemory=emptyBioFirewall();
 let preflightInputs={waterBudget:{amount:'',unit:'m3',period:'perSeason'},plantingDates:['','',''],illustrativeCropSettings:false,effectiveRainfallSlopeConfirmed:false};
 let preflightEvaluations=null,preflightBreakpoints=null,preflightLastSnapshot=null;
@@ -75,57 +77,152 @@ function setInspector(open){
  const label=inspectorLabel(open?'collapse':'open');$('inspector-toggle')?.setAttribute('aria-label',label);$('inspector-toggle')?.setAttribute('title',label);
  const relayout=()=>map?.resize();if(typeof requestAnimationFrame==='function')requestAnimationFrame(relayout);else relayout();
 }
-function setMobileView(view){
- mobileView=view;document.documentElement.dataset.mobileView=view;
- document.querySelectorAll('[data-view]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.view===view)));
- requestAnimationFrame(()=>map?.resize());
-}
+function setMobileView(view){showScreen({explore:'field',plan:'setup',decision:'results'}[view]??'field');}
+
 function cinematicHtml(){
  const ar=lang==='ar';
  return `<section class="cinematic" aria-labelledby="cinematic-title"><img class="cinematic-art" src="/src/assets/cinematic-farmland.webp" alt="" fetchpriority="high"><div class="cinematic-shade"></div><div class="cinematic-copy"><p class="eyebrow">${ar?'من بيانات الأرض إلى قرارات أفضل':'EARTH INTELLIGENCE. HUMAN POSSIBILITY.'}</p><h1 id="cinematic-title">${brandWordmark()}</h1><h2>${ar?'أرض تعرفها. غد تصنعه.':'Know your land.<br>Grow a better tomorrow.'}</h2><p>${ar?'استكشف أرضك، وافهم المناخ، واختبر خطتك قبل أن تزرع.':'Explore your land. Understand its climate.<br>Test what comes next, before you plant.'}</p><button class="primary cinematic-enter" type="button">${ar?'افتح مستكشف الحقول الحقيقي':'Explore your real field'} ${icon('arrow')}</button><span class="cinematic-private">${ar?'بيانات مفتوحة · لا حاجة لحساب':'Open data · No account needed'}</span></div><aside class="cinematic-note"><span class="eyebrow">${ar?'الصورة توضيحية':'AN ILLUSTRATED POSSIBILITY'}</span><p>${ar?'كل حقل يبدأ بسؤال.':'Every field starts<br>with a question.'}</p><small>${ar?'منظر فني مولّد، وليس صور أقمار صناعية أو قياسات ناسا.':'Original AI-generated artwork.<br>Not satellite imagery or NASA measurements.'}</small></aside><div class="cinematic-path"><div><b>01</b><span>${ar?'استكشف':'Explore'}<small>${ar?'خرائط وتضاريس حقيقية':'Real maps & terrain'}</small></span></div><div><b>02</b><span>${ar?'افهم':'Understand'}<small>${ar?'مناخ تاريخي موثق':'Sourced historical climate'}</small></span></div><div><b>03</b><span>${ar?'تحقق':'Verify'}<small>${ar?'اختبر خطتك قبل الزراعة':'Stress-test your plan'}</small></span></div><button class="cinematic-enter" type="button">${ar?'ابدأ بأرضك':'Start with your land'} ↗</button></div></section>`;
 }
 function setCinematic(open){
  cinematicOpen=open;document.documentElement.dataset.cinematic=String(open);
- if(!open){setMobileView('explore');requestAnimationFrame(()=>{map?.resize();$('search-input')?.focus({preventScroll:true});});}
+ if(!open){showScreen(workspaceScreen,{focus:false});requestAnimationFrame(()=>map?.resize());}
  window.scrollTo({top:0,behavior:'instant'});
 }
 async function selectDemoField(){
+ if(fieldLoading)return;
  const ticket=++demoRequest;invalidateDecisionArtifacts({preserveHistorical:true,reason:'demo_select'});
+ setFieldProgress(guidedText('Loading the Scottsbluff–Gering boundary and evidence from MongoDB…','جار تحميل حدود سكوتسبلوف–غيرينغ وأدلته من MongoDB…'),true);
  $('demo-select').disabled=true;$('demo-status').textContent=lang==='ar'?'جار تحميل دليل MongoDB…':'Loading MongoDB evidence…';
- try{const selected=await fetchDemoEvidence();if(ticket!==demoRequest)return;const supplement=await fetchDemoSupplement();if(ticket!==demoRequest)return;if(mapReady){selectionRequest++;map.setTerrain(null);terrain=false;prefer2d=true;$('terrain').setAttribute('aria-pressed','false');$('terrain-status').textContent='';map.jumpTo({center:selected.field.centroid.coordinates,zoom:13,pitch:0});}setPolygon(selected.polygon);demoSelection=selected;demoSupplement=supplement;center=[...selected.field.centroid.coordinates];preflightInputs.waterBudget.amount='';syncFarmerScope();renderField();renderPreflightPanel();}
+ try{const selected=await fetchDemoEvidence();if(ticket!==demoRequest)return;const supplement=await fetchDemoSupplement();if(ticket!==demoRequest)return;prefer2d=true;if(mapReady){selectionRequest++;map.setTerrain(null);terrain=false;prefer2d=true;$('terrain').setAttribute('aria-pressed','false');$('terrain-status').textContent='';map.jumpTo({center:selected.field.centroid.coordinates,zoom:13,pitch:0});}setPolygon(selected.polygon);demoSelection=selected;demoSupplement=supplement;center=[...selected.field.centroid.coordinates];preflightInputs.waterBudget.amount='';syncFarmerScope();renderField();renderPreflightPanel();}
  catch{if(ticket===demoRequest)$('demo-status').textContent=lang==='ar'?'تعذر تحميل MongoDB. أعد المحاولة.':'MongoDB unavailable or invalid evidence. Select again to retry.';}
- finally{$('demo-select').disabled=false;}
+ finally{setFieldProgress(demoSelection?guidedText('Boundary loaded. Analyze & continue to load the historical climate.','تم تحميل الحدود. حلّل وتابع لتحميل المناخ التاريخي.'):$('demo-status').textContent,false);$('demo-select').disabled=false;}
+}
+const guidedText=(en,ar)=>lang==='ar'?ar:en;
+function setFieldProgress(message,busy){
+ fieldLoading=busy;const progress=$('field-progress');if(progress)progress.textContent=message;
+ for(const id of ['demo-select','choose-own-field','language','apply','clear'])if($(id))$(id).disabled=busy;
+ if($('draw'))$('draw').disabled=busy||!mapReady;
+ if($('analyze'))$('analyze').disabled=busy||polygon.length<3;
+}
+function mountGuidedScreens(){
+ const main=document.querySelector('main'),field=$('workspace'),planning=$('planning');
+ const environment=document.querySelector('.environment'),climatePanel=document.querySelector('.climate'),save=document.querySelector('.save-panel');
+ main.insertAdjacentHTML('afterbegin',`<nav id="guided-navigation" class="guided-navigation" aria-label="${guidedText('Planning stages','مراحل التخطيط')}">${['field','setup','results'].map((screen,i)=>`<button type="button" data-screen-link="${screen}"><b>${i+1}</b><span>${[guidedText('Choose your field','اختر حقلك'),guidedText('Set up your comparison','أعدّ المقارنة'),guidedText('Results dashboard','لوحة النتائج')][i]}</span></button>`).join('')}</nav>
+ <section id="field-screen" class="guided-screen" aria-labelledby="field-screen-title"><header class="guided-heading"><p class="eyebrow">01 / FieldShift</p><h1 id="field-screen-title" tabindex="-1">${guidedText('Choose your field','اختر حقلك')}</h1><p class="muted">${guidedText('Start with Scottsbluff–Gering, Nebraska, or outline your own field.','ابدأ بحقل سكوتسبلوف–غيرينغ في نبراسكا، أو ارسم حدود حقلك.')}</p><div id="field-entry" class="field-entry"></div><p id="field-progress" role="status" aria-live="polite"></p></header><div id="field-map-slot"></div></section>
+ <section id="setup-screen" class="guided-screen" aria-labelledby="setup-screen-title" hidden><header class="guided-heading"><button id="back-to-field" type="button">${guidedText('← Change field','تغيير الحقل ←')}</button><p class="eyebrow">02 / FieldShift</p><h1 id="setup-screen-title" tabindex="-1">${guidedText('Set up your comparison','أعدّ المقارنة')}</h1><p id="comparison-field-summary" class="compact-field"></p></header></section>
+ <section id="results-screen" class="guided-screen" aria-labelledby="results-screen-title" hidden><header class="guided-heading"><p class="eyebrow">03 / FieldShift</p><h1 id="results-screen-title" tabindex="-1">${guidedText('Results dashboard','لوحة النتائج')}</h1><div id="dashboard-context" class="dashboard-context"></div></header>
+ <div class="dashboard-tabs" role="tablist" aria-label="${guidedText('Results views','عروض النتائج')}">${[['overview','Overview','نظرة عامة'],['compare','Compare plans','مقارنة الخطط'],['field-data','Field data','بيانات الحقل'],['checks','Checks & methods','الفحوص والمنهجية']].map(([id,en,ar])=>`<button type="button" role="tab" id="dashboard-tab-${id}" data-dashboard-tab="${id}" aria-controls="dashboard-panel-${id}" aria-selected="${dashboardTab===id}" tabindex="${dashboardTab===id?0:-1}">${guidedText(en,ar)}</button>`).join('')}</div>
+ <section id="dashboard-panel-overview" role="tabpanel" aria-labelledby="dashboard-tab-overview" tabindex="0"><div id="dashboard-overview"></div></section>
+ <section id="dashboard-panel-compare" role="tabpanel" aria-labelledby="dashboard-tab-compare" tabindex="0" hidden><div id="dashboard-comparison"></div></section>
+ <section id="dashboard-panel-field-data" role="tabpanel" aria-labelledby="dashboard-tab-field-data" tabindex="0" hidden>
+ <details id="dashboard-map" class="dashboard-evidence"><summary>${guidedText('Field map and boundary','خريطة الحقل وحدوده')}</summary><div id="dashboard-map-slot"></div></details>
+ <details id="dashboard-climate" class="dashboard-evidence"><summary>${guidedText('Historical climate','المناخ التاريخي')}</summary></details>
+ <details id="dashboard-history" class="dashboard-evidence"><summary>${guidedText('Crop history','سجل المحاصيل')}</summary><div id="dashboard-history-output"></div></details>
+ <details id="dashboard-soil" class="dashboard-evidence"><summary>${guidedText('Soil','التربة')}</summary><div id="dashboard-soil-output"></div></details>
+ <details id="dashboard-field-evidence" class="dashboard-evidence"><summary>${guidedText('Data sources and crop profiles','مصادر البيانات وملفات المحاصيل')}</summary><div id="dashboard-field-evidence-output"></div></details></section>
+ <section id="dashboard-panel-checks" role="tabpanel" aria-labelledby="dashboard-tab-checks" tabindex="0" hidden><div id="dashboard-calculations"><div id="dashboard-calculation-output"></div></div><details id="dashboard-tools" class="dashboard-evidence"><summary>${guidedText('Climate scenarios and saved plans','سيناريوهات المناخ والخطط المحفوظة')}</summary></details></section></section>`);
+ $('field-map-slot').append(field);$('setup-screen').append(planning);
+ const history=document.createElement('details');history.className='setup-field-history';history.innerHTML=`<summary>${guidedText('Previous crop (optional)','المحصول السابق (اختياري)')}</summary>`;history.append($('farmer-previous-crop-root'));planning.querySelector('.planner-head').append(history);
+ $('dashboard-climate').append(environment);$('dashboard-tools').append(climatePanel,save);
+ const sources=planning.querySelector('.rotation > details');if(sources)$('dashboard-calculations').append(sources);
+ $('dashboard-map').addEventListener('toggle',()=>{if($('dashboard-map').open)requestAnimationFrame(()=>{map?.resize();reframe();});});
+ document.querySelectorAll('[data-dashboard-tab]').forEach(button=>{
+  button.onclick=()=>selectDashboardTab(button.dataset.dashboardTab);
+  button.onkeydown=event=>{
+   const tabs=[...document.querySelectorAll('[data-dashboard-tab]')],index=tabs.indexOf(button),forward=lang==='ar'?'ArrowLeft':'ArrowRight';
+   let next;
+   if(event.key===forward)next=(index+1)%tabs.length;
+   else if(event.key===(lang==='ar'?'ArrowRight':'ArrowLeft'))next=(index+tabs.length-1)%tabs.length;
+   else if(event.key==='Home')next=0;
+   else if(event.key==='End')next=tabs.length-1;
+   if(next!==undefined){event.preventDefault();selectDashboardTab(tabs[next].dataset.dashboardTab);tabs[next].focus();}
+  };
+ });
+ $('back-to-field').onclick=()=>showScreen('field');
+ document.querySelectorAll('[data-screen-link]').forEach(button=>button.onclick=()=>showScreen(button.dataset.screenLink));
+ document.querySelectorAll('.header nav a').forEach(link=>{if(link.hash==='#workspace'||link.hash==='#planning')link.onclick=event=>{event.preventDefault();setCinematic(false);showScreen(link.hash==='#workspace'?'field':'setup');};});
+}
+function selectDashboardTab(id){
+ dashboardTab=id;
+ document.querySelectorAll('[data-dashboard-tab]').forEach(button=>{const active=button.dataset.dashboardTab===id;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;$(button.getAttribute('aria-controls')).hidden=!active;});
+ if(id==='field-data'&&$('dashboard-map').open)requestAnimationFrame(()=>{map?.resize();reframe();});
+}
+function showScreen(screen,{focus=true}={}){
+ if(screen==='setup'&&!nasaClimate)screen='field';
+ if(screen==='results'&&!preflightEvaluations)screen=nasaClimate?'setup':'field';
+ workspaceScreen=screen;
+ updateWorkflow();
+ if(!$('field-screen')?.dataset)return;
+ for(const name of ['field','setup','results'])$(name+'-screen').hidden=name!==screen;
+ const skip=document.querySelector?.('.skip');if(skip){skip.href='#'+screen+'-screen-title';skip.textContent=screen==='results'?guidedText('Skip to results','انتقل إلى النتائج'):screen==='setup'?guidedText('Skip to comparison setup','انتقل إلى إعداد المقارنة'):guidedText('Skip to field','انتقل إلى الحقل');}
+ const slot=$(screen==='results'?'dashboard-map-slot':'field-map-slot');slot.append($('workspace'));
+ if(screen==='results')renderGuidedDashboard();
+ requestAnimationFrame(()=>{map?.resize();if(focus){$(screen+'-screen-title')?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}});
+}
+function renderGuidedDashboard(){
+ const root=$('dashboard-overview');if(!root)return;
+ if(!preflightEvaluations){root.innerHTML='';return;}
+ const waterBudget=preflightEvaluations[0].water.waterBudget;
+ const perSeason=waterBudget?.period==='perSeason';
+ const budget=perSeason?waterBudget.mm:null,hasSeasonalBudget=Number.isFinite(budget);
+ const rows=preflightEvaluations.map((evaluation,index)=>({evaluation,index,season:evaluation.water.seasons.find(s=>s.season===2),check:evaluation.checks.find(c=>c.ruleId==='water.balance'&&c.season===2)}));
+ const labels=rows=>new Intl.ListFormat(lang,{type:'conjunction'}).format(rows.map(row=>String.fromCharCode(65+row.index)));
+ const passing=rows.filter(row=>row.check?.status==='PASS'),warnings=rows.filter(row=>row.check?.status==='WARNING'),failed=rows.filter(row=>row.check?.status==='FAIL'),unknown=rows.filter(row=>!row.check||row.check.status==='UNKNOWN');
+ const measured=value=>Number.isFinite(value)?`<bdi dir="ltr">${num(value,2)} mm</bdi>`:esc(t('decision').UNKNOWN);
+ const badge=status=>`<span class="preflight-status" data-status="${esc(status)}">${esc(t('decision')[status])}</span>`;
+ const allUnknown=unknown.length===rows.length;
+ const missing=[...new Set(rows.flatMap(row=>row.check?.missingInformation??row.season?.missingInformation??[]))];
+ const missingBudget=preflightEvaluations.some(e=>e.checks.some(c=>c.ruleId==='water.budget'&&c.missingInformation?.includes('availableIrrigationBudget')));
+ const reviewSeasons=missing.some(key=>['seasonPlantingDate','cropCoefficientsAndCalendar','cropCoefficients','cropGrowthStageCalendar','fieldSlopeApplicability','completeCropSeasonWithinNASAObservedPeriod'].includes(key));
+ const action=missingBudget?'budget':reviewSeasons?'seasons':allUnknown?'checks':'compare';
+ const actionLabel=action==='budget'?guidedText('Enter irrigation budget','أدخل ميزانية الري'):action==='seasons'?guidedText('Review season inputs','راجع مدخلات الموسم'):action==='checks'?guidedText('Review missing inputs','راجع المدخلات الناقصة'):guidedText('Compare plans','قارن الخطط');
+ const headline=allUnknown?guidedText('The Season 2 comparison cannot be completed yet.','لا يمكن إكمال مقارنة الموسم الثاني بعد.'):passing.length?guidedText(`${labels(passing)} ${passing.length===1?'passes':'pass'} the season-2 water check at ${num(budget,2)} mm.`,`${passing.length===1?'الخطة':'الخطط'} ${labels(passing)} تجتاز فحص مياه الموسم الثاني بميزانية ${num(budget,2)} مم.`):guidedText(`No plans pass the season-2 water check at ${num(budget,2)} mm yet.`,`لم تجتز أي خطة فحص مياه الموسم الثاني بميزانية ${num(budget,2)} مم حتى الآن.`);
+ const summary=hasSeasonalBudget?[
+  warnings.length?guidedText(`${labels(warnings)} ${warnings.length===1?'has a warning':'have warnings'}.`,`خطط لديها تحذيرات: ${labels(warnings)}.`):guidedText('No plans have warnings for this water check.','لا توجد خطط لديها تحذيرات في فحص المياه هذا.'),
+  failed.length?guidedText(`Failing plans: ${labels(failed)}.`,`خطط لم تجتز الفحص: ${labels(failed)}.`):'',
+  unknown.length?guidedText(`${labels(unknown)} ${unknown.length===1?'needs':'need'} more information.`,`خطط تحتاج إلى معلومات إضافية: ${labels(unknown)}.`):''
+ ].filter(Boolean).join(' '):waterBudget?guidedText('The entered irrigation budget covers the whole plan; a budget for each crop season is needed for this check.','ميزانية الري المدخلة تغطي الخطة كاملة؛ يحتاج هذا الفحص إلى ميزانية لكل موسم محصول.'):guidedText('Missing input: available field-applied irrigation budget for each crop season.','المدخل الناقص: ميزانية مياه الري المتاحة عند الحقل لكل موسم محصول.');
+ const nextStep=action==='budget'?guidedText('Enter the available irrigation amount, unit and seasonal period.','أدخل كمية مياه الري المتاحة ووحدتها وفترتها الموسمية.'):action==='seasons'?guidedText('Review the reference dates, crop settings and slope assumption listed as missing.','راجع التواريخ المرجعية وإعدادات المحاصيل وافتراض الانحدار المدرجة ضمن المدخلات الناقصة.'):action==='checks'?guidedText('Review the missing evidence before interpreting the water check.','راجع الأدلة الناقصة قبل تفسير فحص المياه.'):guidedText('Compare the estimates and warnings, then confirm water delivery and assumptions locally.','قارن التقديرات والتحذيرات، ثم تأكد محلياً من المياه المتاحة والافتراضات.');
+ const context=$('dashboard-context');
+ if(context)context.innerHTML=`<p class="compact-field">${$('comparison-field-summary')?.innerHTML??''}</p><div id="dashboard-budget-confirmation" class="budget-confirmation" data-unit="${esc(waterBudget?.unit??preflightInputs.waterBudget.unit)}">${renderBudgetConfirmation({lang,budget:waterBudget??preflightInputs.waterBudget,areaHa:preflightEvaluations[0].water.areaHa})}</div><button type="button" id="edit-comparison">${guidedText('Edit comparison','تعديل المقارنة')}</button>`;
+ const actionButton=`<button type="button" data-result-action="${action}" id="${action==='budget'?'enter-irrigation-budget':'result-next-action'}" class="primary">${actionLabel}</button>`;
+ root.innerHTML=`<section class="decision-first panel"><p class="eyebrow">${guidedText('SEASON 2 / WATER CHECK','الموسم الثاني / فحص المياه')}</p><h2>${esc(headline)}</h2><p>${esc(allUnknown?(hasSeasonalBudget?guidedText('Your irrigation budget is recorded. Missing model inputs prevent a Season 2 water comparison.','تم تسجيل ميزانية الري. تمنع مدخلات النموذج الناقصة مقارنة مياه الموسم الثاني.'):summary):summary)}</p><p>${esc(nextStep)}</p>${actionButton}<p class="small muted">${guidedText('Season 2 water only. Overall plan assessments include all seasons and other checks.','فحص مياه الموسم الثاني فقط. تشمل التقييمات العامة جميع المواسم والفحوص الأخرى.')}</p></section>
+ ${rows.some(row=>Number.isFinite(row.season?.needMm?.max))?renderSeasonWaterChart({rows,budget,lang}):`<section class="requirements-unavailable"><h3>${guidedText('Irrigation requirements unavailable','احتياجات الري غير متوفرة')}</h3><p>${guidedText('No plan has a calculated Season 2 requirement yet.','لم يُحسب احتياج الموسم الثاني لأي خطة بعد.')}</p>${missing.length?`<p>${[...new Set(missing.map(key=>t('preflight').missingLabels[key]??t('preflight').missing))].map(esc).join(' · ')}</p>`:''}<button type="button" data-result-action="${reviewSeasons?'seasons':action}">${reviewSeasons?guidedText('Review season inputs','راجع مدخلات الموسم'):actionLabel}</button></section>`}`;
+ $('dashboard-comparison').innerHTML=`
+ <section class="season-comparison" aria-labelledby="season-comparison-title"><h2 id="season-comparison-title">${guidedText('Compare season-2 water needs','قارن الاحتياجات المائية للموسم الثاني')}</h2><p class="muted">${guidedText('Upper modeled requirement and balance, in mm of field-applied irrigation.','الحد الأعلى للاحتياج المحسوب والرصيد، بالملليمتر من مياه الري المطبقة على الحقل.')}</p><table class="guided-comparison"><thead><tr>${[guidedText('Plan / crop','الخطة / المحصول'),guidedText('Upper requirement','الاحتياج الأعلى'),guidedText('Applied budget','الميزانية المطبقة'),guidedText('Margin / shortfall','الفائض / العجز'),guidedText('Season-2 water check','فحص مياه الموسم الثاني')].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${rows.map(({evaluation,index,season,check})=>{const margin=season?.remainingMm?.min;return `<tr data-water-plan="${String.fromCharCode(65+index)}"><th scope="row"><strong>${String.fromCharCode(65+index)}</strong> ${esc(crops[season?.crop]?.[lang]??t('unavailable'))}<small><bdi>${esc(season?.plantingDate??'—')} → ${esc(season?.harvestDate??'—')}</bdi></small></th><td data-label="${guidedText('Upper requirement','الاحتياج الأعلى')}">${measured(season?.needMm?.max)}</td><td data-label="${guidedText('Applied budget','الميزانية المطبقة')}">${measured(perSeason?evaluation.water.waterBudget?.mm:null)}</td><td data-label="${guidedText('Margin / shortfall','الفائض / العجز')}">${Number.isFinite(margin)?`<div class="water-balance" data-direction="${margin<0?'shortfall':'margin'}"><strong><bdi dir="ltr">${margin<0?'−':'+'}${num(margin<0?season.deficitMm.max:margin,2)} mm</bdi></strong><span>${margin<0?guidedText('Shortfall vs upper estimate','عجز مقابل التقدير الأعلى'):guidedText('Margin vs upper estimate','فائض مقابل التقدير الأعلى')}</span></div>`:hasSeasonalBudget?guidedText('Not calculated — see row explanation','لم يُحسب — راجع تفسير الصف'):guidedText('Unknown — enter a seasonal budget','غير معروف — أدخل ميزانية للموسم')}</td><td data-label="${guidedText('Water check','فحص المياه')}"><div class="water-status-reason">${badge(check?.status??'UNKNOWN')}${renderSeasonWaterReason({evaluation,lang})}</div></td></tr>`;}).join('')}</tbody></table><p class="small muted">${guidedText('A warning can reflect method uncertainty or a partial rainfall period. Review the calculation details before acting. Whole-plan budgets cannot be applied separately to this season.','قد يعكس التحذير عدم يقين في الطريقة أو فترة أمطار غير مكتملة. راجع تفاصيل الحساب قبل اتخاذ القرار. لا يمكن تطبيق ميزانية الخطة كاملة على موسم منفرد.')}</p></section>
+ <section class="overall-assessments"><h2>${guidedText('Overall plan assessments','التقييمات العامة للخطط')}</h2><div>${preflightEvaluations.map((evaluation,index)=>`<p><strong>${String.fromCharCode(65+index)}</strong> ${badge(evaluation.status)}</p>`).join('')}</div><p class="muted">${guidedText('All seasons, rotation checks and missing evidence are included here, separately from the season-2 water rule.','يشمل التقييم جميع المواسم وفحوص الدورة والأدلة الناقصة، بشكل منفصل عن قاعدة مياه الموسم الثاني.')}</p></section>`;
+ $('edit-comparison').onclick=()=>showScreen('setup');
+ document.querySelectorAll('[data-result-action]').forEach(button=>button.onclick=()=>{
+  const target=button.dataset.resultAction;
+  if(target==='compare'||target==='checks'){selectDashboardTab(target);$('dashboard-tab-'+target).focus();return;}
+  showScreen('setup',{focus:false});
+  requestAnimationFrame(()=>{
+   if(target==='seasons')document.querySelector('.setup-assumptions').open=true;
+   const key=missing.includes('seasonPlantingDate')||missing.includes('completeCropSeasonWithinNASAObservedPeriod')?'planting-date-2':missing.some(key=>['cropCoefficientsAndCalendar','cropCoefficients','cropGrowthStageCalendar'].includes(key))?'illustrative-crop-settings':'effective-rainfall-slope-confirmed';
+   const input=$(target==='budget'?'water-budget-amount':key);input.focus();input.scrollIntoView({block:'center',behavior:'instant'});
+  });
+ });
+ document.querySelectorAll('.season-water-reason').forEach(details=>details.addEventListener('toggle',()=>{if(details.open)document.querySelectorAll('.season-water-reason').forEach(other=>{if(other!==details)other.open=false;});}));
+ selectDashboardTab(dashboardTab);
 }
 function setupExperience(){
- const demo=document.createElement('div');demo.className='demo-picker';demo.innerHTML='<button type="button" id="demo-select">'+(lang==='ar'?'اختر حقل MongoDB التجريبي':'Select MongoDB demo field')+'</button><p id="demo-status" role="status">'+(demoSelection?demoFieldStatusText():(lang==='ar'?'سكوتسبلوف–غيرينغ، نبراسكا · حدود مقترحة':'Scottsbluff–Gering, Nebraska · Proposed boundary'))+'</p>';
- $('demo-slot').append(demo);$('demo-select').onclick=selectDemoField;
-
+ mountGuidedScreens();
+ const demo=document.createElement('div');demo.className='demo-picker';
+ demo.innerHTML='<div class="field-choice-actions"><button type="button" id="demo-select" class="primary">'+guidedText('Try the demo field','جرّب الحقل التجريبي')+'</button><button type="button" id="choose-own-field">'+guidedText('Choose your own field','اختر حقلك الخاص')+'</button></div><p id="demo-status" class="muted" role="status">'+demoStatusMessage()+'</p>';
+ $('field-entry').append(demo);$('demo-select').onclick=selectDemoField;
+ demo.querySelector('.field-choice-actions').append($('analyze'));
+ $('choose-own-field').onclick=()=>{setInspector(true);document.querySelector('.coordinate-editor').open=true;$('coordinates').focus();$('coordinates').scrollIntoView({block:'center'});};
  document.documentElement.dataset.cinematic=String(cinematicOpen);
- document.querySelectorAll('.cinematic-enter').forEach(el=>el.onclick=()=>setCinematic(false));
+ document.querySelectorAll('.cinematic-enter').forEach(el=>el.onclick=()=>{setCinematic(false);showScreen('field');});
  document.querySelectorAll('.brand').forEach(el=>el.onclick=e=>{e.preventDefault();setCinematic(true);});
-
- const ar=lang==='ar';
- let tabs=document.getElementById('mobile-views');
- if(!tabs){tabs=document.createElement('nav');tabs.className='mobile-views';tabs.id='mobile-views';(document.body??document.querySelector('main'))?.append(tabs);}
- tabs.setAttribute('aria-label',ar?'تنقل المهام':'Task navigation');
- tabs.innerHTML=['explore','plan','decision'].map((view,i)=>'<button type="button" data-view="'+view+'">'+(ar?['استكشف الحقل','خطط الدورات','الفحص والقرار']:['Explore field','Plan rotations','Preflight & decision'])[i]+'</button>').join('');
- tabs.querySelectorAll('button').forEach(el=>el.onclick=()=>{setMobileView(el.dataset.view);window.scrollTo(0,0);});
- document.documentElement.dataset.mobileView=mobileView;
- tabs.querySelectorAll('button').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.view===mobileView)));
-
- // Stage rail: Explore → Analyze → Compare → Preflight. Navigation only; stage state comes from updateWorkflow().
- const rail=document.createElement('nav');rail.className='stage-rail';rail.setAttribute('aria-label',ar?'مراحل التخطيط':'Planning stages');
- const labels=ar?['استكشف','حلّل','قارن','الفحص المسبق']:['Explore','Analyze','Compare','Preflight'];
- rail.innerHTML=labels.map((label,i)=>'<button type="button" data-workflow="'+i+'"><b aria-hidden="true">'+(i+1)+'</b><span>'+label+'</span><span class="sr-only" data-stage-state></span></button>').join('<i class="stage-link" aria-hidden="true"></i>');
- $('console-rail').append(rail);
- const reveal=target=>target?.scrollIntoView?.({behavior:'smooth',block:'start'});
- rail.querySelectorAll('button').forEach((button,i)=>button.onclick=()=>{if(i===0){setMobileView('explore');reveal($('workspace'));$('search-input').focus({preventScroll:true});}if(i===1){setMobileView('explore');reveal(document.querySelector('.environment'));}if(i===2){setMobileView('plan');reveal($('planning'));}if(i===3){setMobileView('decision');reveal($('preflight-root'));}});
- const cta=document.createElement('a');cta.className='primary nav-cta';cta.href='#workspace';cta.onclick=e=>{e.preventDefault();setCinematic(false);};cta.textContent=ar?'ابدأ الاستكشاف ↗':'Start exploring ↗';document.querySelector('.header-end').prepend(cta);
+ const cta=document.createElement('a');cta.className='primary nav-cta';cta.href='#workspace';cta.onclick=e=>{e.preventDefault();setCinematic(false);showScreen('field');};cta.textContent=guidedText('Start exploring ↗','ابدأ الاستكشاف ↗');document.querySelector('.header-end').prepend(cta);
+ showScreen(workspaceScreen,{focus:false});
 }
 function updateWorkflow(){
- const step=preflightEvaluations?3:nasaClimate?2:polygon.length>=3?1:0;const ar=lang==='ar';
- document.querySelectorAll('[data-workflow]').forEach((el,i)=>{el.setAttribute('aria-current',i===step?'step':'false');el.dataset.complete=String(i<step);const note=el.querySelector('[data-stage-state]');if(note)note.textContent=' — '+(i<step?(ar?'مكتملة':'done'):i===step?(ar?'المرحلة الحالية':'current stage'):(ar?'لاحقة':'upcoming'));});
+ document.querySelectorAll('[data-screen-link]').forEach(el=>{const screen=el.dataset.screenLink;el.setAttribute('aria-current',screen===workspaceScreen?'step':'false');el.disabled=screen==='setup'?!nasaClimate:screen==='results'?!preflightEvaluations:false;});
+ const summary=$('comparison-field-summary');if(summary)summary.innerHTML=esc(demoSelection?guidedText('Scottsbluff–Gering, Nebraska','سكوتسبلوف–غيرينغ، نبراسكا'):guidedText('Your selected field','الحقل المحدد'))+' · '+(polygon.length>=3?'<bdi dir="ltr">'+num(areaHa(polygon),2)+'</bdi> '+esc(t('hectares')):'')+(nasaClimate?' · <bdi dir="ltr">'+esc(nasaClimate.period.startIso)+' — '+esc(nasaClimate.period.endIso)+'</bdi>':'');
 }
+
 function bind(){
  $('inspector-toggle').onclick=()=>setInspector(!inspectorOpen);$('inspector-open').onclick=()=>setInspector(true);
  $('language').onclick=()=>{capturePreflightInputs();lang=lang==='en'?'ar':'en';render();};
@@ -136,7 +233,7 @@ function bind(){
  $('undo').onclick=()=>{draft.pop();updateDraw();};
  $('clear').onclick=()=>{demoSelection=null;demoSupplement=null;demoRequest++;invalidateDecisionArtifacts({preserveHistorical:false});resetFarmerInputsForField();polygon=[];draft=[];drawing=false;weather=null;nasaClimate=null;weatherRequest++;renderField();renderWeather();renderNasaClimate();updateDraw();};
  $('apply').onclick=()=>{try{setPolygon(validatePolygon($('coordinates').value.trim().split(/\n/).filter(x=>x.trim()).map(parseCoordinates)));}catch{status('boundaryError',true);}};
- $('analyze').onclick=analyze;
+ $('analyze').onclick=()=>nasaClimate?showScreen('setup'):analyze();
  for(const l of ['satellite','relief'])$(l).onclick=()=>switchLayer(l);
  $('zoom-in').onclick=()=>{userControl();map?.zoomIn({duration:0});};$('zoom-out').onclick=()=>{userControl();map?.zoomOut({duration:0});};$('north').onclick=()=>map?.easeTo({bearing:0,duration:cameraState().reducedMotion?0:500});$('orbit-left').onclick=()=>orbit(-1);$('orbit-right').onclick=()=>orbit(1);$('next-step').onclick=()=>{if($('next-step').dataset.step==='analyze')analyze();else {setMobileView('decision');$('preflight-root')?.scrollIntoView({behavior:cameraState().reducedMotion?'auto':'smooth',block:'start'});}};$('fit').onclick=fit;$('reset-view').onclick=resetView;$('view-field').onclick=()=>{setMobileView('explore');$('workspace').scrollIntoView({behavior:cameraState().reducedMotion?'auto':'smooth',block:'start'});fit();};$('terrain').onclick=toggleTerrain;
  for(const id of ['country','scenario','period'])$(id).onchange=()=>{country=$('country').value;scenario=$('scenario').value;period=$('period').value;climate=null;climateRequest++;$('run-climate').disabled=false;renderClimate();};
@@ -152,7 +249,7 @@ function normalizePreflightInputs(value){const input=value&&typeof value==='obje
 function resolveDemoFieldId(){const id=demoSelection?.field?._id??null;return id===DEMO_FIELD_ID?id:null;}
 function currentFieldScope(){return fieldScopeKey({demoFieldId:resolveDemoFieldId(),polygon:polygon.length>=3?polygon:null});}
 function liveSnapshotContext(){return {fieldScope:currentFieldScope(),demoFieldId:resolveDemoFieldId(),materialFingerprint:materialEvaluationFingerprint({rotations,preflightInputs,farmerInputs,fieldScope:currentFieldScope(),demoFieldId:resolveDemoFieldId(),areaHa:polygon.length>=3?areaHa(polygon):null}),climateDigest:climateEvidenceDigest(nasaClimate),hasCurrentEvaluation:Array.isArray(preflightEvaluations)&&preflightEvaluations.length>0,hasClimateForReproduction:!!nasaClimate};}
-function invalidateDecisionArtifacts({preserveHistorical=true,reason='input_change'}={}){if(preserveHistorical&&decisionSnapshot){historicalSnapshot=markSnapshotArchived(decisionSnapshot,reason);snapshotValidity={state:SNAPSHOT_VALIDITY.STALE,reasons:[reason]};}else if(!preserveHistorical){historicalSnapshot=null;snapshotValidity=null;}decisionSnapshot=null;decisionTraces=null;preflightEvaluations=null;preflightBreakpoints=null;preflightLastSnapshot=null;}
+function invalidateDecisionArtifacts({preserveHistorical=true,reason='input_change'}={}){if(preserveHistorical&&decisionSnapshot){historicalSnapshot=markSnapshotArchived(decisionSnapshot,reason);snapshotValidity={state:SNAPSHOT_VALIDITY.STALE,reasons:[reason]};}else if(!preserveHistorical){historicalSnapshot=null;snapshotValidity=null;}decisionSnapshot=null;decisionTraces=null;preflightEvaluations=null;preflightBreakpoints=null;preflightLastSnapshot=null;if(workspaceScreen==='results')showScreen(nasaClimate?'setup':'field',{focus:false});}
 function resetFarmerInputsForField(){invalidateDecisionArtifacts({preserveHistorical:true,reason:'field_scope'});farmerInputs=normalizeFarmerInputs(null,currentFieldScope());farmerInputImpact=null;}
 function syncFarmerScope(){farmerInputs=normalizeFarmerInputs(farmerInputs,currentFieldScope());}
 function updateFarmerImpact(){
@@ -173,7 +270,7 @@ function demoStatusMessage(){const base=demoSelection?demoFieldStatusText():(lan
 function syncConsoleStatus(){if(drawing)return;if(polygon.length<3){status('statusIdle');return;}status(nasaClimate?'climateReady':'boundaryReady');}
 function fieldAreaHtml(has){if(!has)return '';const calc=areaHa(polygon),stored=demoSelection?.field?.area_ha;let html='<div class="area-number">'+num(calc,2)+' <small>'+t('hectares')+'</small></div><p class="muted area-calc-label">'+t('areaCalculatedFromBoundary')+'</p>';if(Number.isFinite(stored))html+='<p class="area-stored" dir="ltr"><span class="muted">'+t('areaStoredRecord')+' ('+t('areaStoredMethod')+'):</span> <strong>'+num(stored,6)+'</strong> '+t('hectares')+'</p>';html+='<p class="area-meta"><span>'+num(calc*2.47105381,2)+' '+t('acres')+'</span><span class="coordinates" dir="ltr">'+(demoSelection?.field.centroid.coordinates??centerOf(polygon)).slice().reverse().map(x=>x.toFixed(5)).join(', ')+'</span></p><details class="area-more"><summary>'+(lang==='ar'?'طريقة حساب المساحة':'How this area is calculated')+'</summary>'+(Number.isFinite(stored)?'<p class="muted small area-reconcile">'+t('areaReconciliationNote')+'</p>':'')+'<p class="muted small">'+t('areaWaterTruthUses')+'</p></details>';return html;}
 function renderMapOverlay(){updateWorkflow();const el=$('map-overlay');if(!el)return;const has=polygon.length>=3;const shell=$('map-shell');if(shell?.dataset){shell.dataset.field=has?'1':'0';shell.dataset.mode=terrain?'3d':'2d';}const dock=$('inspector');if(dock?.dataset)dock.dataset.field=has?'1':'0';renderNextStep();el.innerHTML=overlayHtml({labels:{...t('explorer'),hectares:t('hectares'),unavailable:t('unavailable')},num,polygon,areaHa:has?areaHa(polygon):null,center:has?centerOf(polygon):null,nasaClimate,evaluations:preflightEvaluations,terrain});}
-function renderField(){if($('demo-status'))$('demo-status').textContent=demoStatusMessage();syncConsoleStatus();renderMapOverlay();const has=polygon.length>=3;const analyzeEl=$('analyze');if(analyzeEl){analyzeEl.innerHTML=(has&&nasaClimate?t('analyzeAgain'):t('analyze'))+icon('arrow');} $('view-field').disabled=!has;$('fit').disabled=!has||!mapReady;$('analyze').disabled=!has;$('field-title').textContent=has?t('area'):t('none');$('field-desc').textContent=has?num(polygon.length,0)+' '+t('vertices'):t('noneHelp');$('field-area').innerHTML=fieldAreaHtml(has);$('coordinates').value=polygon.map(([lon,lat])=>lat.toFixed(6)+', '+lon.toFixed(6)).join('\n');}
+function renderField(){if($('demo-status'))$('demo-status').textContent=demoStatusMessage();syncConsoleStatus();renderMapOverlay();const has=polygon.length>=3;const analyzeEl=$('analyze');if(analyzeEl){analyzeEl.innerHTML=(has&&nasaClimate?t('analyzeAgain'):t('analyze'))+icon('arrow');} $('view-field').disabled=!has;$('fit').disabled=!has||!mapReady;$('analyze').disabled=!has;$('analyze').hidden=!has;$('field-title').textContent=has?t('area'):t('none');$('field-desc').textContent=has?num(polygon.length,0)+' '+t('vertices'):t('noneHelp');$('field-area').innerHTML=fieldAreaHtml(has);$('coordinates').value=polygon.map(([lon,lat])=>lat.toFixed(6)+', '+lon.toFixed(6)).join('\n');}
 // Re-renders the planner from the real engine output. Open evidence stays open and the edited plan states which counts moved.
 function renderRotations(){syncFarmerScope();const confirmedPrevious=enginePreviousCrop(farmerInputs); const comparison=compareRotations(rotations,{previousCrop:confirmedPrevious},nasaClimate);
  const opened=new Set([...document.querySelectorAll('#planning details[data-k]')].filter(el=>el.open).map(el=>el.dataset.k));
@@ -216,16 +313,17 @@ function runCurrentPreflight(){
  snapshotValidity={state:SNAPSHOT_VALIDITY.CURRENT,reasons:[]};
  historicalSnapshot=null;
  renderRotations();
+ dashboardTab='overview';showScreen('results');
 }
-function loadDecisionBreakpointDemo(){
+function loadDecisionBreakpointDemo(evaluate=true){
  const period=nasaClimate?.period,start=period?.startIso,end=period?.endIso;
  if(polygon.length<3||!start){const message=$('breakpoint-demo-status');if(message)message.textContent=t('preflight').breakpoint.demoUnavailable;return;}
  const spring=['2025-04-20','2025-05-01','2025-05-15'];
  const clamp=(iso)=>{if(!iso)return '';if(iso<start)return start;if(end&&iso>end)return end;return iso;};
- preflightInputs={waterBudget:{amount:'',unit:'m3',period:'perSeason'},plantingDates:spring.map(clamp),illustrativeCropSettings:true,effectiveRainfallSlopeConfirmed:true};
+ preflightInputs={waterBudget:evaluate?{amount:'',unit:'m3',period:'perSeason'}:{...preflightInputs.waterBudget},plantingDates:spring.map(clamp),illustrativeCropSettings:true,effectiveRainfallSlopeConfirmed:true};
  preflightEvaluations=null;preflightBreakpoints=null;preflightLastSnapshot=null;
  const message=$('breakpoint-demo-status');if(message)message.textContent=t('preflight').illustrativePlantingNote;
- runCurrentPreflight();
+ if(evaluate)runCurrentPreflight();else{invalidateDecisionArtifacts({preserveHistorical:true,reason:'illustrative_inputs'});renderPreflightPanel();}
 }
 function loadBioFirewallDemo(){
  biofirewallMemory=normalizeBioFirewall({fieldId:'Field-B',reportedHazard:{fieldId:'Field-A',hazardId:'clubroot',hazardName:'',evidenceStatus:'confirmed',recordedDate:'2025-04-01',notes:'Illustrative demo only — not a real outbreak record.'},equipmentMovements:[{id:'illustrative-move-1',equipmentId:'shared-tractor-1',fromFieldId:'Field-A',toFieldId:'Field-B',sourceUseConfirmed:true,movedAt:'2025-04-02',cleaningStatus:'not-recorded',cleaningDate:'',notes:'Illustrative demo only — not a real outbreak record.'}]});
@@ -235,17 +333,32 @@ function loadBioFirewallDemo(){
 function renderPreflightPanel(){
  renderMapOverlay();
  const root=$('preflight-root');if(!root)return;
- root.innerHTML=renderPreflightPanelHtml({lang,inputs:preflightInputs,areaHa:polygon.length>=3?areaHa(polygon):null,period:nasaClimate?.period??null,evaluations:preflightEvaluations,breakpoint:preflightBreakpoints,biofirewall:biofirewallMemory,decisionTraces,snapshotValidity,selectedRotation:preflightRotationFocus});
+ root.innerHTML=renderPreflightPanelHtml({lang,inputs:preflightInputs,areaHa:polygon.length>=3?areaHa(polygon):null,period:nasaClimate?.period??null,evaluations:preflightEvaluations,breakpoint:preflightBreakpoints,biofirewall:biofirewallMemory,decisionTraces,snapshotValidity,selectedRotation:preflightRotationFocus,dashboard:true});
+ const calculations=$('dashboard-calculation-output');
+ if(calculations?.replaceChildren)calculations.replaceChildren(root.querySelector('#preflight-results'),root.querySelector('#biofirewall-results'));
  bindPreflightResults();
+ const scenarioButton=$('illustrative-scenario');if(scenarioButton)scenarioButton.onclick=()=>loadDecisionBreakpointDemo(false);
+ const demoBudget=$('demo-budget');if(demoBudget)demoBudget.onclick=()=>{
+  const prior=preflightLastSnapshot;preflightInputs.waterBudget={amount:'600',unit:'mm',period:'perSeason'};
+  invalidateDecisionArtifacts({preserveHistorical:true,reason:'preflight_inputs'});preflightLastSnapshot=prior;renderPreflightPanel();
+ };
  const demo=$('decision-breakpoint-demo');if(demo)demo.onclick=loadDecisionBreakpointDemo;
  const bioDemo=$('bio-demo');if(bioDemo)bioDemo.onclick=loadBioFirewallDemo;
  const form=$('preflight-form');if(!form)return;
- const changed=()=>{preflightInputs=collectPreflightInputs();biofirewallMemory=collectBioFirewallInputs();const budgetCheck=validateWaterBudgetDraft(preflightInputs.waterBudget);const err=$('water-budget-error');if(err){if(!budgetCheck.valid&&budgetCheck.empty===false){err.textContent=t('farmer').budgetInvalid;err.hidden=false;}else{err.hidden=true;err.textContent='';}}invalidateDecisionArtifacts({preserveHistorical:true,reason:'preflight_inputs'});updateFarmerImpact();const impact=$('farmer-input-impact');if(impact)impact.innerHTML=renderFarmerInputImpact({lang,impact:farmerInputImpact});const output=$('preflight-results');if(output){output.innerHTML=renderStalePreflightResults(lang);bindPreflightResults();}const bioOutput=$('biofirewall-results');if(bioOutput)bioOutput.innerHTML='<h4 id="biofirewall-results-title">'+esc(t('preflight').biofirewall.ruleTitle)+'</h4><p>'+esc(t('preflight').biofirewall.runFindings)+'</p>';};
+ const changed=()=>{
+  const prior=preflightLastSnapshot;
+  preflightInputs=collectPreflightInputs();biofirewallMemory=collectBioFirewallInputs();const budgetCheck=validateWaterBudgetDraft(preflightInputs.waterBudget);const err=$('water-budget-error');if(err){if(!budgetCheck.valid&&budgetCheck.empty===false){err.textContent=t('farmer').budgetInvalid;err.hidden=false;}else{err.hidden=true;err.textContent='';}}
+  invalidateDecisionArtifacts({preserveHistorical:true,reason:'preflight_inputs'});
+  preflightLastSnapshot=prior;renderMapOverlay();
+  const confirmation=$('water-budget-confirmation');if(confirmation)confirmation.innerHTML=renderBudgetConfirmation({lang,budget:preflightInputs.waterBudget,areaHa:polygon.length>=3?areaHa(polygon):null});
+  updateFarmerImpact();const impact=$('farmer-input-impact');if(impact)impact.innerHTML=renderFarmerInputImpact({lang,impact:farmerInputImpact});const output=$('preflight-results');if(output){output.innerHTML=renderStalePreflightResults(lang);bindPreflightResults();}const bioOutput=$('biofirewall-results');if(bioOutput)bioOutput.innerHTML='<h4 id="biofirewall-results-title">'+esc(t('preflight').biofirewall.ruleTitle)+'</h4><p>'+esc(t('preflight').biofirewall.runFindings)+'</p>';
+ };
  for(const id of ['water-budget-amount','water-budget-unit','water-budget-period','planting-date-1','planting-date-2','planting-date-3','illustrative-crop-settings','effective-rainfall-slope-confirmed','bio-field-id','bio-hazard-field-id','bio-hazard-id','bio-hazard-name','bio-hazard-status','bio-recorded-date','bio-equipment-id','bio-from-field-id','bio-to-field-id','bio-source-use','bio-moved-at','bio-cleaning-status','bio-cleaning-date','bio-notes']){const element=$(id);if(element){element.oninput=changed;element.onchange=changed;}}
  form.onsubmit=event=>{event.preventDefault();preflightInputs=collectPreflightInputs();biofirewallMemory=collectBioFirewallInputs();const budgetCheck=validateWaterBudgetDraft(preflightInputs.waterBudget);const err=$('water-budget-error');if(!budgetCheck.valid&&budgetCheck.empty===false){if(err){err.textContent=t('farmer').budgetInvalid;err.hidden=false;}return;}if(err){err.hidden=true;err.textContent='';}runCurrentPreflight();};
 }
 function setPreflightRotationFocus(index){
  preflightRotationFocus=Math.max(0,Math.min(2,Number(index)||0));
+ if(document.querySelector?.('#dashboard-plan-select')){renderPreflightPanel();$('dashboard-plan-select').focus();return;}
  const output=$('preflight-results');
  if(!output||!preflightEvaluations?.length)return;
  output.innerHTML=renderPreflightResultsSection({lang,inputs:preflightInputs,areaHa:polygon.length>=3?areaHa(polygon):null,period:nasaClimate?.period??null,evaluations:preflightEvaluations,breakpoint:preflightBreakpoints,decisionTraces,selectedRotation:preflightRotationFocus});
@@ -253,10 +366,12 @@ function setPreflightRotationFocus(index){
  const demo=$('decision-breakpoint-demo');if(demo)demo.onclick=loadDecisionBreakpointDemo;
 }
 function bindPreflightResults(){
+ const planSelect=document.querySelector?.('#dashboard-plan-select');if(planSelect)planSelect.onchange=()=>setPreflightRotationFocus(planSelect.value);
  document.querySelectorAll('[data-preflight-rotation]').forEach(btn=>{btn.onclick=()=>setPreflightRotationFocus(btn.dataset.preflightRotation);});
- const openDrawer=(rotation,key)=>{const store=document.querySelector(`.preflight-check-store[data-rotation="${rotation}"][data-check-key="${key}"]`);const body=$('preflight-drawer-body');const drawer=$('preflight-provenance-drawer');if(!store||!body||!drawer)return;body.innerHTML=store.innerHTML;drawer.hidden=false;drawer.removeAttribute('hidden');};
- document.querySelectorAll('.preflight-check-pick').forEach(btn=>{btn.onclick=()=>openDrawer(btn.dataset.rotation,btn.dataset.checkKey);});
- const close=$('preflight-drawer-close');if(close)close.onclick=()=>{$('preflight-provenance-drawer').hidden=true;};
+ let drawerTrigger;
+ const openDrawer=(rotation,key)=>{const store=document.querySelector(`.preflight-check-store[data-rotation="${rotation}"][data-check-key="${key}"]`);const body=$('preflight-drawer-body');const drawer=$('preflight-provenance-drawer');if(!store||!body||!drawer)return;body.innerHTML=store.innerHTML;drawer.hidden=false;drawer.removeAttribute('hidden');$('preflight-drawer-close')?.focus?.();drawer.scrollIntoView?.({block:'nearest'});};
+ document.querySelectorAll('.preflight-check-pick').forEach(btn=>{btn.onclick=()=>{drawerTrigger=btn;openDrawer(btn.dataset.rotation,btn.dataset.checkKey);};});
+ const close=$('preflight-drawer-close');if(close){close.onclick=()=>{$('preflight-provenance-drawer').hidden=true;drawerTrigger?.focus();};$('preflight-provenance-drawer').onkeydown=event=>{if(event.key==='Escape'){event.preventDefault();close.onclick();}};}
  const stale=$('preflight-stale-run');if(stale)stale.onclick=()=>$('run-preflight')?.click();
 }
 async function search(e){e.preventDefault();const query=$('search-input').value.trim();const current=++generation;$('search-results').replaceChildren();$('search-status').textContent='';
@@ -278,6 +393,8 @@ async function analyze(){if(!polygon.length)return;const request=++weatherReques
  renderField();
  $('analyze').disabled=false;
  $('next-step').disabled=false;
+ setFieldProgress(nasaClimate?guidedText('Historical climate ready.','المناخ التاريخي جاهز.'):guidedText('Analysis could not be loaded. Retry analysis to continue.','تعذر تحميل التحليل. أعد المحاولة للمتابعة.'),false);
+ if(nasaClimate)showScreen('setup');else $('analyze').textContent=guidedText('Retry analysis','إعادة التحليل');
 }
 function metric(label,value,unit,ico){return '<div class="metric">'+icon(ico)+'<span>'+t(label)+'</span><strong>'+(value===null||value===undefined?t('unavailable'):num(value)+' <small dir="ltr">'+unit+'</small>')+'</strong></div>';}
 function renderNasaClimate(){renderRotations();const el=$('nasa-content');if(!el)return;if(!nasaClimate){el.innerHTML='';return;}
@@ -285,6 +402,21 @@ function renderNasaClimate(){renderRotations();const el=$('nasa-content');if(!el
  el.innerHTML='<div class="nasa-head"><h3>'+t('nasaTitle')+'</h3><span class="badge">'+t('nasaHistorical')+'</span></div><p class="small muted">'+t('nasaPeriod')+': <bdi>'+esc(p.period.startIso)+' — '+esc(p.period.endIso)+'</bdi> · '+esc(p.timeStandard||'')+'</p><div class="weather-grid">'+metric('nasaPrecipTotal',plan.precipitationAnnualMm,'mm','drop')+metric('nasaTempMax',plan.temperatureMeanMaxC,'°C','sun')+metric('nasaTempMin',plan.temperatureMeanMinC,'°C','sun')+metric('nasaSolar',plan.solarRadiationMeanDailyMj,c.solarRadiation.unit||'MJ/m^2/day','sun')+'</div><p class="provenance">'+(p.storage==='MongoDB'?(lang==='ar'?'أرشيف NASA POWER عند مركز الحقل المخزن. تقديرات شبكية تاريخية وليست قياسات حقلية؛ تختلف دقة البيانات حسب المتغير.':'Archived NASA POWER at the stored field centroid. Historical gridded estimates, not field instruments; resolution varies by parameter.'):t('nasaNote'))+' <a href="https://power.larc.nasa.gov/" target="_blank" rel="noreferrer">NASA POWER ↗</a></p><p class="small muted">'+t('sample')+': <bdi>'+p.coordinates.latitude+', '+p.coordinates.longitude+'</bdi> · '+t('nasaResolution')+' | '+t('retrieved')+': <bdi>'+esc(p.retrieved)+'</bdi> · <a href="'+esc(p.url)+'" target="_blank" rel="noreferrer">'+t('viewSource')+'</a></p>';
  if(p.storage==='MongoDB'){
   el.innerHTML+='<p class="provenance demo-source">MongoDB · NASA POWER · 2025 · LST</p>'+renderEvidence(demoSelection.evidence,demoSupplement,lang,true);
+ }
+ if(el.querySelector){
+  for(const kind of ['history','soil']){
+   const output=$('dashboard-'+kind+'-output'),section=el.querySelector(`[data-evidence-kind="${kind}"]`);
+   output.replaceChildren();
+   if(section){section.querySelector('summary').remove();output.append(...section.childNodes);section.remove();}
+   else output.textContent=guidedText('No field records loaded.','لم تُحمّل سجلات للحقل.');
+  }
+  const evidence=el.querySelector('.evidence-verification'),output=$('dashboard-field-evidence-output');
+  output.replaceChildren();if(evidence){
+   // Historical seasonal summaries belong beside the daily climate, with their source metadata.
+   const seasonal=[...evidence.querySelectorAll(':scope > details')].find(details=>!details.querySelector('table'));
+   if(seasonal)el.append(seasonal);
+   output.append(evidence);
+  }else output.textContent=guidedText('Climate source and coverage are shown with the historical data. No crop or soil records loaded.','يظهر مصدر المناخ وفترته مع البيانات التاريخية. لم تُحمّل سجلات للمحاصيل أو التربة.');
  }
  renderMapOverlay();
 }
@@ -302,7 +434,7 @@ async function initMap(){const current=mapGeneration;let timeout=setTimeout(()=>
  map=new ml.Map({container:'map',center,zoom,maxZoom:17,minZoom:2,maxPitch:CAMERA.maxPitch,attributionControl:false,style:{version:8,sources:{satellite:{type:'raster',tiles:['https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/{z}/{y}/{x}.jpg'],tileSize:256,maxzoom:14,attribution:'<a href="https://s2maps.eu">Sentinel-2 cloudless</a> by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'},relief:{type:'raster',tiles:['https://tiles.maps.eox.at/wmts/1.0.0/terrain_3857/default/g/{z}/{y}/{x}.jpg'],tileSize:256,maxzoom:13,attribution:'Terrain © <a href="https://maps.eox.at">EOX</a>; OpenStreetMap contributors, NASA, USGS, Copernicus, GEBCO'}},layers:[{id:'satellite',type:'raster',source:'satellite'},{id:'relief',type:'raster',source:'relief',layout:{visibility:'none'}}]}});
  framed=false;autoMove=false;bindMapCamera();
  map.addControl(new ml.AttributionControl({compact:media('(max-width:760px)')}),'bottom-right');map.addControl(new ml.ScaleControl({maxWidth:100,unit:'metric'}),'bottom-left');
- map.on('load',()=>{if(current!==mapGeneration)return;clearTimeout(timeout);mapReady=true;for(const id of MAP_CONTROLS)if(id!=='fit')$(id).disabled=false;$('fit').disabled=!polygon.length;$('map-loading').hidden=true;map.setSky?.({'sky-color':'#071c32','horizon-color':'#89b5cc','fog-color':'#244357','sky-horizon-blend':.7,'horizon-fog-blend':.6,'fog-ground-blend':.6,'atmosphere-blend':0});map.on('rotate',updateCompass);updateCompass();map.once('idle',()=>{const credit=map?.getContainer().querySelector('.maplibregl-ctrl-attrib.maplibregl-compact');credit?.classList.remove('maplibregl-compact-show');credit?.removeAttribute('open');});map.addSource('field',{type:'geojson',lineMetrics:true,data:{type:'FeatureCollection',features:[]}});map.addLayer({id:'field-mask',type:'fill',source:'field',filter:['==','kind','mask'],paint:{'fill-color':'#03100b',...FIELD_PAINT['field-mask']}});map.addLayer({id:'field-shadow',type:'line',source:'field',filter:['==','kind','field'],layout:{'line-join':'round'},paint:{'line-color':'#010604','line-width':6,'line-blur':5,'line-translate':[0,3],'line-translate-anchor':'viewport',...FIELD_PAINT['field-shadow']}});map.addLayer({id:'field-fill',type:'fill',source:'field',filter:['==','kind','field'],paint:{'fill-color':'#36B77A',...FIELD_PAINT['field-fill']}});map.addLayer({id:'field-inner',type:'line',source:'field',filter:['==','kind','field'],layout:{'line-join':'round'},paint:{'line-color':'#D6F5A8','line-width':10,'line-blur':10,'line-offset':5,...FIELD_PAINT['field-inner']}});map.addLayer({id:'field-glow',type:'line',source:'field',filter:['==','kind','field'],layout:{'line-join':'round'},paint:{'line-color':'#36B77A','line-blur':4,...FIELD_PAINT['field-glow']}});map.addLayer({id:'field-casing',type:'line',source:'field',filter:['in','kind','field','draft'],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#03130f','line-opacity':.75,...FIELD_PAINT['field-casing']}});map.addLayer({id:'field-line',type:'line',source:'field',filter:['in','kind','field','draft'],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#EFFFE6',...FIELD_PAINT['field-line']}});map.addLayer({id:'field-trace',type:'line',source:'field',filter:['==','kind','trace'],layout:{'line-join':'round','line-cap':'round'},paint:{'line-width':4,'line-blur':2,'line-gradient':traceGradient(1)}});map.addLayer({id:'field-points',type:'circle',source:'field',filter:['==','kind','vertex'],paint:{'circle-radius':4.5,'circle-color':'#f2fff7','circle-stroke-color':'#0f6b4c','circle-stroke-width':2}});const tag=document.createElement('div');tag.className='field-tag';tag.tabIndex=-1;tag.setAttribute('aria-hidden','true');fieldTag=new ml.Marker({element:tag,anchor:'bottom',offset:[0,-14]});switchLayer(layer);updateDraw();});
+ map.on('load',()=>{if(current!==mapGeneration)return;clearTimeout(timeout);mapReady=true;for(const id of MAP_CONTROLS)if(id!=='fit')$(id).disabled=false;$('fit').disabled=!polygon.length;$('map-loading').hidden=true;map.setSky?.({'sky-color':'#071c32','horizon-color':'#89b5cc','fog-color':'#244357','sky-horizon-blend':.7,'horizon-fog-blend':.6,'fog-ground-blend':.6,'atmosphere-blend':0});map.on('rotate',updateCompass);updateCompass();map.once('idle',()=>{const credit=map?.getContainer().querySelector('.maplibregl-ctrl-attrib.maplibregl-compact');credit?.classList.remove('maplibregl-compact-show');credit?.removeAttribute('open');});map.addSource('field',{type:'geojson',lineMetrics:true,data:{type:'FeatureCollection',features:[]}});map.addLayer({id:'field-mask',type:'fill',source:'field',filter:['==','kind','mask'],paint:{'fill-color':'#03100b',...FIELD_PAINT['field-mask']}});map.addLayer({id:'field-shadow',type:'line',source:'field',filter:['==','kind','field'],layout:{'line-join':'round'},paint:{'line-color':'#010604','line-width':6,'line-blur':5,'line-translate':[0,3],'line-translate-anchor':'viewport',...FIELD_PAINT['field-shadow']}});map.addLayer({id:'field-fill',type:'fill',source:'field',filter:['==','kind','field'],paint:{'fill-color':'#36B77A',...FIELD_PAINT['field-fill']}});map.addLayer({id:'field-inner',type:'line',source:'field',filter:['==','kind','field'],layout:{'line-join':'round'},paint:{'line-color':'#D6F5A8','line-width':10,'line-blur':10,'line-offset':5,...FIELD_PAINT['field-inner']}});map.addLayer({id:'field-glow',type:'line',source:'field',filter:['==','kind','field'],layout:{'line-join':'round'},paint:{'line-color':'#36B77A','line-blur':4,...FIELD_PAINT['field-glow']}});map.addLayer({id:'field-casing',type:'line',source:'field',filter:['in','kind','field','draft'],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#03130f','line-opacity':.75,...FIELD_PAINT['field-casing']}});map.addLayer({id:'field-line',type:'line',source:'field',filter:['in','kind','field','draft'],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#EFFFE6',...FIELD_PAINT['field-line']}});map.addLayer({id:'field-trace',type:'line',source:'field',filter:['==','kind','trace'],layout:{'line-join':'round','line-cap':'round'},paint:{'line-width':4,'line-blur':2,'line-gradient':traceGradient(1)}});map.addLayer({id:'field-points',type:'circle',source:'field',filter:['==','kind','vertex'],paint:{'circle-radius':4.5,'circle-color':'#f2fff7','circle-stroke-color':'#0f6b4c','circle-stroke-width':2}});const tag=document.createElement('div');tag.className='field-tag';tag.tabIndex=-1;tag.setAttribute('aria-hidden','true');fieldTag=new ml.Marker({element:tag,anchor:'bottom',offset:[0,-14]});switchLayer(layer);updateDraw();if(polygon.length>=3){revealField();selectionTask=focusSelection();}});
  map.on('click',e=>{if(drawing&&draft.length<100){draft.push([e.lngLat.lng,e.lngLat.lat]);updateDraw();}});
  map.on('error',e=>{if(current!==mapGeneration)return;if(e.sourceId==='dem-shade')return;if(e.sourceId==='dem'){const msg=String(e.error?.message||e.error||'');if(/source unavailable|could not be decoded|404|not found/i.test(msg)){terrain=false;map.setTerrain(null);syncFieldMaskVisibility();map.setPitch(0);map.setBearing(0);$('terrain').setAttribute('aria-pressed','false');$('terrain-status').textContent=t('terrainFailed');renderMapOverlay();}return;}status('tilesFailed',true);});
  map.on('moveend',()=>{center=map.getCenter().toArray();zoom=map.getZoom();updateCompass();});

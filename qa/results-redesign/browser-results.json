@@ -1,0 +1,805 @@
+{
+  "base": "http://127.0.0.1:4181/",
+  "sessions": [
+    {
+      "name": "desktop-en",
+      "errors": [],
+      "states": [
+        {
+          "budget": "blank",
+          "modelInputs": "missing",
+          "rows": [
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "maize",
+                "plantingDate": "",
+                "budget": null
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "soy",
+                "plantingDate": "",
+                "budget": null
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "wheat",
+                "plantingDate": "",
+                "budget": null
+              }
+            }
+          ]
+        },
+        {
+          "budget": "600 mm",
+          "modelInputs": "missing",
+          "rows": [
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "maize",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "soy",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "wheat",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "budget": "600 mm",
+          "modelInputs": "complete demo",
+          "rows": [
+            {
+              "status": "PASS",
+              "engineStatus": "PASS",
+              "inputs": {
+                "crop": "maize",
+                "needMm": {
+                  "min": 578.9797291858033,
+                  "max": 593.7749894642636
+                },
+                "needM3": {
+                  "min": 128461.47827925596,
+                  "max": 131744.1856195805
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": 6.225010535736374,
+                  "max": 21.020270814196692
+                },
+                "deficitMm": {
+                  "min": 0,
+                  "max": 0
+                },
+                "partialBlock": false
+              }
+            },
+            {
+              "status": "WARNING",
+              "engineStatus": "WARNING",
+              "inputs": {
+                "crop": "soy",
+                "needMm": {
+                  "min": 606.9446535581294,
+                  "max": 606.9446535581294
+                },
+                "needM3": {
+                  "min": 134666.2128213244,
+                  "max": 134666.2128213244
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": -6.944653558129403,
+                  "max": -6.944653558129403
+                },
+                "deficitMm": {
+                  "min": 6.944653558129403,
+                  "max": 6.944653558129403
+                },
+                "partialBlock": true
+              }
+            },
+            {
+              "status": "WARNING",
+              "engineStatus": "WARNING",
+              "inputs": {
+                "crop": "wheat",
+                "needMm": {
+                  "min": 611.0337184138375,
+                  "max": 618.7230164979281
+                },
+                "needM3": {
+                  "min": 135573.4765641893,
+                  "max": 137279.54423637054
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": -18.723016497928143,
+                  "max": -11.033718413837505
+                },
+                "deficitMm": {
+                  "min": 11.033718413837505,
+                  "max": 18.723016497928143
+                },
+                "partialBlock": true
+              }
+            }
+          ]
+        }
+      ],
+      "partialRequirements": "pass",
+      "editAndRerun": "pass",
+      "keyboardAndFocus": "pass",
+      "details": "pass",
+      "pass": true
+    },
+    {
+      "name": "mobile-en",
+      "errors": [],
+      "states": [
+        {
+          "budget": "blank",
+          "modelInputs": "missing",
+          "rows": [
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "maize",
+                "plantingDate": "",
+                "budget": null
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "soy",
+                "plantingDate": "",
+                "budget": null
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "wheat",
+                "plantingDate": "",
+                "budget": null
+              }
+            }
+          ]
+        },
+        {
+          "budget": "600 mm",
+          "modelInputs": "missing",
+          "rows": [
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "maize",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "soy",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "wheat",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "budget": "600 mm",
+          "modelInputs": "complete demo",
+          "rows": [
+            {
+              "status": "PASS",
+              "engineStatus": "PASS",
+              "inputs": {
+                "crop": "maize",
+                "needMm": {
+                  "min": 578.9797291858033,
+                  "max": 593.7749894642636
+                },
+                "needM3": {
+                  "min": 128461.47827925596,
+                  "max": 131744.1856195805
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": 6.225010535736374,
+                  "max": 21.020270814196692
+                },
+                "deficitMm": {
+                  "min": 0,
+                  "max": 0
+                },
+                "partialBlock": false
+              }
+            },
+            {
+              "status": "WARNING",
+              "engineStatus": "WARNING",
+              "inputs": {
+                "crop": "soy",
+                "needMm": {
+                  "min": 606.9446535581294,
+                  "max": 606.9446535581294
+                },
+                "needM3": {
+                  "min": 134666.2128213244,
+                  "max": 134666.2128213244
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": -6.944653558129403,
+                  "max": -6.944653558129403
+                },
+                "deficitMm": {
+                  "min": 6.944653558129403,
+                  "max": 6.944653558129403
+                },
+                "partialBlock": true
+              }
+            },
+            {
+              "status": "WARNING",
+              "engineStatus": "WARNING",
+              "inputs": {
+                "crop": "wheat",
+                "needMm": {
+                  "min": 611.0337184138375,
+                  "max": 618.7230164979281
+                },
+                "needM3": {
+                  "min": 135573.4765641893,
+                  "max": 137279.54423637054
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": -18.723016497928143,
+                  "max": -11.033718413837505
+                },
+                "deficitMm": {
+                  "min": 11.033718413837505,
+                  "max": 18.723016497928143
+                },
+                "partialBlock": true
+              }
+            }
+          ]
+        }
+      ],
+      "partialRequirements": "pass",
+      "editAndRerun": "pass",
+      "keyboardAndFocus": "pass",
+      "details": "pass",
+      "pass": true
+    },
+    {
+      "name": "desktop-ar",
+      "errors": [],
+      "states": [
+        {
+          "budget": "blank",
+          "modelInputs": "missing",
+          "rows": [
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "maize",
+                "plantingDate": "",
+                "budget": null
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "soy",
+                "plantingDate": "",
+                "budget": null
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "wheat",
+                "plantingDate": "",
+                "budget": null
+              }
+            }
+          ]
+        },
+        {
+          "budget": "600 mm",
+          "modelInputs": "missing",
+          "rows": [
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "maize",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "soy",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "wheat",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "budget": "600 mm",
+          "modelInputs": "complete demo",
+          "rows": [
+            {
+              "status": "PASS",
+              "engineStatus": "PASS",
+              "inputs": {
+                "crop": "maize",
+                "needMm": {
+                  "min": 578.9797291858033,
+                  "max": 593.7749894642636
+                },
+                "needM3": {
+                  "min": 128461.47827925596,
+                  "max": 131744.1856195805
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": 6.225010535736374,
+                  "max": 21.020270814196692
+                },
+                "deficitMm": {
+                  "min": 0,
+                  "max": 0
+                },
+                "partialBlock": false
+              }
+            },
+            {
+              "status": "WARNING",
+              "engineStatus": "WARNING",
+              "inputs": {
+                "crop": "soy",
+                "needMm": {
+                  "min": 606.9446535581294,
+                  "max": 606.9446535581294
+                },
+                "needM3": {
+                  "min": 134666.2128213244,
+                  "max": 134666.2128213244
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": -6.944653558129403,
+                  "max": -6.944653558129403
+                },
+                "deficitMm": {
+                  "min": 6.944653558129403,
+                  "max": 6.944653558129403
+                },
+                "partialBlock": true
+              }
+            },
+            {
+              "status": "WARNING",
+              "engineStatus": "WARNING",
+              "inputs": {
+                "crop": "wheat",
+                "needMm": {
+                  "min": 611.0337184138375,
+                  "max": 618.7230164979281
+                },
+                "needM3": {
+                  "min": 135573.4765641893,
+                  "max": 137279.54423637054
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": -18.723016497928143,
+                  "max": -11.033718413837505
+                },
+                "deficitMm": {
+                  "min": 11.033718413837505,
+                  "max": 18.723016497928143
+                },
+                "partialBlock": true
+              }
+            }
+          ]
+        }
+      ],
+      "partialRequirements": "pass",
+      "editAndRerun": "pass",
+      "keyboardAndFocus": "pass",
+      "details": "pass",
+      "pass": true
+    },
+    {
+      "name": "mobile-ar",
+      "errors": [],
+      "states": [
+        {
+          "budget": "blank",
+          "modelInputs": "missing",
+          "rows": [
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "maize",
+                "plantingDate": "",
+                "budget": null
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "soy",
+                "plantingDate": "",
+                "budget": null
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "wheat",
+                "plantingDate": "",
+                "budget": null
+              }
+            }
+          ]
+        },
+        {
+          "budget": "600 mm",
+          "modelInputs": "missing",
+          "rows": [
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "maize",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "soy",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            },
+            {
+              "status": "UNKNOWN",
+              "engineStatus": "UNKNOWN",
+              "inputs": {
+                "crop": "wheat",
+                "plantingDate": "",
+                "budget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "budget": "600 mm",
+          "modelInputs": "complete demo",
+          "rows": [
+            {
+              "status": "PASS",
+              "engineStatus": "PASS",
+              "inputs": {
+                "crop": "maize",
+                "needMm": {
+                  "min": 578.9797291858033,
+                  "max": 593.7749894642636
+                },
+                "needM3": {
+                  "min": 128461.47827925596,
+                  "max": 131744.1856195805
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": 6.225010535736374,
+                  "max": 21.020270814196692
+                },
+                "deficitMm": {
+                  "min": 0,
+                  "max": 0
+                },
+                "partialBlock": false
+              }
+            },
+            {
+              "status": "WARNING",
+              "engineStatus": "WARNING",
+              "inputs": {
+                "crop": "soy",
+                "needMm": {
+                  "min": 606.9446535581294,
+                  "max": 606.9446535581294
+                },
+                "needM3": {
+                  "min": 134666.2128213244,
+                  "max": 134666.2128213244
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": -6.944653558129403,
+                  "max": -6.944653558129403
+                },
+                "deficitMm": {
+                  "min": 6.944653558129403,
+                  "max": 6.944653558129403
+                },
+                "partialBlock": true
+              }
+            },
+            {
+              "status": "WARNING",
+              "engineStatus": "WARNING",
+              "inputs": {
+                "crop": "wheat",
+                "needMm": {
+                  "min": 611.0337184138375,
+                  "max": 618.7230164979281
+                },
+                "needM3": {
+                  "min": 135573.4765641893,
+                  "max": 137279.54423637054
+                },
+                "waterBudget": {
+                  "amount": 600,
+                  "unit": "mm",
+                  "period": "perSeason",
+                  "mm": 600,
+                  "m3": 133125.36360460115,
+                  "basis": "field-application"
+                },
+                "remainingMm": {
+                  "min": -18.723016497928143,
+                  "max": -11.033718413837505
+                },
+                "deficitMm": {
+                  "min": 11.033718413837505,
+                  "max": 18.723016497928143
+                },
+                "partialBlock": true
+              }
+            }
+          ]
+        }
+      ],
+      "partialRequirements": "pass",
+      "editAndRerun": "pass",
+      "keyboardAndFocus": "pass",
+      "details": "pass",
+      "pass": true
+    }
+  ]
+}

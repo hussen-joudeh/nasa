@@ -7,7 +7,7 @@ import * as view from '../src/rotation-view.mjs';
 import {runPreflight} from '../src/preflight.mjs';
 import {analyzeDecisionSensitivity} from '../src/decision-breakpoint.mjs';
 import * as biofirewall from '../src/biofirewall.mjs';
-import {renderPreflightPanel as renderPreflightPanelHtml,renderStalePreflightResults,renderPreflightResultsSection} from '../src/preflight-view.mjs';
+import {renderPreflightPanel as renderPreflightPanelHtml,renderBudgetConfirmation,renderSeasonWaterReason,renderSeasonWaterChart,renderStalePreflightResults,renderPreflightResultsSection} from '../src/preflight-view.mjs';
 import {messages} from '../src/i18n.mjs';
 import * as explorer from '../src/map-explorer.mjs';
 import * as farmerInputs from '../src/farmer-inputs.mjs';
@@ -31,7 +31,7 @@ function climate(){
 function harness(){
   const elements=new Map();
   const document={getElementById(id){if(!elements.has(id))elements.set(id,{innerHTML:'',value:'',checked:false,classList:{toggle(){}},textContent:''});return elements.get(id);},querySelectorAll(){return [];}};
-  const context=vm.createContext({DEMO_FIELD_ID,...explorer,...domain,...view,...biofirewall,...farmerInputs,...farmerInputView,...decisionTrace,...decisionSnapshot,...decisionSnapshotValidity,...decisionTraceView,runPreflight,analyzeDecisionSensitivity,renderPreflightPanelHtml,renderStalePreflightResults,renderPreflightResultsSection,messages,document,Intl,URL,console});
+  const context=vm.createContext({DEMO_FIELD_ID,...explorer,...domain,...view,...biofirewall,...farmerInputs,...farmerInputView,...decisionTrace,...decisionSnapshot,...decisionSnapshotValidity,...decisionTraceView,runPreflight,analyzeDecisionSensitivity,renderPreflightPanelHtml,renderBudgetConfirmation,renderSeasonWaterReason,renderSeasonWaterChart,renderStalePreflightResults,renderPreflightResultsSection,messages,document,Intl,URL,console});
   vm.runInContext(source,context);
   return {context,elements,run:code=>vm.runInContext(code,context)};
 }
@@ -67,6 +67,10 @@ test('Decision Breakpoint demo still analyzes real Preflight water changes',()=>
   const demo=h.elements.get('decision-breakpoint-demo');
   assert.equal(typeof demo.onclick,'function');
   demo.onclick();
+  const steps=['field','setup','results'].map(screenLink=>({dataset:{screenLink},setAttribute(name,value){this[name]=value;}}));
+  h.context.document.querySelectorAll=selector=>selector==='[data-screen-link]'?steps:[];
+  h.run('renderMapOverlay()');
+  assert.equal(steps[2]['aria-current'],'step');
   assert.equal(h.run("preflightInputs.waterBudget.amount"),'');
   assert.equal(h.run("preflightEvaluations[0].checks.find(x=>x.ruleId==='water.balance'&&x.season===1).status"),'UNKNOWN');
   assert.equal(h.run("preflightBreakpoints.findings.find(x=>x.rotationIndex===0&&x.season===1&&x.ruleId==='water.balance').classification"),'DECISION-SENSITIVE');
@@ -77,7 +81,12 @@ test('Decision Breakpoint demo still analyzes real Preflight water changes',()=>
   h.elements.get('water-budget-amount').value=String(threshold);
   h.elements.get('water-budget-unit').value='m3';
   h.elements.get('water-budget-period').value='perSeason';
+  h.elements.get('water-budget-amount').oninput();
+  assert.equal(h.run('preflightEvaluations'),null);
+  assert.equal(steps[1]['aria-current'],'step');
+  assert.match(h.elements.get('preflight-results').innerHTML,/Inputs changed/);
   h.elements.get('preflight-form').onsubmit({preventDefault(){}});
+  assert.equal(steps[2]['aria-current'],'step');
   const changed=h.run('preflightBreakpoints.observedChanges');
   assert.ok(changed.changed.some(x=>x.ruleId==='water.balance'&&x.season===1&&x.before==='UNKNOWN'&&x.after==='PASS'));
   assert.deepEqual(Array.from(changed.changedInputs),['waterBudget']);

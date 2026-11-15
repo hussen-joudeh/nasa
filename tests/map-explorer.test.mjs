@@ -6,7 +6,7 @@ import * as domain from '../src/domain.mjs';
 import * as view$ from '../src/rotation-view.mjs';
 import {runPreflight} from '../src/preflight.mjs';
 import * as biofirewall from '../src/biofirewall.mjs';
-import {renderPreflightPanel as renderPreflightPanelHtml} from '../src/preflight-view.mjs';
+import {renderPreflightPanel as renderPreflightPanelHtml,renderBudgetConfirmation,renderSeasonWaterReason,renderSeasonWaterChart} from '../src/preflight-view.mjs';
 import {messages} from '../src/i18n.mjs';
 import * as explorer from '../src/map-explorer.mjs';
 import * as farmerInputs from '../src/farmer-inputs.mjs';
@@ -200,7 +200,7 @@ test('overlay never intercepts pointer or touch input and map controls keep touc
 const source=(await readFile(new URL('../src/app.mjs',import.meta.url),'utf8')).replace(/^import .*;\r?\n/gm,'').replace(/render\(\);\s*$/,'');
 function harness(){
   const elements=new Map();
-  const make=()=>({innerHTML:'',value:'',textContent:'',style:{},dataset:{},classList:{toggle(){}},setAttribute(k,v){this[k]=v;},replaceWith(next){this.replacedWith=next;},addEventListener(){},append(){},prepend(){},querySelectorAll(){return [];}});
+  const make=()=>({innerHTML:'',value:'',textContent:'',style:{},dataset:{},classList:{toggle(){}},setAttribute(k,v){this[k]=v;},replaceWith(next){this.replacedWith=next;},addEventListener(){},append(){},prepend(){},insertAdjacentHTML(){},querySelector(){return make();},querySelectorAll(){return [];}});
   const body=make();
   const document={body,createElement:()=>({...make(),querySelectorAll:()=>[]}),documentElement:{dataset:{}},getElementById(id){if(!elements.has(id))elements.set(id,make());return elements.get(id);},querySelectorAll(){return [];},querySelector(selector){return [".header-end","main",".field-panel"].includes(selector)?make():null;}};
   const calls=[];
@@ -211,8 +211,9 @@ function harness(){
   const look=options=>{if(Number.isFinite(options?.bearing))view.bearing=options.bearing;if(Number.isFinite(options?.pitch))view.pitch=options.pitch;};
   const surface={addEventListener(type,fn){(inputs[type]??=[]).push(fn);}};
   const fakeMap={removed:false,remove(){this.removed=true;},getCenter:()=>({toArray:()=>[1,2]}),getZoom:()=>10,getContainer:()=>container,getCanvasContainer:()=>surface,resize(){calls.push(['resize']);emit('resize');},getCanvas:()=>({style:{}}),getSource:()=>({setData(data){calls.push(['setData',data]);}}),getLayer(id){return id==='field-mask'?{}:null;},setLayoutProperty(...a){calls.push(['layout',...a]);},setTerrain(){},setLight(){},setPitch(){},setPaintProperty(...a){calls.push(['paint',...a]);},fitBounds(...a){look(a[1]);calls.push(['fitBounds',...a]);},easeTo(...a){look(a[0]);calls.push(['easeTo',...a]);},jumpTo(...a){calls.push(['jumpTo',...a]);},zoomIn(...a){calls.push(['zoomIn',...a]);},zoomOut(...a){calls.push(['zoomOut',...a]);},stop(){calls.push(['stop']);emit('moveend');},getBearing:()=>view.bearing,getPitch:()=>view.pitch,on(type,fn){(handlers[type]??=[]).push(fn);},once(){},isStyleLoaded:()=>true};
-  const context=vm.createContext({DEMO_FIELD_ID,...domain,...view$,...biofirewall,...explorer,...farmerInputs,...farmerInputView,...decisionTrace,...decisionSnapshot,...decisionSnapshotValidity,...decisionTraceView,runPreflight,renderPreflightPanelHtml,messages,document,Intl,URL,console,setTimeout,clearTimeout,fakeMap});
-  vm.runInContext(source,context);return {elements,calls,container,fakeMap,emit,input:(type,event={})=>{for(const fn of inputs[type]??[])fn(event);},run:code=>vm.runInContext(code,context)};
+  const context=vm.createContext({DEMO_FIELD_ID,...domain,...view$,...biofirewall,...explorer,...farmerInputs,...farmerInputView,...decisionTrace,...decisionSnapshot,...decisionSnapshotValidity,...decisionTraceView,runPreflight,renderPreflightPanelHtml,renderBudgetConfirmation,renderSeasonWaterReason,renderSeasonWaterChart,messages,document,Intl,URL,console,setTimeout,clearTimeout,fakeMap});
+  // The live guided-demo QA covers screen transitions; this harness isolates the map camera.
+  vm.runInContext(source+'\nshowScreen=()=>{};',context);return {elements,calls,container,fakeMap,emit,input:(type,event={})=>{for(const fn of inputs[type]??[])fn(event);},run:code=>vm.runInContext(code,context)};
 }
 test('app renders the map overlay from current field state',()=>{
   const h=harness();h.run('renderField()');

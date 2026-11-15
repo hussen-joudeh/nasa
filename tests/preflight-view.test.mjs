@@ -1,16 +1,71 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {messages} from '../src/i18n.mjs';
-import {renderPreflightPanel,renderDecisionBreakpoint} from '../src/preflight-view.mjs';
+import {renderPreflightPanel,renderPreflightResultsSection,renderDecisionBreakpoint,renderBudgetConfirmation,renderSeasonWaterChart} from '../src/preflight-view.mjs';
+import {JSDOM} from 'jsdom';
+import {cubicMetresToMillimetres} from '../src/water-truth.mjs';
+import {formatDepthMm} from '../src/display-format.mjs';
 import {runPreflight} from '../src/preflight.mjs';
 import {compareRotations} from '../src/domain.mjs';
 import {renderDecisionComparison} from '../src/rotation-view.mjs';
 
 const inputs={waterBudget:{amount:'2500',unit:'m3',period:'perSeason'},plantingDates:['2025-02-01','',''],illustrativeCropSettings:false,effectiveRainfallSlopeConfirmed:false};
 
+test('dashboard groups shared missing inputs once and scopes checks, seasons and sensitivity to the selected plan',()=>{
+ const evaluations=Array.from({length:3},()=>runPreflight(['wheat','maize','wheat'],{},null));
+ const findings=evaluations.map((_,rotationIndex)=>({rotationIndex,ruleId:'water.balance',season:2,classification:'INSUFFICIENT EVIDENCE',missingInformation:['seasonPlantingDate']}));
+ const changed=findings.map(item=>({...item,before:'UNKNOWN',after:'PASS'}));
+ for(const lang of ['en','ar']){
+  const html=renderPreflightResultsSection({lang,evaluations,selectedRotation:1,dashboard:true,breakpoint:{findings,observedChanges:{changed,unchangedCount:42,changedInputs:['waterBudget']}}});
+  const document=new JSDOM(html).window.document;
+  assert.equal(document.querySelectorAll('.preflight-evaluation').length,1);
+  assert.equal(document.querySelector('.preflight-evaluation').dataset.rotation,'1');
+  assert.equal(document.querySelectorAll('.preflight-check-groups').length,1);
+  assert.equal(document.querySelector('.preflight-check-groups').dataset.rotation,'1');
+  assert.equal(document.querySelectorAll('.breakpoint-finding').length,1);
+  assert.equal(document.querySelectorAll('.breakpoint-changes li').length,1);
+  const missing=document.querySelectorAll('[data-missing-input="seasonPlantingDate"]');
+  assert.equal(missing.length,1);
+  assert.match(missing[0].textContent,/A.*B.*C/);
+  assert.equal(document.querySelectorAll('.preflight-season-missing').length,0);
+  assert.equal(document.querySelectorAll('.preflight-check-store:not([hidden])').length,0);
+ }
+});
+
+test('Season 2 chart uses a shared zero-based scale and keeps blank and zero budgets distinct',()=>{
+ const rows=[300,600,450].map((need,index)=>({index,season:{crop:'maize',needMm:{max:need},remainingMm:{min:700-need}}}));
+ for(const lang of ['en','ar']){
+  const blank=renderSeasonWaterChart({rows,lang});
+  assert.doesNotMatch(blank,/class="chart-budget-line"/);
+  assert.ok(blank.includes(lang==='en'?'Enter a seasonal irrigation budget':'أدخل ميزانية ري لكل موسم'));
+  const withBudget=renderSeasonWaterChart({rows,budget:700,lang});
+  assert.ok(withBudget.includes('width:'+300/700*100+'%'));
+  assert.ok(withBudget.includes('width:'+600/700*100+'%'));
+  assert.ok(withBudget.includes('<data value="0">'));
+  assert.ok(withBudget.includes('inset-inline-start:100%'));
+  assert.match(renderSeasonWaterChart({rows,budget:0,lang}),/class="chart-budget-line"/);
+  assert.doesNotMatch(renderSeasonWaterChart({rows:[{index:0}],lang}),/NaN|Infinity|undefined/);
+ }
+});
+
+test('budget confirmation preserves volume and scope and uses the existing depth conversion',()=>{
+ const areaHa=22.187560600766858;
+ for(const lang of ['en','ar']){
+  const html=renderBudgetConfirmation({lang,budget:{amount:'600',unit:'m3',period:'perSeason'},areaHa});
+  assert.ok(html.includes('600 m³'));
+  assert.ok(html.includes(formatDepthMm(cubicMetresToMillimetres(600,areaHa),lang)+' mm'));
+  assert.ok(html.includes(lang==='en'?'per crop season':'لكل موسم محصول'));
+  assert.ok(renderBudgetConfirmation({lang,budget:{amount:'600',unit:'mm',period:'wholePlan'},areaHa}).includes(lang==='en'?'not allocated separately to Season 2':'لا يُخصص بشكل منفصل للموسم الثاني'));
+ }
+ assert.match(renderBudgetConfirmation({budget:{amount:'',unit:'mm',period:'perSeason'},areaHa}),/No irrigation budget entered/);
+ assert.match(renderBudgetConfirmation({budget:{amount:'0',unit:'mm',period:'perSeason'},areaHa}),/>0 mm</);
+ assert.match(renderBudgetConfirmation({budget:{amount:'600',unit:'m3',period:'perSeason'}}),/Select a valid field boundary/);
+ assert.match(renderBudgetConfirmation({budget:{amount:'-1',unit:'mm',period:'perSeason'},areaHa}),/class="error"/);
+});
+
 test('Preflight controls expose budget units, applicability period, three dates, and no required-field false gate',()=>{
   const html=renderPreflightPanel({lang:'en',inputs,areaHa:2,period:{startIso:'2025-01-01',endIso:'2025-12-31'}});
-  assert.match(html,/>Run Preflight</);
+  assert.match(html,/>Compare plans</);
   assert.match(html,/m³ for the whole field/);
   assert.match(html,/All three seasons combined/);
   assert.match(html,/id="planting-date-3"/);
@@ -28,7 +83,7 @@ test('Preflight season cards do not show escaped bdi markup in balance text',()=
 test('Arabic Preflight labels, UNKNOWN state, and explanations are localized',()=>{
   const evaluation=runPreflight(['wheat','maize','wheat'],{},null);
   const html=renderPreflightPanel({lang:'ar',inputs,evaluations:[evaluation]});
-  assert.match(html,/شغّل الفحص المسبق/);
+  assert.match(html,/قارن الخطط/);
   assert.match(html,/غير معروف/);
   assert.match(html,/ميزانية الري أو وحدتها أو فترتها أو مساحة الحقل ناقصة/);
   assert.match(html,/class="preflight-season-note"/);

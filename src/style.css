@@ -530,3 +530,206 @@ main{overflow-x:clip}
 .stage-map .field-tag{padding:3px 9px;background:#06181bf0;border-color:#effff64d;color:#b7d0cc;box-shadow:0 2px 8px #0007}
 .stage-map .field-tag strong{font-weight:600;color:#effff6}
 .stage-map .field-tag::after{background:#effff680}
+
+/* Guided workspace: one task at a time; the same map and engine remain in use. */
+.guided-screen[hidden]{display:none!important}
+.guided-navigation{display:flex;gap:8px;padding:24px 0;border-bottom:1px solid var(--line)}
+.guided-navigation button{justify-content:flex-start;flex:1;padding:12px 16px;background:transparent;border-color:transparent;color:var(--muted);text-align:start;font-size:14px}
+.guided-navigation b{display:grid;place-items:center;flex:none;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;font-size:12px}
+.guided-navigation [aria-current=step]{color:#ecf9ef;background:#16342a;border-color:#416b53}
+.guided-navigation [aria-current=step] b{background:var(--brand-accent);color:var(--brand-ink);border-color:var(--brand-accent)}
+.guided-heading{padding:28px 0 20px}
+.guided-heading .eyebrow{margin:0 0 10px}
+.guided-heading h1{font-family:var(--font-display);font-size:32px;line-height:1.25;letter-spacing:-.8px;margin:0 0 12px}
+.guided-heading h1:focus{outline:none}
+.guided-heading>button{margin-bottom:22px}
+.guided-heading p{max-width:780px;margin-bottom:12px}
+.field-choice-actions,.setup-scenario-actions{display:flex;gap:12px;flex-wrap:wrap}
+.field-choice-actions button{min-height:48px;font-size:15px}
+.field-entry .demo-picker{margin:20px 0 0;padding:0;border:0;background:none}
+.field-entry .demo-picker p{font-size:13px;margin:12px 0 0;line-height:1.6}
+.field-entry .demo-picker button{width:auto;min-height:48px;font-size:15px}
+.field-entry #analyze{margin:0;justify-content:center}
+#field-progress{color:var(--brand-accent);font-size:14px;margin-top:12px}
+#field-progress:empty{display:none}
+.guided-screen .console{margin-top:0}
+.guided-screen #console-rail,.guided-screen #next-step,.guided-screen #demo-slot{display:none!important}
+.guided-screen .console-bar{justify-content:flex-start}
+.guided-screen .console-search{flex:1 1 auto;max-width:540px}
+.guided-screen .console-foot>span{white-space:normal}
+.compact-field{color:#c7dfd0;font-size:14px;padding-inline-start:14px;border-inline-start:2px solid var(--brand-accent)}
+#setup-screen #planning{display:block;margin:0 0 36px}
+#setup-screen .rotation{padding:24px}
+#setup-screen .planner-head{display:block;margin-bottom:20px}
+#setup-screen .planner-head .eyebrow,#setup-screen .family-legend,#setup-screen .lane-notes,#setup-screen .plan-evidence,#setup-screen #rotation-comparison,#setup-screen #farmer-input-impact{display:none}
+#setup-screen .planner-prev{max-width:700px;margin:16px 0}
+.setup-field-history{padding:8px 0;font-size:14px}
+#setup-screen .plan-lane{grid-template-columns:125px minmax(0,1fr);grid-template-areas:"id track";padding:20px;gap:20px}
+#setup-screen .lane-id{padding-top:0;align-self:center}
+#setup-screen .lane-track{margin:0}
+#setup-screen .preflight-panel{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.setup-scenario{background:#162d24;border-inline-start:3px solid var(--brand-accent);padding:16px 20px;margin:16px 0 20px}
+.setup-scenario p{font-size:14px;margin-bottom:14px}
+.setup-assumptions,.setup-additional{padding:16px 0;border-bottom:1px solid var(--line)}
+.setup-assumptions>summary,.setup-additional>summary{font-size:14px;line-height:1.7}
+.assumptions-state{display:inline-block;margin-inline-start:12px;color:var(--brand-accent);font-size:12px}
+.setup-assumptions .preflight-historical{margin-top:18px}
+.budget-action{margin-top:24px}
+.budget-action .preflight-input-grid{grid-template-columns:minmax(200px,2fr) 1fr 1fr;gap:16px}
+.budget-action input,.budget-action select{font-size:16px;min-height:48px}
+.budget-action .preflight-area{display:none}
+.budget-action p{max-width:860px}
+.budget-action #run-preflight{min-width:240px;min-height:50px;font-size:16px;margin-top:8px}
+.budget-action .preflight-input-grid{padding:16px;border:1px solid var(--line);border-radius:8px;background:#10231b}
+.budget-confirmation{padding:16px 18px;margin:16px 0;border:1px solid #345b47;border-inline-start:3px solid var(--brand-accent);border-radius:8px;background:#11271e}
+.budget-confirmation p{font-size:14px;line-height:1.7;margin:0;overflow-wrap:anywhere}
+.budget-confirmation p+p{margin-top:6px}
+.budget-confirmation strong{font-size:16px;color:#edf8ef}
+.decision-first{border-inline-start:4px solid var(--brand-accent);padding:28px 32px;margin-bottom:32px}
+.decision-first h2{font-size:30px;max-width:950px;line-height:1.3;letter-spacing:-.6px}
+.decision-first>p{max-width:900px}
+.decision-first .primary{min-height:48px;font-size:15px;margin:4px 0 18px}
+.decision-first .small{margin-bottom:0}
+.season-comparison{margin-bottom:32px}
+.season-water-chart{margin:0 0 28px;padding:20px 24px;border:1px solid var(--line);border-radius:10px;background:#10231b}
+.season-water-chart figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px 24px;flex-wrap:wrap;margin-bottom:14px}
+.season-water-chart h3{margin:0;font-size:16px;line-height:1.6}
+.chart-budget-legend{display:flex;align-items:center;gap:8px;font-size:13px;margin:0}
+.chart-budget-legend i{width:24px;border-top:2px dashed #f3d594}
+.chart-axis{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;padding-bottom:8px;font-variant-numeric:tabular-nums}
+.chart-plot{position:relative}
+.chart-budget-line{position:absolute;inset-block:0;border-inline-start:2px dashed #f3d594;z-index:2;pointer-events:none}
+.chart-bars{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.chart-row-label{position:relative;z-index:3;display:flex;justify-content:space-between;gap:4px 16px;flex-wrap:wrap;background:#10231b;padding-bottom:7px;font-size:13px;line-height:1.6}
+.chart-requirement{font-weight:600;font-variant-numeric:tabular-nums}
+.chart-balance{color:var(--muted);font-size:12px}
+.chart-track{position:relative;height:14px;background:#213e31;border-radius:3px}
+.chart-bar{position:absolute;inset-inline-start:0;inset-block:0;background:#78cfaa;border-radius:3px}
+.season-water-chart>.small{font-size:12px;line-height:1.6;margin:14px 0 0}
+.guided-comparison{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+.guided-comparison th,.guided-comparison td{text-align:start;padding:18px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
+.guided-comparison thead th{font-weight:500;font-size:12px;color:var(--muted);background:#11261e}
+.guided-comparison tbody th{font-weight:500}
+.guided-comparison th strong{display:inline-grid;place-items:center;width:30px;height:30px;margin-inline-end:10px;border:1px solid #43684f;border-radius:6px;color:var(--brand-accent)}
+.guided-comparison small{display:block;color:var(--muted);font-size:11px;line-height:1.8;margin-top:8px;white-space:nowrap}
+.guided-comparison .preflight-status{white-space:nowrap}
+.guided-comparison tbody td:last-child{width:30%;min-width:230px}
+.water-balance{display:grid;gap:6px;min-width:0}
+.water-balance strong{font-size:19px;font-weight:600}
+.water-balance span{font-size:12px;line-height:1.5;color:var(--muted)}
+.water-balance[data-direction=margin] strong{color:#a7efce}
+.water-balance[data-direction=shortfall] strong{color:#f3d594}
+.water-status-reason{min-width:0}
+.water-reason-note{margin:8px 0 0;font-size:12px;line-height:1.6;color:#f3d594}
+.season-water-reason{margin-top:6px;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.season-water-reason summary{min-height:44px;padding-block:10px;color:var(--brand-accent);cursor:pointer}
+.season-water-reason p{font-size:13px;line-height:1.7;margin:8px 0 12px}
+.season-comparison>.small{margin:14px 0 0}
+.overall-assessments{padding:24px 0;border-top:1px solid var(--line);margin-bottom:18px}
+.overall-assessments>div{display:flex;gap:40px;flex-wrap:wrap}
+.overall-assessments p{font-size:14px;margin-bottom:14px}
+.overall-assessments strong{margin-inline-end:10px}
+.verification{margin-bottom:32px}
+.verification ul{padding-inline-start:22px;line-height:1.8;font-size:14px;margin-bottom:0}
+.verification li+li{margin-top:10px}
+.dashboard-evidence{border-top:1px solid var(--line);padding:20px 0}
+.dashboard-evidence>summary{font-size:16px;font-weight:600;min-height:28px}
+.dashboard-evidence>div,.dashboard-evidence>.panel{margin-top:20px}
+#dashboard-map .console-stage{grid-template-columns:minmax(0,1fr)}
+#dashboard-map .inspector,#dashboard-map .console-bar,#dashboard-map .stage-actions,#dashboard-map .stage-inspector-open,#dashboard-map .console-foot{display:none}
+#dashboard-map .stage-map{min-height:420px}
+#dashboard-calculations #preflight-results{margin:0}
+[data-cinematic=false] body{padding-bottom:0}
+[data-cinematic=false] .nav-cta{display:none}
+.dashboard-context{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:center}
+.dashboard-context .compact-field{grid-column:1/-1;margin:0;font-size:15px}
+.dashboard-context .compact-field bdi{display:inline-block}
+.dashboard-context .budget-confirmation{background:none;border:0;padding:0;margin:4px 0;display:flex;gap:8px 24px;flex-wrap:wrap}
+.dashboard-context .budget-confirmation p+p{margin:0}
+.dashboard-context .budget-confirmation[data-unit=mm] p:nth-child(2){display:none}
+.dashboard-context>button{min-height:44px}
+.dashboard-tabs{display:flex;gap:8px;border-bottom:1px solid var(--line);margin:8px 0 28px}
+.dashboard-tabs button{background:none;border:0;border-bottom:3px solid transparent;border-radius:0;min-height:52px;padding:12px 20px;color:var(--muted);font-size:16px;line-height:1.5}
+.dashboard-tabs button[aria-selected=true]{border-color:var(--brand-accent);color:var(--text);background:#142c22}
+#results-screen [role=tabpanel][hidden]{display:none!important}
+#results-screen [role=tabpanel]{min-width:0}
+#results-screen :is(button,select,summary,a):focus-visible,#results-screen [role=tabpanel]:focus-visible{outline:3px solid var(--brand-accent);outline-offset:4px}
+#results-screen .decision-first{margin-bottom:24px}
+#results-screen .decision-first h2{font-size:28px;max-width:900px}
+#results-screen .decision-first p{font-size:16px;line-height:1.7}
+#results-screen .decision-first .small{font-size:14px}
+.requirements-unavailable{padding:20px 24px;border:1px solid var(--line);border-radius:10px;background:#10231b}
+.requirements-unavailable h3{font-size:18px;margin:0}
+.requirements-unavailable p{font-size:15px;line-height:1.7;max-width:850px}
+.requirements-unavailable button{min-height:44px}
+.dashboard-plan-picker{display:flex;gap:16px;align-items:center;font-size:16px;margin-bottom:24px}
+.dashboard-plan-picker select{font-size:16px;min-height:46px;min-width:170px}
+.shared-missing-inputs{padding:20px 24px;border:1px solid var(--line);border-radius:8px;margin-bottom:24px}
+.shared-missing-inputs h3{font-size:18px;margin-top:0}
+.shared-missing-inputs ul{margin:0;padding-inline-start:20px}
+.shared-missing-inputs li{font-size:15px;line-height:1.7;padding:8px 0}
+.shared-missing-inputs li span{display:block;color:var(--muted);font-size:14px}
+#results-screen .preflight-check-pick{min-height:48px;font-size:15px}
+#results-screen .preflight-season :is(p,dt,dd),#results-screen .preflight-drawer-body{font-size:14px;line-height:1.7}
+#results-screen .preflight-method-footer{display:block;padding:16px 0}
+#results-screen .dashboard-evidence>summary{font-size:17px;line-height:1.7;min-height:44px}
+#results-screen .chart-row-label{font-size:15px}
+#results-screen .chart-balance,#results-screen .chart-axis,#results-screen .season-water-chart>.small{font-size:13px}
+#results-screen .guided-comparison thead th{font-size:14px}
+#results-screen .season-water-reason p{font-size:14px}
+#results-screen .evidence-table{overflow-x:auto}
+@media(max-width:760px){
+ .dashboard-context{grid-template-columns:minmax(0,1fr)}
+ .dashboard-context>button{justify-self:start}
+ .dashboard-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:20px}
+ .dashboard-tabs button{font-size:15px;padding:10px 8px;min-height:52px}
+ #results-screen .decision-first h2{font-size:23px}
+ .requirements-unavailable,.shared-missing-inputs{padding:18px}
+ #results-screen .chart-row-label{font-size:14px}
+ #results-screen .guided-comparison td{font-size:14px}
+ .dashboard-plan-picker{justify-content:space-between}
+}
+[dir=rtl] .guided-heading h1,[dir=rtl] .decision-first h2{letter-spacing:0;line-height:1.6}
+@media(max-width:760px){
+ .guided-navigation{gap:4px;padding:14px 0}
+ .guided-navigation button{padding:8px 4px;flex-direction:column;align-items:flex-start;gap:8px;font-size:11px;line-height:1.5}
+ .guided-heading{padding:24px 0 18px}
+ .guided-heading h1{font-size:26px}
+ .guided-heading p{font-size:14px}
+ .field-choice-actions{gap:10px}
+ .field-choice-actions button{flex:1 1 100%}
+ #setup-screen .rotation{padding:18px 14px}
+ #setup-screen .plan-lane{grid-template-columns:minmax(0,1fr);grid-template-areas:"id" "track";padding:16px;gap:14px}
+ #setup-screen .lane-track{gap:8px}
+ #setup-screen .lane-season{grid-template-columns:72px minmax(0,1fr)}
+ #setup-screen .lane-link{display:none}
+ .setup-scenario{padding:14px}
+ .setup-scenario-actions button{width:100%;font-size:13px;min-height:44px}
+ .assumptions-state{display:block;margin:4px 0 0}
+ .budget-action .preflight-input-grid{grid-template-columns:minmax(0,1fr)}
+ .budget-action #run-preflight{width:100%;min-width:0}
+ .decision-first{padding:22px 18px;margin-bottom:26px}
+ .decision-first h2{font-size:24px}
+ .decision-first p{font-size:14px}
+ .decision-first .primary{width:100%}
+ .guided-comparison,.guided-comparison tbody{display:block}
+ .season-water-chart{padding:16px 14px;margin-bottom:24px}
+ .season-water-chart h3{font-size:14px}
+ .chart-row-label{font-size:12px}
+ .chart-balance{font-size:12px}
+ .guided-comparison thead{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}
+ .guided-comparison tr{display:block;border:1px solid var(--line);border-radius:10px;margin-bottom:14px;padding:6px 14px;background:#10231b}
+ .guided-comparison tbody th{display:block;padding:12px 0}
+ .guided-comparison td{display:flex;justify-content:space-between;gap:12px;padding:12px 0;font-size:13px;text-align:end;align-items:center}
+ .guided-comparison td:last-child{border-bottom:0}
+ .guided-comparison tbody td:last-child{display:block;width:auto;min-width:0;text-align:start}
+ .guided-comparison tbody td:last-child::before{display:block;margin-bottom:10px}
+ .guided-comparison td::before{content:attr(data-label);text-align:start;color:var(--muted);font-size:12px;flex:1;min-width:35%}
+ .guided-comparison td bdi{white-space:nowrap}
+ .overall-assessments>div{gap:18px}
+ .verification{padding:20px 18px}
+ .dashboard-evidence>summary{font-size:14px;line-height:1.7}
+ #dashboard-map .stage-map{min-height:340px}
+ .guided-screen .console-search{max-width:none}
+ .guided-screen .console-foot{font-size:11px}
+}
