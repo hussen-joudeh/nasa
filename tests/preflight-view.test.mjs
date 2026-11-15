@@ -18,6 +18,13 @@ test('Preflight controls expose budget units, applicability period, three dates,
   assert.doesNotMatch(html,/\brequired\b/);
 });
 
+test('Preflight season cards do not show escaped bdi markup in balance text',()=>{
+  const evaluation=runPreflight(['wheat','maize','wheat'],{waterBudget:{amount:'622',unit:'mm',period:'perSeason'},illustrativeCropSettings:true,effectiveRainfallSlopeConfirmed:true,plantingDates:['2025-04-20','2025-05-01','2025-05-15']},null);
+  const html=renderPreflightPanel({lang:'en',inputs:{waterBudget:{amount:'622',unit:'mm',period:'perSeason'},illustrativeCropSettings:true,effectiveRainfallSlopeConfirmed:true,plantingDates:['2025-04-20','2025-05-01','2025-05-15']},evaluations:[evaluation]});
+  assert.doesNotMatch(html,/&lt;bdi&gt;/);
+  assert.match(html,/class="preflight-season"/);
+});
+
 test('Arabic Preflight labels, UNKNOWN state, and explanations are localized',()=>{
   const evaluation=runPreflight(['wheat','maize','wheat'],{},null);
   const html=renderPreflightPanel({lang:'ar',inputs,evaluations:[evaluation]});
@@ -73,6 +80,19 @@ test('both language dictionaries provide all core labels and neutral UNKNOWN',()
   }
 });
 
+test('Decision Breakpoint threshold axis uses engine numbers without hardcoding demo constants',()=>{
+  const sensitive={id:'sensitive',rotationIndex:0,ruleId:'water.balance',season:1,classification:'DECISION-SENSITIVE',testedRange:{min:0,max:1200.1234567890123,unit:'m3',period:'perSeason',derived:true},threshold:{mm:623.8591556593612,m3:138419.12822535323,inclusive:true},statuses:{atMin:'WARNING',atMax:'PASS',atThreshold:'PASS'},transitions:[],missingInformation:[],baselineStatus:'WARNING',variable:'waterBudget'};
+  const evaluation={status:'UNKNOWN',checks:[{ruleId:'water.balance',season:1,status:'WARNING'}],water:{seasons:[{season:1,status:'UNKNOWN',budgetStatus:'WARNING',needMm:{min:614.9,max:623.86},needM3:{min:136432,max:138419}}]}};
+  const html=renderDecisionBreakpoint({lang:'en',findings:[sensitive],hasRun:true,evaluation,waterBudget:{amount:'622',unit:'mm',period:'perSeason'},areaHa:22.19,period:{startIso:'2025-01-01',endIso:'2025-12-31'},inputs:{illustrativeCropSettings:true,effectiveRainfallSlopeConfirmed:true}});
+  assert.match(html,/class="breakpoint-axis"/);
+  assert.match(html,/breakpoint-marker--threshold/);
+  assert.match(html,/breakpoint-marker--budget/);
+  assert.match(html,/623\.86/);
+  assert.doesNotMatch(html,/623\.8591556593612/);
+  assert.match(html,/data-status="UNKNOWN"/);
+  assert.match(html,/data-status="WARNING"/);
+});
+
 test('Decision Breakpoint panel prioritizes sensitivity and shows no more than three findings',()=>{
   const sensitive={id:'sensitive',rotationIndex:0,ruleId:'water.balance',season:1,classification:'DECISION-SENSITIVE',testedRange:{min:0,max:1200.1234567890123,unit:'m3',period:'perSeason',derived:true},threshold:{mm:100.12345678901234,m3:1000.1234567890123,inclusive:true},statuses:{atMin:'FAIL',atMax:'PASS',atThreshold:'PASS'},transitions:[],missingInformation:[],explanation:'Rule-level change.',verifyAction:'Confirm delivered water.'};
   const findings=[sensitive,...Array.from({length:4},(_,index)=>({id:`unknown-${index}`,rotationIndex:index,ruleId:'rotation.compatibility',season:null,classification:'INSUFFICIENT EVIDENCE',testedRange:null,threshold:null,statuses:null,transitions:[],missingInformation:['localConstraints'],explanation:'Cannot assess.',verifyAction:'Check local constraints.'}))];
@@ -81,7 +101,9 @@ test('Decision Breakpoint panel prioritizes sensitivity and shows no more than t
   assert.equal((html.match(/class="breakpoint-finding"/g)??[]).length,3);
   assert.ok(html.indexOf('DECISION-SENSITIVE')<html.indexOf('INSUFFICIENT EVIDENCE'));
   assert.match(html,/m³/);
-  assert.match(html,/1000\.1234567890123/);
+  assert.match(html,/1,000/);
+  assert.doesNotMatch(html,/1000\.1234567890123/);
+  assert.doesNotMatch(html,/623\.8591556593612/);
   assert.match(html,/per season/i);
   assert.doesNotMatch(html,/undefined/);
 });

@@ -1,0 +1,4 @@
+
+> field-shift@0.1.0 qa:browser
+> node scripts/qa-browser.mjs
+

@@ -1,0 +1,365 @@
+{
+  "base": "http://127.0.0.1:5173/",
+  "headed": false,
+  "channel": "chrome",
+  "steps": [
+    {
+      "name": "2d-default",
+      "ok": true,
+      "meanRGB": 0,
+      "darkRatio": 1,
+      "canvas": {
+        "w": 1042,
+        "h": 704
+      },
+      "terrainPressed": "false",
+      "terrainStatus": "",
+      "mode": "2d",
+      "field": "0",
+      "hasFieldLine": true
+    },
+    {
+      "name": "2d-demo-fit",
+      "ok": true,
+      "meanRGB": 0,
+      "darkRatio": 1,
+      "canvas": {
+        "w": 1042,
+        "h": 704
+      },
+      "terrainPressed": "false",
+      "terrainStatus": "",
+      "mode": "2d",
+      "field": "1",
+      "hasFieldLine": true
+    },
+    {
+      "name": "3d-terrain-on",
+      "ok": true,
+      "meanRGB": 0,
+      "darkRatio": 1,
+      "canvas": {
+        "w": 1042,
+        "h": 704
+      },
+      "terrainPressed": "true",
+      "terrainStatus": "Real DEM · 1× vertical scale",
+      "mode": "3d",
+      "field": "1",
+      "hasFieldLine": true
+    },
+    {
+      "name": "mobile-3d",
+      "ok": true,
+      "meanRGB": 0,
+      "darkRatio": 1,
+      "canvas": {
+        "w": 349,
+        "h": 487
+      },
+      "terrainPressed": "true",
+      "terrainStatus": "Real DEM · 1× vertical scale",
+      "mode": "3d",
+      "field": "1",
+      "hasFieldLine": true
+    }
+  ],
+  "tileLog": [
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6955/12189.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3477/6092.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3476/6092.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/14/6091/3476.jpg",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/13/3045/1739.jpg",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/868/1522.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/868/1522.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/868/1522.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/13/1739/3045.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3476/6091.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3475/6091.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3474/6091.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3477/6095.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12187.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6952/12187.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12188.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6952/12188.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6954/12187.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6952/12186.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6955/12189.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6955/12189.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6955/12185.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6954/12185.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12185.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12188.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "failed",
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12189.png",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "errors": [],
+  "demResponses": [
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/869/1523.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3476/6093.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3476/6094.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3477/6093.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/13/1737/3046.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3477/6094.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/13/1738/3046.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/13/1737/3047.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/5/6/11.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/13/1738/3047.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/868/1523.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6952/12187.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12188.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12187.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6952/12188.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12186.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6954/12187.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6952/12186.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6954/12188.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6951/12187.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6951/12188.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6954/12189.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6955/12187.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6951/12186.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6954/12186.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6951/12189.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6955/12188.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6955/12186.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6953/12189.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6952/12189.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6950/12186.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3475/6094.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/6950/12187.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/869/1522.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/434/761.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3477/6092.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3476/6092.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/869/1523.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3474/6093.png",
+      "status": 200
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/3475/6092.png",
+      "status": 200
+    }
+  ],
+  "failedDem": [],
+  "verified": true,
+  "headlessNote": "Run QA_HEADED=1 for GPU-verified terrain pixels."
+}

@@ -1,0 +1,45 @@
+{
+  "base": "http://127.0.0.1:5179/",
+  "captures": [
+    {
+      "file": "qa\\visual-v1\\screenshots\\desktop-1440x900-en.png",
+      "shot": {
+        "name": "desktop-1440x900-en",
+        "width": 1440,
+        "height": 900,
+        "lang": "en",
+        "mobileView": "explore"
+      }
+    },
+    {
+      "file": "qa\\visual-v1\\screenshots\\tablet-768x1024-en.png",
+      "shot": {
+        "name": "tablet-768x1024-en",
+        "width": 768,
+        "height": 1024,
+        "lang": "en",
+        "mobileView": "explore"
+      }
+    },
+    {
+      "file": "qa\\visual-v1\\screenshots\\mobile-375x812-en.png",
+      "shot": {
+        "name": "mobile-375x812-en",
+        "width": 375,
+        "height": 812,
+        "lang": "en",
+        "mobileView": "explore"
+      }
+    },
+    {
+      "file": "qa\\visual-v1\\screenshots\\mobile-375x812-ar.png",
+      "shot": {
+        "name": "mobile-375x812-ar",
+        "width": 375,
+        "height": 812,
+        "lang": "ar",
+        "mobileView": "plan"
+      }
+    }
+  ]
+}

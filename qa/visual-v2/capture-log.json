@@ -1,0 +1,928 @@
+{
+  "base": "http://127.0.0.1:5179/",
+  "captures": [
+    {
+      "file": "qa\\visual-v2\\screenshots\\desktop-1440x900-en.png",
+      "shot": {
+        "name": "desktop-1440x900-en",
+        "width": 1440,
+        "height": 900,
+        "lang": "en"
+      }
+    },
+    {
+      "file": "qa\\visual-v2\\screenshots\\desktop-1600x1000-en.png",
+      "shot": {
+        "name": "desktop-1600x1000-en",
+        "width": 1600,
+        "height": 1000,
+        "lang": "en"
+      }
+    },
+    {
+      "file": "qa\\visual-v2\\screenshots\\tablet-768x1024-en.png",
+      "shot": {
+        "name": "tablet-768x1024-en",
+        "width": 768,
+        "height": 1024,
+        "lang": "en"
+      }
+    },
+    {
+      "file": "qa\\visual-v2\\screenshots\\mobile-375x812-en.png",
+      "shot": {
+        "name": "mobile-375x812-en",
+        "width": 375,
+        "height": 812,
+        "lang": "en"
+      }
+    },
+    {
+      "file": "qa\\visual-v2\\screenshots\\mobile-375x812-ar.png",
+      "shot": {
+        "name": "mobile-375x812-ar",
+        "width": 375,
+        "height": 812,
+        "lang": "ar"
+      }
+    },
+    {
+      "file": "qa\\visual-v2\\screenshots\\desktop-1440x900-ar.png",
+      "shot": {
+        "name": "desktop-1440x900-ar",
+        "width": 1440,
+        "height": 900,
+        "lang": "ar"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "desktop-1440x900-en",
+      "result": "pass",
+      "empty": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 134,
+          "w": 1042,
+          "h": 704
+        },
+        "inspector": {
+          "x": 1071,
+          "y": 134,
+          "w": 340,
+          "h": 704
+        },
+        "mapShareOfConsole": 0.645,
+        "mapShareOfViewport": 0.566,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1Explore — curre",
+          "2Analyze — upcom",
+          "3Compare — upcom",
+          "4Preflight — upc",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-toggle",
+          "demo-select",
+          "apply"
+        ],
+        "stage": [
+          "Explore:current",
+          "Analyze:pending",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "selected": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 134,
+          "w": 1042,
+          "h": 704
+        },
+        "inspector": {
+          "x": 1071,
+          "y": 134,
+          "w": 340,
+          "h": 704
+        },
+        "mapShareOfConsole": 0.645,
+        "mapShareOfViewport": 0.566,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1Explore — done",
+          "2Analyze — curre",
+          "3Compare — upcom",
+          "4Preflight — upc",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-toggle",
+          "demo-select",
+          "apply"
+        ],
+        "stage": [
+          "Explore:done",
+          "Analyze:current",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "collapsed": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 134,
+          "w": 1382,
+          "h": 704
+        },
+        "inspector": null,
+        "mapShareOfConsole": 0.855,
+        "mapShareOfViewport": 0.751,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1Explore — done",
+          "2Analyze — curre",
+          "3Compare — upcom",
+          "4Preflight — upc",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-open"
+        ],
+        "stage": [
+          "Explore:done",
+          "Analyze:current",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "inspectorRoundTrip": {
+        "before": {
+          "area": "22.19 ha",
+          "canvas": true
+        },
+        "after": {
+          "area": "22.19 ha",
+          "sameCanvas": true,
+          "analyzeVisible": true
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "name": "desktop-1600x1000-en",
+      "result": "pass",
+      "empty": {
+        "viewport": [
+          1600,
+          1000
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 134,
+          "w": 1162,
+          "h": 804
+        },
+        "inspector": {
+          "x": 1191,
+          "y": 134,
+          "w": 380,
+          "h": 804
+        },
+        "mapShareOfConsole": 0.656,
+        "mapShareOfViewport": 0.584,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1Explore — curre",
+          "2Analyze — upcom",
+          "3Compare — upcom",
+          "4Preflight — upc",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-toggle",
+          "demo-select",
+          "apply"
+        ],
+        "stage": [
+          "Explore:current",
+          "Analyze:pending",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "selected": {
+        "viewport": [
+          1600,
+          1000
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 134,
+          "w": 1162,
+          "h": 804
+        },
+        "inspector": {
+          "x": 1191,
+          "y": 134,
+          "w": 380,
+          "h": 804
+        },
+        "mapShareOfConsole": 0.656,
+        "mapShareOfViewport": 0.584,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1Explore — done",
+          "2Analyze — curre",
+          "3Compare — upcom",
+          "4Preflight — upc",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-toggle",
+          "demo-select",
+          "apply"
+        ],
+        "stage": [
+          "Explore:done",
+          "Analyze:current",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "collapsed": {
+        "viewport": [
+          1600,
+          1000
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 134,
+          "w": 1542,
+          "h": 804
+        },
+        "inspector": null,
+        "mapShareOfConsole": 0.871,
+        "mapShareOfViewport": 0.775,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1Explore — done",
+          "2Analyze — curre",
+          "3Compare — upcom",
+          "4Preflight — upc",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-open"
+        ],
+        "stage": [
+          "Explore:done",
+          "Analyze:current",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "inspectorRoundTrip": {
+        "before": {
+          "area": "22.19 ha",
+          "canvas": true
+        },
+        "after": {
+          "area": "22.19 ha",
+          "sameCanvas": true,
+          "analyzeVisible": true
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "name": "tablet-768x1024-en",
+      "result": "pass",
+      "empty": {
+        "viewport": [
+          768,
+          1024
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 198,
+          "w": 710,
+          "h": 594
+        },
+        "inspector": {
+          "x": 29,
+          "y": 792,
+          "w": 710,
+          "h": 271
+        },
+        "mapShareOfConsole": 0.571,
+        "mapShareOfViewport": 0.536,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "search-button",
+          "inspector-toggle"
+        ],
+        "stage": [
+          "Explore:current",
+          "Analyze:pending",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "selected": {
+        "viewport": [
+          768,
+          1024
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 198,
+          "w": 710,
+          "h": 594
+        },
+        "inspector": {
+          "x": 29,
+          "y": 792,
+          "w": 710,
+          "h": 571
+        },
+        "mapShareOfConsole": 0.443,
+        "mapShareOfViewport": 0.536,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "search-button",
+          "inspector-toggle"
+        ],
+        "stage": [
+          "Explore:done",
+          "Analyze:current",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "collapsed": {
+        "viewport": [
+          768,
+          1024
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 198,
+          "w": 710,
+          "h": 594
+        },
+        "inspector": {
+          "x": 29,
+          "y": 792,
+          "w": 710,
+          "h": 101
+        },
+        "mapShareOfConsole": 0.682,
+        "mapShareOfViewport": 0.536,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "search-button",
+          "inspector-toggle"
+        ],
+        "stage": [
+          "Explore:done",
+          "Analyze:current",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "hidden"
+      },
+      "inspectorRoundTrip": {
+        "before": {
+          "area": "22.19 ha",
+          "canvas": true
+        },
+        "after": {
+          "area": "22.19 ha",
+          "sameCanvas": true,
+          "analyzeVisible": true
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "name": "mobile-375x812-en",
+      "result": "pass",
+      "empty": {
+        "viewport": [
+          375,
+          812
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 13,
+          "y": 200,
+          "w": 349,
+          "h": 487
+        },
+        "inspector": {
+          "x": 13,
+          "y": 687,
+          "w": 349,
+          "h": 561
+        },
+        "mapShareOfConsole": 0.396,
+        "mapShareOfViewport": 0.558,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [],
+        "stage": [
+          "Explore:current",
+          "Analyze:pending",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "in-viewport"
+      },
+      "selected": {
+        "viewport": [
+          375,
+          812
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 13,
+          "y": -212,
+          "w": 349,
+          "h": 487
+        },
+        "inspector": {
+          "x": 13,
+          "y": 275,
+          "w": 349,
+          "h": 1035
+        },
+        "mapShareOfConsole": 0.285,
+        "mapShareOfViewport": 0.558,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [],
+        "stage": [
+          "Explore:done",
+          "Analyze:current",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "in-viewport"
+      },
+      "collapsed": {
+        "viewport": [
+          375,
+          812
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 13,
+          "y": -212,
+          "w": 349,
+          "h": 487
+        },
+        "inspector": {
+          "x": 13,
+          "y": 275,
+          "w": 349,
+          "h": 97
+        },
+        "mapShareOfConsole": 0.638,
+        "mapShareOfViewport": 0.558,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [],
+        "stage": [
+          "Explore:done",
+          "Analyze:current",
+          "Compare:pending",
+          "Preflight:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "ltr",
+        "mobileNav": "in-viewport"
+      },
+      "inspectorRoundTrip": {
+        "before": {
+          "area": "22.19 ha",
+          "canvas": true
+        },
+        "after": {
+          "area": "22.19 ha",
+          "sameCanvas": true,
+          "analyzeVisible": true
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "name": "mobile-375x812-ar",
+      "result": "pass",
+      "empty": {
+        "viewport": [
+          375,
+          812
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 13,
+          "y": -199,
+          "w": 349,
+          "h": 487
+        },
+        "inspector": {
+          "x": 13,
+          "y": 288,
+          "w": 349,
+          "h": 564
+        },
+        "mapShareOfConsole": 0.401,
+        "mapShareOfViewport": 0.558,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [],
+        "stage": [
+          "استكشف:current",
+          "حلّل:pending",
+          "قارن:pending",
+          "الفحص المسبق:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "rtl",
+        "mobileNav": "in-viewport"
+      },
+      "selected": {
+        "viewport": [
+          375,
+          812
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 13,
+          "y": -199,
+          "w": 349,
+          "h": 487
+        },
+        "inspector": {
+          "x": 13,
+          "y": 288,
+          "w": 349,
+          "h": 986
+        },
+        "mapShareOfConsole": 0.294,
+        "mapShareOfViewport": 0.558,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [],
+        "stage": [
+          "استكشف:done",
+          "حلّل:current",
+          "قارن:pending",
+          "الفحص المسبق:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "rtl",
+        "mobileNav": "in-viewport"
+      },
+      "collapsed": {
+        "viewport": [
+          375,
+          812
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 13,
+          "y": -199,
+          "w": 349,
+          "h": 487
+        },
+        "inspector": {
+          "x": 13,
+          "y": 288,
+          "w": 349,
+          "h": 100
+        },
+        "mapShareOfConsole": 0.635,
+        "mapShareOfViewport": 0.558,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [],
+        "stage": [
+          "استكشف:done",
+          "حلّل:current",
+          "قارن:pending",
+          "الفحص المسبق:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "rtl",
+        "mobileNav": "in-viewport"
+      },
+      "inspectorRoundTrip": {
+        "before": {
+          "area": "22.19 هكتار",
+          "canvas": true
+        },
+        "after": {
+          "area": "22.19 هكتار",
+          "sameCanvas": true,
+          "analyzeVisible": true
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "name": "desktop-1440x900-ar",
+      "result": "pass",
+      "empty": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 369,
+          "y": 134,
+          "w": 1042,
+          "h": 704
+        },
+        "inspector": {
+          "x": 29,
+          "y": 134,
+          "w": 340,
+          "h": 704
+        },
+        "mapShareOfConsole": 0.645,
+        "mapShareOfViewport": 0.566,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1استكشف — المرحل",
+          "2حلّل — لاحقة",
+          "3قارن — لاحقة",
+          "4الفحص المسبق — ",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-toggle",
+          "demo-select",
+          "apply"
+        ],
+        "stage": [
+          "استكشف:current",
+          "حلّل:pending",
+          "قارن:pending",
+          "الفحص المسبق:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "rtl",
+        "mobileNav": "hidden"
+      },
+      "selected": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 369,
+          "y": 134,
+          "w": 1042,
+          "h": 704
+        },
+        "inspector": {
+          "x": 29,
+          "y": 134,
+          "w": 340,
+          "h": 704
+        },
+        "mapShareOfConsole": 0.645,
+        "mapShareOfViewport": 0.566,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1استكشف — مكتملة",
+          "2حلّل — المرحلة ",
+          "3قارن — لاحقة",
+          "4الفحص المسبق — ",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-toggle",
+          "demo-select",
+          "apply"
+        ],
+        "stage": [
+          "استكشف:done",
+          "حلّل:current",
+          "قارن:pending",
+          "الفحص المسبق:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "rtl",
+        "mobileNav": "hidden"
+      },
+      "collapsed": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "horizontalOverflow": false,
+        "map": {
+          "x": 29,
+          "y": 134,
+          "w": 1382,
+          "h": 704
+        },
+        "inspector": null,
+        "mapShareOfConsole": 0.855,
+        "mapShareOfViewport": 0.751,
+        "inspectorOverMap": false,
+        "controlOverlaps": [],
+        "controlsUnder44px": [
+          "1استكشف — مكتملة",
+          "2حلّل — المرحلة ",
+          "3قارن — لاحقة",
+          "4الفحص المسبق — ",
+          "search-button",
+          "satellite",
+          "relief",
+          "terrain",
+          "fit",
+          "orbit-left",
+          "orbit-right",
+          "north",
+          "zoom-in",
+          "zoom-out",
+          "reset-view",
+          "draw",
+          "clear",
+          "inspector-open"
+        ],
+        "stage": [
+          "استكشف:done",
+          "حلّل:current",
+          "قارن:pending",
+          "الفحص المسبق:pending"
+        ],
+        "wordmarkDirection": "ltr",
+        "dir": "rtl",
+        "mobileNav": "hidden"
+      },
+      "inspectorRoundTrip": {
+        "before": {
+          "area": "22.19 هكتار",
+          "canvas": true
+        },
+        "after": {
+          "area": "22.19 هكتار",
+          "sameCanvas": true,
+          "analyzeVisible": true
+        }
+      },
+      "pageErrors": []
+    }
+  ]
+}

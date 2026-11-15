@@ -1,0 +1,125 @@
+{
+  "consistency": [
+    {
+      "year": 2023,
+      "status": "CONSISTENT"
+    },
+    {
+      "year": 2024,
+      "status": "CONSISTENT"
+    }
+  ],
+  "roles": {
+    "DIRECT_INPUT": 366,
+    "REQUIRES_CONFIRMATION": 11,
+    "CONTEXT_ONLY": 28
+  },
+  "mapping": [
+    {
+      "engineId": "wheat",
+      "dbId": "winter_wheat",
+      "botanical": "Poaceae",
+      "familyMatch": "partial",
+      "status": "proposed_not_activated",
+      "evidence": "DB profile is winter wheat interpretation of generic engine wheat; no Kc crosswalk.",
+      "dbPresent": true,
+      "dbStatus": "proposed_for_engine_review"
+    },
+    {
+      "engineId": "maize",
+      "dbId": "corn",
+      "botanical": "Zea mays / Poaceae",
+      "familyMatch": "yes",
+      "status": "proposed_not_activated",
+      "evidence": "Name alignment only; engine uses illustrative FAO Kc, not seasonal_water_use_mm range.",
+      "dbPresent": true,
+      "dbStatus": "proposed_for_engine_review"
+    },
+    {
+      "engineId": "soy",
+      "dbId": null,
+      "botanical": "Fabaceae",
+      "familyMatch": "n/a",
+      "status": "unmapped",
+      "evidence": "No crop_profiles slug for soybean.",
+      "dbPresent": false,
+      "dbStatus": null
+    },
+    {
+      "engineId": "chickpea",
+      "dbId": "chickpea",
+      "botanical": "Fabaceae",
+      "familyMatch": "yes",
+      "status": "proposed_not_activated",
+      "evidence": "Trial-range water use in DB; engine legume checks only.",
+      "dbPresent": true,
+      "dbStatus": "proposed_for_engine_review"
+    },
+    {
+      "engineId": "sunflower",
+      "dbId": null,
+      "botanical": "Asteraceae",
+      "familyMatch": "n/a",
+      "status": "unmapped",
+      "evidence": "No crop_profiles record.",
+      "dbPresent": false,
+      "dbStatus": null
+    },
+    {
+      "engineId": null,
+      "dbId": "alfalfa",
+      "botanical": "Fabaceae",
+      "familyMatch": "n/a",
+      "status": "db_only",
+      "evidence": "Regional profile not in engine rotation catalog.",
+      "dbPresent": true,
+      "dbStatus": "proposed_for_engine_review"
+    },
+    {
+      "engineId": null,
+      "dbId": "barley",
+      "botanical": "Poaceae",
+      "familyMatch": "n/a",
+      "status": "db_only",
+      "evidence": "Regional profile not in engine rotation catalog.",
+      "dbPresent": true,
+      "dbStatus": "proposed_for_engine_review"
+    },
+    {
+      "engineId": null,
+      "dbId": "dry_bean",
+      "botanical": "Fabaceae",
+      "familyMatch": "n/a",
+      "status": "db_only",
+      "evidence": "Regional profile not in engine rotation catalog.",
+      "dbPresent": true,
+      "dbStatus": "proposed_for_engine_review"
+    },
+    {
+      "engineId": null,
+      "dbId": "lentil",
+      "botanical": "Fabaceae",
+      "familyMatch": "n/a",
+      "status": "db_only",
+      "evidence": "Regional profile not in engine rotation catalog.",
+      "dbPresent": true,
+      "dbStatus": "proposed_for_engine_review"
+    },
+    {
+      "engineId": null,
+      "dbId": "sugar_beet",
+      "botanical": "Amaranthaceae",
+      "familyMatch": "n/a",
+      "status": "db_only",
+      "evidence": "Regional profile not in engine rotation catalog.",
+      "dbPresent": true,
+      "dbStatus": "proposed_for_engine_review"
+    }
+  ],
+  "unchangedEngine": true,
+  "budgets": [
+    "UNKNOWN",
+    "UNKNOWN",
+    "UNKNOWN"
+  ]
+}

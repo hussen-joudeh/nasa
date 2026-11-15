@@ -1,0 +1,10 @@
+C:\Users\husse\Downloads\field-shift\scripts\export-brand-assets.mjs
+C:\Users\husse\Downloads\field-shift\scripts\local-server.mjs
+C:\Users\husse\Downloads\field-shift\scripts\prove-breakpoint-09c.mjs
+C:\Users\husse\Downloads\field-shift\scripts\qa-batch07b.mjs
+C:\Users\husse\Downloads\field-shift\scripts\qa-batch07d.mjs
+C:\Users\husse\Downloads\field-shift\scripts\qa-live-nasa-non-demo.mjs
+C:\Users\husse\Downloads\field-shift\scripts\qa-snapshot-journeys.mjs
+C:\Users\husse\Downloads\field-shift\src\app.mjs
+C:\Users\husse\Downloads\field-shift\src\water-truth.mjs
+✖ 15 problems (15 errors, 0 warnings)

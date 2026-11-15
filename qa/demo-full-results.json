@@ -1,0 +1,77 @@
+{
+  "startedAt": "2026-11-15T02:26:13.244Z",
+  "base": "http://127.0.0.1:5179/",
+  "checks": [
+    {
+      "name": "01-cinematic-enter",
+      "result": "pass"
+    },
+    {
+      "name": "02-maplibre-workspace",
+      "result": "pass"
+    },
+    {
+      "name": "03-demo-field-select",
+      "result": "pass"
+    },
+    {
+      "name": "04-boundary-area-labels",
+      "result": "pass"
+    },
+    {
+      "name": "05-climate-analyze",
+      "result": "pass"
+    },
+    {
+      "name": "06-mongodb-climate-source",
+      "result": "pass"
+    },
+    {
+      "name": "07-rotation-edits",
+      "result": "pass"
+    },
+    {
+      "name": "08-preflight-unknown-budget",
+      "result": "pass"
+    },
+    {
+      "name": "09-farmer-budget-re-eval",
+      "result": "pass"
+    },
+    {
+      "name": "10-farmer-previous-crop-impact",
+      "result": "pass"
+    },
+    {
+      "name": "11-decision-trace-provenance",
+      "result": "pass"
+    },
+    {
+      "name": "12-save-export-import",
+      "result": "pass"
+    },
+    {
+      "name": "13-breakpoint-spring-demo",
+      "result": "pass"
+    },
+    {
+      "name": "14-historical-snapshot-banner",
+      "result": "pass"
+    },
+    {
+      "name": "15-reanalyze-current",
+      "result": "pass"
+    },
+    {
+      "name": "16-field-switch-no-leakage",
+      "result": "pass"
+    },
+    {
+      "name": "17-arabic-rtl-subset",
+      "result": "pass"
+    }
+  ],
+  "screenshots": [
+    "desktop-analysis-complete.png"
+  ]
+}

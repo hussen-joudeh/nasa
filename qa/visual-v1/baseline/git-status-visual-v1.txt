@@ -1,0 +1,115 @@
+﻿ M index.html
+ M package.json
+ M scripts/build-local.mjs
+ M scripts/local-server.mjs
+ M scripts/qa-browser.mjs
+ M sources.html
+ M src/app.mjs
+ M src/domain.mjs
+ M src/i18n.mjs
+ M src/preflight-view.mjs
+ M src/rotation-view.mjs
+ M src/style.css
+ M src/water-truth.mjs
+ M tests/build.test.mjs
+ M tests/decision-breakpoint-app.test.mjs
+ M tests/map-explorer.test.mjs
+ M tests/rotation-app.test.mjs
+ M tests/rotation-view.test.mjs
+ M tests/server.test.mjs
+ M tsconfig.json
+ M vite.config.ts
+?? .claude/
+?? BRAND_USAGE.md
+?? DECISION_TRACE_07G.md
+?? DEMO_RUNBOOK_07E.md
+?? FARMER_INPUTS_07F.md
+?? SYSTEM_READINESS_AUDIT_08A.md
+?? backend/
+?? brand-tokens.json
+?? fieldshift.env.example
+?? package-lock.json
+?? qa/batch06e-tests.txt
+?? qa/batch07b-tests.txt
+?? qa/breakpoint-demo-09c-browser.json
+?? qa/breakpoint-proof-09c.json
+?? qa/browser-results.json
+?? qa/demo-full-results.json
+?? qa/evidence/batch06e/
+?? qa/evidence/batch06f/
+?? qa/evidence/batch07b/
+?? qa/evidence/batch07d/
+?? qa/evidence/batch07e/
+?? qa/live-nasa-non-demo.json
+?? qa/loading-retry-results.json
+?? qa/manual-support-08b5.json
+?? qa/screenshots/
+?? qa/visual-checklist-08b4.json
+?? qa/visual-v1/
+?? scripts/check-demo-map.mjs
+?? scripts/export-brand-assets.mjs
+?? scripts/fieldshift-config.mjs
+?? scripts/fieldshift-config.mjs.d.ts
+?? scripts/load-fieldshift-env.mjs
+?? scripts/prove-breakpoint-09c.mjs
+?? scripts/qa-batch06e.mjs
+?? scripts/qa-batch06f.mjs
+?? scripts/qa-batch07b.mjs
+?? scripts/qa-batch07d.mjs
+?? scripts/qa-breakpoint-demo-09c.mjs
+?? scripts/qa-demo-full.mjs
+?? scripts/qa-import-export.mjs
+?? scripts/qa-live-nasa-non-demo.mjs
+?? scripts/qa-loading-retry.mjs
+?? scripts/qa-manual-support.mjs
+?? scripts/qa-snapshot-journeys.mjs
+?? scripts/qa-visual-checklist.mjs
+?? scripts/smoke-live.mjs
+?? scripts/wait-mongo.mjs
+?? site.webmanifest
+?? src/assets/
+?? src/brand-tokens.css
+?? src/decision-snapshot-validity.mjs
+?? src/decision-snapshot.mjs
+?? src/decision-trace-view.mjs
+?? src/decision-trace.mjs
+?? src/demo-evidence.mjs
+?? src/evidence-readiness.mjs
+?? src/evidence-view.mjs
+?? src/farmer-input-view.mjs
+?? src/farmer-inputs.mjs
+?? tests/brand.test.mjs
+?? tests/decision-breakpoint-demo-09c.test.mjs
+?? tests/decision-snapshot-integrity.test.mjs
+?? tests/decision-trace.test.mjs
+?? tests/demo-evidence.test.mjs
+?? tests/evidence-coverage.test.mjs
+?? tests/evidence-readiness.test.mjs
+?? tests/evidence-view.test.mjs
+?? tests/farmer-inputs.test.mjs
+?? tests/plan-import.test.mjs
+?? tests/smoke-exit.test.mjs
+?? tests/stack-config.test.mjs
+?? tests/vite-config.test.mjs
+ index.html                             |  28 ++++---
+ package.json                           |  10 +++
+ scripts/build-local.mjs                |   7 +-
+ scripts/local-server.mjs               |  59 +++++++++++++-
+ scripts/qa-browser.mjs                 |  11 ++-
+ sources.html                           |   2 +-
+ src/app.mjs                            | 141 +++++++++++++++++++++++++--------
+ src/domain.mjs                         |  28 +++++++
+ src/i18n.mjs                           |  32 +++++---
+ src/preflight-view.mjs                 |  17 ++--
+ src/rotation-view.mjs                  |  91 ++++++++++++++++++---
+ src/style.css                          | 122 +++++++++++++++++++++++++++-
+ src/water-truth.mjs                    |   2 +-
+ tests/build.test.mjs                   |  10 ++-
+ tests/decision-breakpoint-app.test.mjs |   9 ++-
+ tests/map-explorer.test.mjs            |  11 ++-
+ tests/rotation-app.test.mjs            |  19 +++--
+ tests/rotation-view.test.mjs           |  85 +++++++++++++++++++-
+ tests/server.test.mjs                  |   8 +-
+ tsconfig.json                          |   2 +-
+ vite.config.ts                         |  54 ++++++++-----
+ 21 files changed, 625 insertions(+), 123 deletions(-)

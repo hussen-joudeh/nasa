@@ -5,3 +5,8 @@ coverage
 *.log
 qa/source-probe/docs/worldcover-head.bin
 .expo/
+.claude/
+fieldshift.env
+.env
+.env.*
+qa/**/worktree-snapshot.tar.gz

@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "name": "map-draw-boundary",
+      "pass": true
+    },
+    {
+      "name": "terrain-toggle-interactive",
+      "pass": true,
+      "automatedOnly": true,
+      "detail": "data-mode=2d aria-pressed=false status=",
+      "humanRequired": "Visible DEM tiles and 3D relief in headful browser"
+    },
+    {
+      "name": "nasa-response-captured",
+      "pass": true,
+      "detail": {
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M_MAX%2CT2M_MIN%2CALLSKY_SFC_SW_DWN&community=AG&longitude=-119.95640869140618&latitude=36.78174120913164&start=20250101",
+        "status": 200,
+        "hasParameters": true,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Daily Data",
+          "api": {
+            "version": "v2.10.3",
+            "name": "POWER Daily API"
+          },
+          "sources": [
+            "MERRA2",
+            "SYN1DEG",
+            "POWER"
+          ],
+          "fill_value": -999,
+          "time_standard": "LST",
+          "start": "20250101",
+          "end": "20251231"
+        }
+      }
+    },
+    {
+      "name": "draw-control-keyboard-focus",
+      "pass": true,
+      "automatedOnly": true,
+      "detail": {
+        "id": "draw",
+        "tag": "BUTTON"
+      },
+      "humanRequired": "Tab order through map and Preflight; visible focus rings"
+    },
+    {
+      "name": "reference-screenshots-present",
+      "pass": true,
+      "detail": [
+        {
+          "file": "desktop-analysis-complete.png",
+          "bytes": 3490130
+        },
+        {
+          "file": "arabic-decision-panel.png",
+          "bytes": 400828
+        },
+        {
+          "file": "mobile-result.png",
+          "bytes": 466637
+        }
+      ],
+      "note": "Pixel diff not automated — human compares visuals"
+    }
+  ],
+  "humanOnly": [
+    "Confirm DEM/terrain tiles visibly load (not just data-mode=3d)",
+    "Screen-reader announcement of status and UNKNOWN labels",
+    "Full keyboard path through Preflight form without mouse",
+    "Side-by-side pixel review vs batch08b3 reference PNGs",
+    "Map draw under touch/pointer on real hardware"
+  ],
+  "nasaSample": {
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M_MAX%2CT2M_MIN%2CALLSKY_SFC_SW_DWN&community=AG&longitude=-119.95640869140618&latitude=36.78174120913164&start=20250101",
+    "status": 200,
+    "hasParameters": true,
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "api": {
+        "version": "v2.10.3",
+        "name": "POWER Daily API"
+      },
+      "sources": [
+        "MERRA2",
+        "SYN1DEG",
+        "POWER"
+      ],
+      "fill_value": -999,
+      "time_standard": "LST",
+      "start": "20250101",
+      "end": "20251231"
+    }
+  }
+}

@@ -1,4 +1,27 @@
 import {validateBioFirewall} from './biofirewall.mjs';
+import {validateSavedFarmerInputs} from './farmer-inputs.mjs';
+import {validateDecisionSnapshotStructure, assessImportedSnapshotTrust} from './decision-snapshot.mjs';
+
+/** Maximum UTF-8 byte length for a v1 plan JSON import (includes decision snapshots). */
+export const PLAN_IMPORT_MAX_BYTES = 1_048_576;
+
+export function assertPlanImportByteSize(byteLength) {
+  if (!Number.isFinite(byteLength) || byteLength < 0) {
+    const err = new Error('plan-invalid-size');
+    err.code = 'plan-invalid-size';
+    throw err;
+  }
+  if (byteLength > PLAN_IMPORT_MAX_BYTES) {
+    const err = new Error('plan-too-large');
+    err.code = 'plan-too-large';
+    err.maxBytes = PLAN_IMPORT_MAX_BYTES;
+    throw err;
+  }
+}
+
+export function utf8ByteLength(text) {
+  return new TextEncoder().encode(text).length;
+}
 
 export function parseCoordinates(text) {
   const parts = text.trim().split(',').map(x => x.trim());
@@ -163,6 +186,11 @@ export function readSaved(raw) {
  if(value.version!==1)throw Error('version');
  if(value.preflightInputs!==undefined)validateSavedPreflight(value.preflightInputs);
  if(value.biofirewall!==undefined)validateBioFirewall(value.biofirewall);
+ if(value.farmerInputs!==undefined)validateSavedFarmerInputs(value.farmerInputs);
+ if(value.decisionSnapshot!==undefined&&value.decisionSnapshot!==null){
+  validateDecisionSnapshotStructure(value.decisionSnapshot);
+  value.decisionSnapshotTrust=assessImportedSnapshotTrust(value.decisionSnapshot,value);
+ }
  if(value.previousCrop!==undefined&&value.previousCrop!==null&&!knownCrop(value.previousCrop))throw Error('history');
  validatePolygon(value.polygon);
  value.rotations=normalizeSavedRotations(value.rotations);

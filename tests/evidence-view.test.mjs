@@ -1,0 +1,2 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {renderEvidence} from '../src/evidence-view.mjs';
+test('unavailable supplements render an honest empty context without throwing',()=>{const e={field:{approval_status:'proposed'},climateDaily:[{source:{product:'NASA POWER'}}],cropHistory:[],soils:[]};assert.match(renderEvidence(e,null,'en'),/Evidence &amp; Verification|Evidence & Verification/);assert.match(renderEvidence(e,null,'ar'),/الأدلة والتحقق/);});

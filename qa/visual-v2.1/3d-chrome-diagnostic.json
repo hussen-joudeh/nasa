@@ -1,0 +1,14 @@
+{
+  "base": "http://127.0.0.1:5179/",
+  "headed": true,
+  "checks": [
+    {
+      "name": "webgl_sample",
+      "ok": true,
+      "meanRGB": 0,
+      "terrainPressed": "true",
+      "pass": false
+    }
+  ],
+  "verified": false
+}

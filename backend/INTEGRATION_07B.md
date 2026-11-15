@@ -1,0 +1,16 @@
+# Batch 07B integration
+
+The existing standalone MongoDB API is now connected through the local frontend server. Batch 07C adds read-only `GET /api/health`, `/api/demo-field/climate-seasonal`, `/api/demo-field/scenarios`, `/api/crop-profiles`, and `/api/crop-compatibility`; the frontend server proxies all `/api/*` GET routes. Run MongoDB, `npm start --prefix backend` (5174), and `npm run dev:local` (5173). The native frontend server forwards only GET /api/demo-field to the fixed loopback API with an 8-second timeout and controlled 503 errors; other methods return 405. Vite development also has a local API proxy. Static build output alone does not supply an API server: a same-origin reverse proxy would be required if deployed later. No deployment is included.
+
+Select **Select MongoDB demo field** in the field panel, then **Analyze this field**. Selection fetches and validates the exact canonical ID, copies the stored ring without its closing vertex, and focuses the real map. The proposed-boundary note displays the stored equal-area figure (22.220372 ha); the existing area display/engine retains its spherical polygon estimate. These methods are not silently conflated.
+
+`src/demo-evidence.mjs` validates the proposed field, geometry, referenced evidence, full ascending 2025 date series and LST/source metadata. It converts solar kWh to MJ by 3.6 and passes nulls as missing through the unchanged POWER parser. Original source metadata remains attached as archiveSource. Crops/soils are inspectable evidence only; no crop crosswalk or soil calculation is applied.
+
+Only an explicit in-memory selection with an exact polygon match can request stored climate. Analysis re-fetches the API and checks the polygon again. Backend failure never falls back to live data for the demo. Manual drawing, coordinate changes, clearing and restore invalidate the association. Saved plan format is unchanged: restored geometry and farmer inputs persist, but the user must explicitly reselect the demo to associate MongoDB evidence again. Selecting a new demo clears the previous field's water amount; no budget is inferred from the database. Ordinary polygons continue using live NASA.
+
+Verification: repeat import matched all 1138 documents with zero upserts; unchanged counts, unique IDs and actual indexes recorded in qa/evidence/batch07b. Real API-backed 2025 results: 394 mm precipitation, approximately 19.1 C Tmax, 4.7 C Tmin, 16.5 MJ/m2/day solar. All three real-data engine evaluations retain UNKNOWN for missing irrigation. 131 local tests and 6 backend tests passed. Existing browser QA and targeted integration browser QA passed. Targeted unavailable-response interception is a failure-path test only; successful analysis and engine checks used live MongoDB.
+
+Screenshots and machine-readable reports: qa/evidence/batch07b/. No scientific engines or canonical records changed; no commit or deployment.
+
+Final map verification: the canonical Nebraska polygon renders correctly in 2D. Automatic terrain focus produced a blank scene in browser QA, so explicit demo selection now opens in 2D at the stored centroid. The existing 3D control remains available, but successful 3D rendering of this demo is not verified. This limitation is separate from the successful live MongoDB/Preflight flow.
+

@@ -1,0 +1,84 @@
+{
+  "startedAt": "2026-11-15T07:14:45.982Z",
+  "console": [],
+  "failedRequests": [
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/13/1364/3196.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/684/1598.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/13/1368/3196.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/684/1597.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/684/1596.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/14/6389/2730.jpg",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/14/6390/2731.jpg",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/14/2734/6388.png",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "checks": [
+    {
+      "name": "English shell",
+      "result": "pass"
+    },
+    {
+      "name": "Coordinate selection and real area",
+      "result": "pass"
+    },
+    {
+      "name": "Rotation changes",
+      "result": "pass"
+    },
+    {
+      "name": "Save and restore",
+      "result": "pass"
+    },
+    {
+      "name": "Weather success or honest failure",
+      "result": "pass"
+    },
+    {
+      "name": "Climate success or honest failure",
+      "result": "pass"
+    },
+    {
+      "name": "Arabic direction",
+      "result": "pass"
+    },
+    {
+      "name": "Mobile document does not overflow",
+      "result": "pass"
+    },
+    {
+      "name": "Mobile rotation lanes reachable",
+      "result": "pass"
+    }
+  ],
+  "manualRemaining": [
+    "Visually inspect screenshots",
+    "Draw a polygon with map clicks",
+    "Pan/zoom/orbit real terrain",
+    "Verify loaded DEM tiles",
+    "Inspect network source payloads",
+    "Keyboard and screen-reader QA"
+  ]
+}

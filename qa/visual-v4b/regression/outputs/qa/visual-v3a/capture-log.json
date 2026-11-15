@@ -1,0 +1,13 @@
+{
+  "base": "http://127.0.0.1:5173/",
+  "captures": [
+    "desktop-1440-below-threshold-warning",
+    "desktop-1440-at-threshold-pass",
+    "desktop-1440-overall-unknown-hierarchy",
+    "desktop-1600-comparison",
+    "tablet-768-below",
+    "mobile-375-en-below",
+    "mobile-375-ar-rtl",
+    "desktop-insufficient-evidence-empty"
+  ]
+}

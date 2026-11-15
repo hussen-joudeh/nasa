@@ -1,0 +1,96 @@
+[
+  {
+    "name": "field for save/restore",
+    "pass": true
+  },
+  {
+    "name": "defaults differ across plans",
+    "pass": true,
+    "detail": [
+      "1/2/0 w4",
+      "3/0/1 w0",
+      "2/0/2 w0"
+    ]
+  },
+  {
+    "name": "edit A season 2 updates engine counts in place",
+    "pass": true,
+    "detail": {
+      "before": "1/2/0 w4",
+      "after": "2/0/1 w0",
+      "note": "Updated Plant families 1 → 2 · Same-family transitions 2 → 0 · Legume seasons 0 → 1 · Advisory warnings 4 → 0"
+    }
+  },
+  {
+    "name": "edit B and C keep earlier selections",
+    "pass": true,
+    "detail": {
+      "values": "wheat,soy,wheat,wheat,soy,soy,chickpea,chickpea,soy",
+      "facts": [
+        "2/0/1 w0",
+        "2/1/2 w1",
+        "1/2/3 w3"
+      ],
+      "noteC": "Updated Plant families 2 → 1 · Same-family transitions 0 → 2 · Legume seasons 2 → 3 · Advisory warnings 0 → 3"
+    }
+  },
+  {
+    "name": "comparison marks differing rows and keeps UNKNOWN",
+    "pass": true,
+    "detail": {
+      "rows": [
+        "true:Plant families DIFFERS ✓ PASS: 2 ✓ PASS: 2 ! WARNING: 1",
+        "true:Same-family transitions DIFFERS ✓ PASS: 0 ! WARNING: 1 ! WARNING: 2",
+        "true:Legume seasons DIFFERS ✓ PASS: 1 ✓ PASS: 2 ✓ PASS: 3",
+        "false:Previous-crop transition SAME IN ALL PLANS ? UNKNOWN: UNKNOWN ? UNKNOWN: UNKNOWN ? UNKNOWN: UNKNOWN",
+        "true:Advisory warnings DIFFERS ✓ PASS: 0 ! WARNING: 1 ! WARNING: 3",
+        "false:Unresolved checks SAME IN ALL PLANS ? UNKNOWN: 5 ? UNKNOWN: 5 ? UNKNOWN: 5"
+      ],
+      "open": "?\nUNKNOWN:\nNot assessed for any plan: Previous-crop transition · Local compatibility · Climate suitability"
+    }
+  },
+  {
+    "name": "evidence stays open across an edit",
+    "pass": true
+  },
+  {
+    "name": "previous crop feeds the history check",
+    "pass": true,
+    "detail": "Previous-crop transition DIFFERS ✓ PASS: PASS ✓ PASS: PASS ! WARNING: WARNING"
+  },
+  {
+    "name": "save and restore keep the edited rotations",
+    "pass": true,
+    "detail": "wheat,soy,wheat,wheat,soy,soy,chickpea,chickpea,sunflower"
+  },
+  {
+    "name": "Arabic planner is RTL without overflow",
+    "pass": true,
+    "detail": "ابنِ ثلاث دورات زراعية جنباً إلى جنب. غيّر أي محصول لترى كيف تتغيّر الفصائل النباتية وتكرارها ومواسم البقوليات."
+  },
+  {
+    "name": "mobile ar layout",
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "small": [],
+      "lane": 525,
+      "nav": "fixed"
+    }
+  },
+  {
+    "name": "mobile en layout",
+    "pass": true,
+    "detail": {
+      "overflow": false,
+      "small": [],
+      "lane": 534,
+      "nav": "fixed"
+    }
+  },
+  {
+    "name": "mobile edit and view switch preserve selections",
+    "pass": true,
+    "detail": "Updated Crop changed; counts unchanged"
+  }
+]

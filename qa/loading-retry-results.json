@@ -1,0 +1,27 @@
+{
+  "startedAt": "2026-11-15T02:18:31.211Z",
+  "base": "http://127.0.0.1:5179/",
+  "checks": [
+    {
+      "name": "nasa-loading-shown",
+      "pass": true
+    },
+    {
+      "name": "nasa-failure-honest",
+      "pass": true,
+      "detail": "NASA POWER data unavailable for this location."
+    },
+    {
+      "name": "analyze-reenabled-after-fail",
+      "pass": true
+    },
+    {
+      "name": "nasa-retry-success",
+      "pass": true
+    },
+    {
+      "name": "preflight-without-climate-stays-not-run-or-unknown",
+      "pass": true
+    }
+  ]
+}

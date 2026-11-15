@@ -1,0 +1,3902 @@
+{
+  "version": 1,
+  "savedAt": "2026-11-15T02:26:19.530Z",
+  "polygon": [
+    [
+      -103.60723783560144,
+      41.809078716744935
+    ],
+    [
+      -103.60777682526569,
+      41.80925837927258
+    ],
+    [
+      -103.60804631958578,
+      41.809258379335176
+    ],
+    [
+      -103.60831581400284,
+      41.80925837972523
+    ],
+    [
+      -103.60894463504101,
+      41.808809221555265
+    ],
+    [
+      -103.61002261310699,
+      41.808449895890156
+    ],
+    [
+      -103.61020227568405,
+      41.80836006446572
+    ],
+    [
+      -103.61083109696726,
+      41.80791090619441
+    ],
+    [
+      -103.61137008567266,
+      41.808000737741416
+    ],
+    [
+      -103.61137008552164,
+      41.807731243797214
+    ],
+    [
+      -103.61154974880759,
+      41.807551580203594
+    ],
+    [
+      -103.61201123225773,
+      41.80726628378428
+    ],
+    [
+      -103.61370570591428,
+      41.807371916948334
+    ],
+    [
+      -103.61379553743453,
+      41.807371917235116
+    ],
+    [
+      -103.61384397242904,
+      41.806677301902994
+    ],
+    [
+      -103.6130333842235,
+      41.80636165771634
+    ],
+    [
+      -103.61202433628078,
+      41.80622375266772
+    ],
+    [
+      -103.6117832866698,
+      41.805713005584366
+    ],
+    [
+      -103.611339370701,
+      41.80542633881468
+    ],
+    [
+      -103.61084723835629,
+      41.8047949524995
+    ],
+    [
+      -103.61044658197491,
+      41.8037660781269
+    ],
+    [
+      -103.61029830276885,
+      41.80348584278533
+    ],
+    [
+      -103.6095622707278,
+      41.80313848586455
+    ],
+    [
+      -103.60728280594263,
+      41.80301679882955
+    ],
+    [
+      -103.607237835729,
+      41.805215960914225
+    ],
+    [
+      -103.60723783520318,
+      41.80620410711261
+    ],
+    [
+      -103.60723783515647,
+      41.80800073853801
+    ],
+    [
+      -103.60723783527247,
+      41.808360064167445
+    ],
+    [
+      -103.60723783554822,
+      41.80898888503019
+    ]
+  ],
+  "rotations": [
+    [
+      "wheat",
+      "soy",
+      "wheat"
+    ],
+    [
+      "wheat",
+      "soy",
+      "chickpea"
+    ],
+    [
+      "sunflower",
+      "wheat",
+      "soy"
+    ]
+  ],
+  "farmerInputs": {
+    "fieldScope": "demo:scottsbluff_gering_ne:csb1825:311825012125041",
+    "previousCrop": {
+      "cropId": "maize",
+      "confirmed": true,
+      "provenance": "farmer_assertion"
+    }
+  },
+  "previousCrop": "maize",
+  "preflightInputs": {
+    "waterBudget": {
+      "amount": "120000",
+      "unit": "m3",
+      "period": "perSeason"
+    },
+    "plantingDates": [
+      "",
+      "",
+      ""
+    ],
+    "illustrativeCropSettings": false,
+    "effectiveRainfallSlopeConfirmed": false
+  },
+  "biofirewall": {
+    "fieldId": "",
+    "reportedHazard": null,
+    "equipmentMovements": []
+  },
+  "decisionSnapshot": {
+    "version": 1,
+    "engineTraceVersion": "fieldshift-07g",
+    "capturedAt": "2026-11-15T02:26:19.268Z",
+    "validity": {
+      "state": "CURRENT",
+      "at": "2026-11-15T02:26:19.268Z"
+    },
+    "field": {
+      "fieldScope": "demo:scottsbluff_gering_ne:csb1825:311825012125041",
+      "demoFieldId": "scottsbluff_gering_ne:csb1825:311825012125041",
+      "canonicalDemoFieldId": "scottsbluff_gering_ne:csb1825:311825012125041",
+      "areaHa": 22.187560600766858,
+      "vertexCount": 29,
+      "geometryReference": "demo:scottsbluff_gering_ne:csb1825:311825012125041"
+    },
+    "climate": {
+      "source": "NASA POWER",
+      "storage": "MongoDB",
+      "period": {
+        "start": "20250101",
+        "end": "20251231",
+        "startIso": "2025-01-01",
+        "endIso": "2025-12-31"
+      },
+      "url": "/api/demo-field",
+      "timeStandard": "LST",
+      "evidenceDigest": {
+        "kind": "stored_daily",
+        "storage": "MongoDB",
+        "source": "NASA POWER",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "timeStandard": "LST",
+        "fieldId": "scottsbluff_gering_ne:csb1825:311825012125041",
+        "dayCount": null,
+        "precipAnnualMm": 394.04,
+        "tempMaxMeanC": 19.083506849315054,
+        "tempMinMeanC": 4.65380821917808,
+        "reproducible": true
+      }
+    },
+    "evaluationInputs": {
+      "fingerprint": "{\"rotations\":[[\"wheat\",\"soy\",\"wheat\"],[\"wheat\",\"soy\",\"chickpea\"],[\"sunflower\",\"wheat\",\"soy\"]],\"fieldScope\":\"demo:scottsbluff_gering_ne:csb1825:311825012125041\",\"canonicalDemoFieldId\":\"scottsbluff_gering_ne:csb1825:311825012125041\",\"areaHa\":22.187560600766858,\"previousCrop\":\"maize\",\"previousCropConfirmed\":true,\"waterBudget\":{\"amount\":\"120000\",\"unit\":\"m3\",\"period\":\"perSeason\"},\"plantingDates\":[\"\",\"\",\"\"],\"illustrativeCropSettings\":false,\"effectiveRainfallSlopeConfirmed\":false}"
+    },
+    "rotations": [
+      [
+        "wheat",
+        "soy",
+        "wheat"
+      ],
+      [
+        "wheat",
+        "soy",
+        "chickpea"
+      ],
+      [
+        "sunflower",
+        "wheat",
+        "soy"
+      ]
+    ],
+    "farmerInputs": {
+      "fieldScope": "demo:scottsbluff_gering_ne:csb1825:311825012125041",
+      "previousCrop": {
+        "cropId": "maize",
+        "confirmed": true,
+        "provenance": "farmer_assertion"
+      }
+    },
+    "preflightInputs": {
+      "waterBudget": {
+        "amount": "120000",
+        "unit": "m3",
+        "period": "perSeason",
+        "provenance": "farmer_assertion_when_non_empty"
+      },
+      "plantingDates": [
+        "",
+        "",
+        ""
+      ],
+      "illustrativeCropSettings": false,
+      "effectiveRainfallSlopeConfirmed": false
+    },
+    "farmerImpact": {
+      "items": [
+        {
+          "domain": "rotation",
+          "ruleId": "rotation.history",
+          "from": "UNKNOWN",
+          "to": "WARNING",
+          "inputChanged": "farmerInputs.previousCrop.confirmed",
+          "provenance": "farmer_assertion",
+          "noteKey": "previousCrop"
+        },
+        {
+          "domain": "water",
+          "ruleId": "water.budget",
+          "from": "UNKNOWN",
+          "to": "PASS",
+          "inputChanged": "preflightInputs.waterBudget",
+          "provenance": "farmer_assertion",
+          "noteKey": "budget"
+        }
+      ],
+      "overallStatus": {
+        "from": "UNKNOWN",
+        "to": "UNKNOWN"
+      }
+    },
+    "traces": [
+      {
+        "version": "fieldshift-07g",
+        "rotationIndex": 0,
+        "sequence": [
+          "wheat",
+          "soy",
+          "wheat"
+        ],
+        "overallStatus": "UNKNOWN",
+        "checks": [
+          {
+            "ruleId": "rotation.sequence",
+            "status": "PASS",
+            "explanation": "Three recognized crops are present; this validates structure only.",
+            "season": null,
+            "inputs": {
+              "sequence": [
+                "wheat",
+                "soy",
+                "wheat"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "Field Shift Batch 02 rule contract: exactly three catalog crops; no validated local compatibility or climate thresholds.",
+              "reason": "sequenceValid"
+            },
+            "nextStep": "Use exactly three crops from the catalog.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "explanation": "The adjacent crops have different families. This passes the family-change check only; shared pests can still occur.",
+            "season": 2,
+            "inputs": {
+              "previousCrop": "wheat",
+              "crop": "soy"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyChange"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "explanation": "The adjacent crops have different families. This passes the family-change check only; shared pests can still occur.",
+            "season": 3,
+            "inputs": {
+              "previousCrop": "soy",
+              "crop": "wheat"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyChange"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.diversity",
+            "status": "PASS",
+            "explanation": "More than one family occurs in the plan. This records diversification, not a yield or soil benefit estimate.",
+            "season": null,
+            "inputs": {
+              "families": [
+                "Poaceae",
+                "Fabaceae"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://www.fao.org/conservation-agriculture/overview/what-we-do/en/",
+              "reason": "diversityPresent"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.legume",
+            "status": "PASS",
+            "explanation": "A legume is included. Nitrogen contribution depends on fixation, residues and management; no fertilizer credit is calculated.",
+            "season": null,
+            "inputs": {
+              "legumes": [
+                "soy"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/agriculture/crop-production/small-grains/small-grain-crop-rotations",
+              "reason": "legumePresent"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.history",
+            "status": "WARNING",
+            "explanation": "Consecutive crops share a family. Review shared pest and disease risks; this is an advisory flag, not a universal prohibition.",
+            "season": 1,
+            "inputs": {
+              "previousCrop": "maize",
+              "crop": "wheat"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyRepeat"
+            },
+            "nextStep": "Verify shared pest and disease risks with local crop-history guidance.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "directCalculationInput": true,
+              "field": "previousCrop",
+              "value": "maize",
+              "noteKey": "previousCrop"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.compatibility",
+            "status": "UNKNOWN",
+            "explanation": "Local pest, disease, soil and management constraints are not documented. Family changes do not establish compatibility.",
+            "season": null,
+            "inputs": {
+              "sequence": [
+                "wheat",
+                "soy",
+                "wheat"
+              ]
+            },
+            "missingInformation": [
+              "localConstraints",
+              "diseaseHistory",
+              "soilManagement"
+            ],
+            "evidence": {
+              "source": "Field Shift Batch 02 rule contract: exactly three catalog crops; no validated local compatibility or climate thresholds.",
+              "reason": "compatibilityUnknown"
+            },
+            "nextStep": "Verify local pest, disease, soil, and management constraints.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "note": "No local compatibility rules encoded; always UNKNOWN."
+            },
+            "limitation": "Local pest, disease, and soil constraints are not encoded."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 1,
+            "inputs": {
+              "crop": "wheat",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 2,
+            "inputs": {
+              "crop": "soy",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 3,
+            "inputs": {
+              "crop": "wheat",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "water.field-area",
+            "status": "PASS",
+            "explanation": "Field area comes from the proposed boundary polygon (spherical WGS84), not a cadastral parcel.",
+            "season": null,
+            "inputs": {
+              "areaHa": 22.187560600766858
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the drawn boundary matches the irrigated parcel you intend to model.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "geometry",
+              "directCalculationInput": true,
+              "field": "polygon",
+              "noteKey": "fieldArea"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.budget",
+            "status": "PASS",
+            "explanation": "A non-negative field-application budget and its unit/period are provided.",
+            "season": null,
+            "inputs": {
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              },
+              "areaHa": 22.187560600766858
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the amount is water delivered for field application, not an unadjusted source withdrawal.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.climate-support",
+            "status": "WARNING",
+            "explanation": "NASA POWER daily Tmax/Tmin and precipitation support a historical Hargreaves-Samani scenario; wind/humidity inputs for FAO-56 Penman-Monteith are absent.",
+            "season": null,
+            "inputs": {
+              "source": "NASA POWER",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "parameters": [
+                "PRECTOTCORR",
+                "T2M_MAX",
+                "T2M_MIN",
+                "ALLSKY_SFC_SW_DWN"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Treat this as a historical analogue, then compare ETo locally against a FAO-56 Penman-Monteith station estimate when available.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.crop-settings",
+            "status": "UNKNOWN",
+            "explanation": "No locally validated crop coefficients and calendar were supplied, and illustrative settings are not enabled.",
+            "season": null,
+            "inputs": {
+              "illustrativeCropSettings": false
+            },
+            "missingInformation": [
+              "cropCoefficients",
+              "cropGrowthStageCalendar"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Supply local crop coefficients and stage dates, or explicitly enable the illustrative FAO-56 demonstration templates.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "illustrativeCropSettings",
+              "noteKey": "cropSettingsMissing"
+            },
+            "limitation": "Illustrative FAO-56 templates are not locally validated."
+          },
+          {
+            "ruleId": "water.effective-rainfall-scope",
+            "status": "UNKNOWN",
+            "explanation": "The FAO simple effective-rainfall method requires a confirmed field slope within its stated about-4–5% scope.",
+            "season": null,
+            "inputs": {
+              "slopeAtMostFivePercent": false,
+              "accountingPeriodDays": 30
+            },
+            "missingInformation": [
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the field slope is at most 5%, or provide a supported soil-water-balance method.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "effectiveRainfallSlopeConfirmed",
+              "noteKey": "slopeScopeMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 1,
+            "inputs": {
+              "crop": "wheat",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 1,
+            "inputs": {
+              "crop": "wheat",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 2,
+            "inputs": {
+              "crop": "soy",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 2,
+            "inputs": {
+              "crop": "soy",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 3,
+            "inputs": {
+              "crop": "wheat",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 3,
+            "inputs": {
+              "crop": "wheat",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "biofirewall.reported-hazard",
+            "status": "UNKNOWN",
+            "explanation": "A field identifier and a reported hazard evidence status are needed before this history can be assessed.",
+            "season": null,
+            "inputs": {
+              "fieldId": "",
+              "sourceFieldId": null,
+              "equipmentId": null
+            },
+            "missingInformation": [
+              "fieldIdentifier",
+              "hazardFieldIdentifier",
+              "hazardEvidenceStatus"
+            ],
+            "evidence": {
+              "source": "Farmer-entered field memory and equipment movement record",
+              "hazardRecord": null,
+              "movement": null,
+              "sources": []
+            },
+            "nextStep": "Enter the affected field, hazard, and the evidence status supplied by the farmer.",
+            "engine": "evaluateBioFirewall",
+            "engineModule": "biofirewall.mjs",
+            "inputProvenance": {
+              "kind": "farmer_memory",
+              "directCalculationInput": true,
+              "field": "biofirewall",
+              "note": "Farmer-entered hazard and equipment records."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "biofirewall.equipment-exposure",
+            "status": "UNKNOWN",
+            "explanation": "No complete equipment movement into this field is recorded, so a source-to-target exposure path cannot be assessed.",
+            "season": null,
+            "inputs": {
+              "fieldId": "",
+              "sourceFieldId": null,
+              "equipmentId": null
+            },
+            "missingInformation": [
+              "fieldIdentifier",
+              "equipmentMovementRecord"
+            ],
+            "evidence": {
+              "source": "Farmer-entered field memory and equipment movement record",
+              "hazardRecord": null,
+              "movement": null,
+              "sources": []
+            },
+            "nextStep": "Record the equipment identity, source field, destination field, and source-use evidence; absence of a record is not proof of no exposure.",
+            "engine": "evaluateBioFirewall",
+            "engineModule": "biofirewall.mjs",
+            "inputProvenance": {
+              "kind": "farmer_memory",
+              "directCalculationInput": true,
+              "field": "biofirewall",
+              "note": "Farmer-entered hazard and equipment records."
+            },
+            "limitation": null
+          }
+        ],
+        "unknownRuleIds": [
+          "rotation.compatibility",
+          "rotation.climate",
+          "rotation.climate",
+          "rotation.climate",
+          "water.crop-settings",
+          "water.effective-rainfall-scope",
+          "water.season-data",
+          "water.balance",
+          "water.season-data",
+          "water.balance",
+          "water.season-data",
+          "water.balance",
+          "biofirewall.reported-hazard",
+          "biofirewall.equipment-exposure"
+        ],
+        "climate": {
+          "source": "NASA POWER",
+          "period": {
+            "start": "20250101",
+            "end": "20251231",
+            "startIso": "2025-01-01",
+            "endIso": "2025-12-31"
+          },
+          "storage": "MongoDB",
+          "provenance": {
+            "kind": "stored_daily",
+            "directCalculationInput": true,
+            "source": "/api/demo-field",
+            "period": {
+              "start": "20250101",
+              "end": "20251231",
+              "startIso": "2025-01-01",
+              "endIso": "2025-12-31"
+            },
+            "timeStandard": "LST"
+          }
+        },
+        "field": {
+          "areaHa": 22.187560600766858,
+          "fieldScope": "demo:scottsbluff_gering_ne:csb1825:311825012125041",
+          "demoFieldId": "scottsbluff_gering_ne:csb1825:311825012125041"
+        }
+      },
+      {
+        "version": "fieldshift-07g",
+        "rotationIndex": 1,
+        "sequence": [
+          "wheat",
+          "soy",
+          "chickpea"
+        ],
+        "overallStatus": "UNKNOWN",
+        "checks": [
+          {
+            "ruleId": "rotation.sequence",
+            "status": "PASS",
+            "explanation": "Three recognized crops are present; this validates structure only.",
+            "season": null,
+            "inputs": {
+              "sequence": [
+                "wheat",
+                "soy",
+                "chickpea"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "Field Shift Batch 02 rule contract: exactly three catalog crops; no validated local compatibility or climate thresholds.",
+              "reason": "sequenceValid"
+            },
+            "nextStep": "Use exactly three crops from the catalog.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "explanation": "The adjacent crops have different families. This passes the family-change check only; shared pests can still occur.",
+            "season": 2,
+            "inputs": {
+              "previousCrop": "wheat",
+              "crop": "soy"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyChange"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "WARNING",
+            "explanation": "Consecutive crops share a family. Review shared pest and disease risks; this is an advisory flag, not a universal prohibition.",
+            "season": 3,
+            "inputs": {
+              "previousCrop": "soy",
+              "crop": "chickpea"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyRepeat"
+            },
+            "nextStep": "Verify shared pest and disease risks with local crop-history guidance.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.diversity",
+            "status": "PASS",
+            "explanation": "More than one family occurs in the plan. This records diversification, not a yield or soil benefit estimate.",
+            "season": null,
+            "inputs": {
+              "families": [
+                "Poaceae",
+                "Fabaceae"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://www.fao.org/conservation-agriculture/overview/what-we-do/en/",
+              "reason": "diversityPresent"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.legume",
+            "status": "PASS",
+            "explanation": "A legume is included. Nitrogen contribution depends on fixation, residues and management; no fertilizer credit is calculated.",
+            "season": null,
+            "inputs": {
+              "legumes": [
+                "soy",
+                "chickpea"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/agriculture/crop-production/small-grains/small-grain-crop-rotations",
+              "reason": "legumePresent"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.history",
+            "status": "WARNING",
+            "explanation": "Consecutive crops share a family. Review shared pest and disease risks; this is an advisory flag, not a universal prohibition.",
+            "season": 1,
+            "inputs": {
+              "previousCrop": "maize",
+              "crop": "wheat"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyRepeat"
+            },
+            "nextStep": "Verify shared pest and disease risks with local crop-history guidance.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "directCalculationInput": true,
+              "field": "previousCrop",
+              "value": "maize",
+              "noteKey": "previousCrop"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.compatibility",
+            "status": "UNKNOWN",
+            "explanation": "Local pest, disease, soil and management constraints are not documented. Family changes do not establish compatibility.",
+            "season": null,
+            "inputs": {
+              "sequence": [
+                "wheat",
+                "soy",
+                "chickpea"
+              ]
+            },
+            "missingInformation": [
+              "localConstraints",
+              "diseaseHistory",
+              "soilManagement"
+            ],
+            "evidence": {
+              "source": "Field Shift Batch 02 rule contract: exactly three catalog crops; no validated local compatibility or climate thresholds.",
+              "reason": "compatibilityUnknown"
+            },
+            "nextStep": "Verify local pest, disease, soil, and management constraints.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "note": "No local compatibility rules encoded; always UNKNOWN."
+            },
+            "limitation": "Local pest, disease, and soil constraints are not encoded."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 1,
+            "inputs": {
+              "crop": "wheat",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 2,
+            "inputs": {
+              "crop": "soy",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 3,
+            "inputs": {
+              "crop": "chickpea",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "water.field-area",
+            "status": "PASS",
+            "explanation": "Field area comes from the proposed boundary polygon (spherical WGS84), not a cadastral parcel.",
+            "season": null,
+            "inputs": {
+              "areaHa": 22.187560600766858
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the drawn boundary matches the irrigated parcel you intend to model.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "geometry",
+              "directCalculationInput": true,
+              "field": "polygon",
+              "noteKey": "fieldArea"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.budget",
+            "status": "PASS",
+            "explanation": "A non-negative field-application budget and its unit/period are provided.",
+            "season": null,
+            "inputs": {
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              },
+              "areaHa": 22.187560600766858
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the amount is water delivered for field application, not an unadjusted source withdrawal.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.climate-support",
+            "status": "WARNING",
+            "explanation": "NASA POWER daily Tmax/Tmin and precipitation support a historical Hargreaves-Samani scenario; wind/humidity inputs for FAO-56 Penman-Monteith are absent.",
+            "season": null,
+            "inputs": {
+              "source": "NASA POWER",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "parameters": [
+                "PRECTOTCORR",
+                "T2M_MAX",
+                "T2M_MIN",
+                "ALLSKY_SFC_SW_DWN"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Treat this as a historical analogue, then compare ETo locally against a FAO-56 Penman-Monteith station estimate when available.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.crop-settings",
+            "status": "UNKNOWN",
+            "explanation": "No locally validated crop coefficients and calendar were supplied, and illustrative settings are not enabled.",
+            "season": null,
+            "inputs": {
+              "illustrativeCropSettings": false
+            },
+            "missingInformation": [
+              "cropCoefficients",
+              "cropGrowthStageCalendar"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Supply local crop coefficients and stage dates, or explicitly enable the illustrative FAO-56 demonstration templates.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "illustrativeCropSettings",
+              "noteKey": "cropSettingsMissing"
+            },
+            "limitation": "Illustrative FAO-56 templates are not locally validated."
+          },
+          {
+            "ruleId": "water.effective-rainfall-scope",
+            "status": "UNKNOWN",
+            "explanation": "The FAO simple effective-rainfall method requires a confirmed field slope within its stated about-4–5% scope.",
+            "season": null,
+            "inputs": {
+              "slopeAtMostFivePercent": false,
+              "accountingPeriodDays": 30
+            },
+            "missingInformation": [
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the field slope is at most 5%, or provide a supported soil-water-balance method.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "effectiveRainfallSlopeConfirmed",
+              "noteKey": "slopeScopeMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 1,
+            "inputs": {
+              "crop": "wheat",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 1,
+            "inputs": {
+              "crop": "wheat",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 2,
+            "inputs": {
+              "crop": "soy",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 2,
+            "inputs": {
+              "crop": "soy",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 3,
+            "inputs": {
+              "crop": "chickpea",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 3,
+            "inputs": {
+              "crop": "chickpea",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "biofirewall.reported-hazard",
+            "status": "UNKNOWN",
+            "explanation": "A field identifier and a reported hazard evidence status are needed before this history can be assessed.",
+            "season": null,
+            "inputs": {
+              "fieldId": "",
+              "sourceFieldId": null,
+              "equipmentId": null
+            },
+            "missingInformation": [
+              "fieldIdentifier",
+              "hazardFieldIdentifier",
+              "hazardEvidenceStatus"
+            ],
+            "evidence": {
+              "source": "Farmer-entered field memory and equipment movement record",
+              "hazardRecord": null,
+              "movement": null,
+              "sources": []
+            },
+            "nextStep": "Enter the affected field, hazard, and the evidence status supplied by the farmer.",
+            "engine": "evaluateBioFirewall",
+            "engineModule": "biofirewall.mjs",
+            "inputProvenance": {
+              "kind": "farmer_memory",
+              "directCalculationInput": true,
+              "field": "biofirewall",
+              "note": "Farmer-entered hazard and equipment records."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "biofirewall.equipment-exposure",
+            "status": "UNKNOWN",
+            "explanation": "No complete equipment movement into this field is recorded, so a source-to-target exposure path cannot be assessed.",
+            "season": null,
+            "inputs": {
+              "fieldId": "",
+              "sourceFieldId": null,
+              "equipmentId": null
+            },
+            "missingInformation": [
+              "fieldIdentifier",
+              "equipmentMovementRecord"
+            ],
+            "evidence": {
+              "source": "Farmer-entered field memory and equipment movement record",
+              "hazardRecord": null,
+              "movement": null,
+              "sources": []
+            },
+            "nextStep": "Record the equipment identity, source field, destination field, and source-use evidence; absence of a record is not proof of no exposure.",
+            "engine": "evaluateBioFirewall",
+            "engineModule": "biofirewall.mjs",
+            "inputProvenance": {
+              "kind": "farmer_memory",
+              "directCalculationInput": true,
+              "field": "biofirewall",
+              "note": "Farmer-entered hazard and equipment records."
+            },
+            "limitation": null
+          }
+        ],
+        "unknownRuleIds": [
+          "rotation.compatibility",
+          "rotation.climate",
+          "rotation.climate",
+          "rotation.climate",
+          "water.crop-settings",
+          "water.effective-rainfall-scope",
+          "water.season-data",
+          "water.balance",
+          "water.season-data",
+          "water.balance",
+          "water.season-data",
+          "water.balance",
+          "biofirewall.reported-hazard",
+          "biofirewall.equipment-exposure"
+        ],
+        "climate": {
+          "source": "NASA POWER",
+          "period": {
+            "start": "20250101",
+            "end": "20251231",
+            "startIso": "2025-01-01",
+            "endIso": "2025-12-31"
+          },
+          "storage": "MongoDB",
+          "provenance": {
+            "kind": "stored_daily",
+            "directCalculationInput": true,
+            "source": "/api/demo-field",
+            "period": {
+              "start": "20250101",
+              "end": "20251231",
+              "startIso": "2025-01-01",
+              "endIso": "2025-12-31"
+            },
+            "timeStandard": "LST"
+          }
+        },
+        "field": {
+          "areaHa": 22.187560600766858,
+          "fieldScope": "demo:scottsbluff_gering_ne:csb1825:311825012125041",
+          "demoFieldId": "scottsbluff_gering_ne:csb1825:311825012125041"
+        }
+      },
+      {
+        "version": "fieldshift-07g",
+        "rotationIndex": 2,
+        "sequence": [
+          "sunflower",
+          "wheat",
+          "soy"
+        ],
+        "overallStatus": "UNKNOWN",
+        "checks": [
+          {
+            "ruleId": "rotation.sequence",
+            "status": "PASS",
+            "explanation": "Three recognized crops are present; this validates structure only.",
+            "season": null,
+            "inputs": {
+              "sequence": [
+                "sunflower",
+                "wheat",
+                "soy"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "Field Shift Batch 02 rule contract: exactly three catalog crops; no validated local compatibility or climate thresholds.",
+              "reason": "sequenceValid"
+            },
+            "nextStep": "Use exactly three crops from the catalog.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "explanation": "The adjacent crops have different families. This passes the family-change check only; shared pests can still occur.",
+            "season": 2,
+            "inputs": {
+              "previousCrop": "sunflower",
+              "crop": "wheat"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyChange"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "explanation": "The adjacent crops have different families. This passes the family-change check only; shared pests can still occur.",
+            "season": 3,
+            "inputs": {
+              "previousCrop": "wheat",
+              "crop": "soy"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyChange"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.diversity",
+            "status": "PASS",
+            "explanation": "More than one family occurs in the plan. This records diversification, not a yield or soil benefit estimate.",
+            "season": null,
+            "inputs": {
+              "families": [
+                "Asteraceae",
+                "Poaceae",
+                "Fabaceae"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://www.fao.org/conservation-agriculture/overview/what-we-do/en/",
+              "reason": "diversityPresent"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.legume",
+            "status": "PASS",
+            "explanation": "A legume is included. Nitrogen contribution depends on fixation, residues and management; no fertilizer credit is calculated.",
+            "season": null,
+            "inputs": {
+              "legumes": [
+                "soy"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/agriculture/crop-production/small-grains/small-grain-crop-rotations",
+              "reason": "legumePresent"
+            },
+            "nextStep": "Review the cited rotation guidance and local field conditions.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "rotation_definition",
+              "directCalculationInput": true,
+              "field": "rotation.sequence",
+              "note": "Three catalog crops from user plan."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.history",
+            "status": "PASS",
+            "explanation": "The adjacent crops have different families. This passes the family-change check only; shared pests can still occur.",
+            "season": 1,
+            "inputs": {
+              "previousCrop": "maize",
+              "crop": "sunflower"
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/living-soil-healthy-garden",
+              "reason": "familyChange"
+            },
+            "nextStep": "Record the immediately preceding crop if known; otherwise keep history UNKNOWN.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "directCalculationInput": true,
+              "field": "previousCrop",
+              "value": "maize",
+              "noteKey": "previousCrop"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "rotation.compatibility",
+            "status": "UNKNOWN",
+            "explanation": "Local pest, disease, soil and management constraints are not documented. Family changes do not establish compatibility.",
+            "season": null,
+            "inputs": {
+              "sequence": [
+                "sunflower",
+                "wheat",
+                "soy"
+              ]
+            },
+            "missingInformation": [
+              "localConstraints",
+              "diseaseHistory",
+              "soilManagement"
+            ],
+            "evidence": {
+              "source": "Field Shift Batch 02 rule contract: exactly three catalog crops; no validated local compatibility or climate thresholds.",
+              "reason": "compatibilityUnknown"
+            },
+            "nextStep": "Verify local pest, disease, soil, and management constraints.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "note": "No local compatibility rules encoded; always UNKNOWN."
+            },
+            "limitation": "Local pest, disease, and soil constraints are not encoded."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 1,
+            "inputs": {
+              "crop": "sunflower",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 2,
+            "inputs": {
+              "crop": "wheat",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "explanation": "POWER observations describe the requested historical period at a grid point. Annual summaries cannot establish crop-season suitability; no validated crop requirements are encoded.",
+            "season": 3,
+            "inputs": {
+              "crop": "soy",
+              "observations": {
+                "precipitation": {
+                  "value": 394.04,
+                  "unit": "mm",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMax": {
+                  "value": 19.083506849315054,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                },
+                "temperatureMin": {
+                  "value": 4.65380821917808,
+                  "unit": "C",
+                  "validDays": 365,
+                  "daysInSeries": 365
+                }
+              },
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "aggregation": "historical period total precipitation and mean daily maximum/minimum temperatures; not crop-season conditions"
+            },
+            "missingInformation": [
+              "cropCalendar",
+              "cropRequirements",
+              "seasonalCoverage",
+              "waterManagement"
+            ],
+            "evidence": {
+              "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+              "reason": "climateUnknown"
+            },
+            "nextStep": "Use crop-season observations and validated local crop requirements; annual summaries are insufficient.",
+            "engine": "evaluateRotation",
+            "engineModule": "domain.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": "Annual grid summaries do not establish crop-season suitability."
+          },
+          {
+            "ruleId": "water.field-area",
+            "status": "PASS",
+            "explanation": "Field area comes from the proposed boundary polygon (spherical WGS84), not a cadastral parcel.",
+            "season": null,
+            "inputs": {
+              "areaHa": 22.187560600766858
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the drawn boundary matches the irrigated parcel you intend to model.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "geometry",
+              "directCalculationInput": true,
+              "field": "polygon",
+              "noteKey": "fieldArea"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.budget",
+            "status": "PASS",
+            "explanation": "A non-negative field-application budget and its unit/period are provided.",
+            "season": null,
+            "inputs": {
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              },
+              "areaHa": 22.187560600766858
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the amount is water delivered for field application, not an unadjusted source withdrawal.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.climate-support",
+            "status": "WARNING",
+            "explanation": "NASA POWER daily Tmax/Tmin and precipitation support a historical Hargreaves-Samani scenario; wind/humidity inputs for FAO-56 Penman-Monteith are absent.",
+            "season": null,
+            "inputs": {
+              "source": "NASA POWER",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "parameters": [
+                "PRECTOTCORR",
+                "T2M_MAX",
+                "T2M_MIN",
+                "ALLSKY_SFC_SW_DWN"
+              ]
+            },
+            "missingInformation": [],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Treat this as a historical analogue, then compare ETo locally against a FAO-56 Penman-Monteith station estimate when available.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "stored_daily",
+              "directCalculationInput": true,
+              "source": "/api/demo-field",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "timeStandard": "LST",
+              "field": "climateDaily",
+              "noteKey": "climateDaily"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.crop-settings",
+            "status": "UNKNOWN",
+            "explanation": "No locally validated crop coefficients and calendar were supplied, and illustrative settings are not enabled.",
+            "season": null,
+            "inputs": {
+              "illustrativeCropSettings": false
+            },
+            "missingInformation": [
+              "cropCoefficients",
+              "cropGrowthStageCalendar"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Supply local crop coefficients and stage dates, or explicitly enable the illustrative FAO-56 demonstration templates.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "illustrativeCropSettings",
+              "noteKey": "cropSettingsMissing"
+            },
+            "limitation": "Illustrative FAO-56 templates are not locally validated."
+          },
+          {
+            "ruleId": "water.effective-rainfall-scope",
+            "status": "UNKNOWN",
+            "explanation": "The FAO simple effective-rainfall method requires a confirmed field slope within its stated about-4–5% scope.",
+            "season": null,
+            "inputs": {
+              "slopeAtMostFivePercent": false,
+              "accountingPeriodDays": 30
+            },
+            "missingInformation": [
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Confirm the field slope is at most 5%, or provide a supported soil-water-balance method.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "effectiveRainfallSlopeConfirmed",
+              "noteKey": "slopeScopeMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 1,
+            "inputs": {
+              "crop": "sunflower",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 1,
+            "inputs": {
+              "crop": "sunflower",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 2,
+            "inputs": {
+              "crop": "wheat",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 2,
+            "inputs": {
+              "crop": "wheat",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "explanation": "The crop-season water comparison is UNKNOWN until every critical input and supported method requirement is present.",
+            "season": 3,
+            "inputs": {
+              "crop": "soy",
+              "plantingDate": "",
+              "areaHa": 22.187560600766858,
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Provide the missing field, water, crop-calendar, slope, and NASA daily inputs listed for this season.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "missing",
+              "directCalculationInput": false,
+              "field": "plantingDates",
+              "noteKey": "plantingCalendarMissing"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "explanation": "A seasonal irrigation balance cannot be compared while critical inputs are missing.",
+            "season": 3,
+            "inputs": {
+              "crop": "soy",
+              "plantingDate": "",
+              "budget": {
+                "amount": 120000,
+                "unit": "m3",
+                "period": "perSeason",
+                "mm": 540.8435932152564,
+                "m3": 120000,
+                "basis": "field-application"
+              }
+            },
+            "missingInformation": [
+              "cropCoefficientsAndCalendar",
+              "seasonPlantingDate",
+              "fieldSlopeApplicability"
+            ],
+            "evidence": {
+              "source": "NASA POWER",
+              "dataset": "NASA/POWER Source Native Resolution Daily Data",
+              "period": {
+                "start": "20250101",
+                "end": "20251231",
+                "startIso": "2025-01-01",
+                "endIso": "2025-12-31"
+              },
+              "coordinates": {
+                "latitude": 41.806,
+                "longitude": -103.609,
+                "elevation": 1336.29
+              },
+              "timeStandard": "LST"
+            },
+            "nextStep": "Resolve the missing information before interpreting a water deficit or remaining budget.",
+            "engine": "estimateWaterTruth",
+            "engineModule": "water-truth.mjs",
+            "inputProvenance": {
+              "kind": "farmer_assertion",
+              "provided": true,
+              "source": "farmer_assertion",
+              "storedDatabaseValue": null,
+              "directCalculationInput": true,
+              "field": "waterBudget",
+              "noteKey": "waterBudget"
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "biofirewall.reported-hazard",
+            "status": "UNKNOWN",
+            "explanation": "A field identifier and a reported hazard evidence status are needed before this history can be assessed.",
+            "season": null,
+            "inputs": {
+              "fieldId": "",
+              "sourceFieldId": null,
+              "equipmentId": null
+            },
+            "missingInformation": [
+              "fieldIdentifier",
+              "hazardFieldIdentifier",
+              "hazardEvidenceStatus"
+            ],
+            "evidence": {
+              "source": "Farmer-entered field memory and equipment movement record",
+              "hazardRecord": null,
+              "movement": null,
+              "sources": []
+            },
+            "nextStep": "Enter the affected field, hazard, and the evidence status supplied by the farmer.",
+            "engine": "evaluateBioFirewall",
+            "engineModule": "biofirewall.mjs",
+            "inputProvenance": {
+              "kind": "farmer_memory",
+              "directCalculationInput": true,
+              "field": "biofirewall",
+              "note": "Farmer-entered hazard and equipment records."
+            },
+            "limitation": null
+          },
+          {
+            "ruleId": "biofirewall.equipment-exposure",
+            "status": "UNKNOWN",
+            "explanation": "No complete equipment movement into this field is recorded, so a source-to-target exposure path cannot be assessed.",
+            "season": null,
+            "inputs": {
+              "fieldId": "",
+              "sourceFieldId": null,
+              "equipmentId": null
+            },
+            "missingInformation": [
+              "fieldIdentifier",
+              "equipmentMovementRecord"
+            ],
+            "evidence": {
+              "source": "Farmer-entered field memory and equipment movement record",
+              "hazardRecord": null,
+              "movement": null,
+              "sources": []
+            },
+            "nextStep": "Record the equipment identity, source field, destination field, and source-use evidence; absence of a record is not proof of no exposure.",
+            "engine": "evaluateBioFirewall",
+            "engineModule": "biofirewall.mjs",
+            "inputProvenance": {
+              "kind": "farmer_memory",
+              "directCalculationInput": true,
+              "field": "biofirewall",
+              "note": "Farmer-entered hazard and equipment records."
+            },
+            "limitation": null
+          }
+        ],
+        "unknownRuleIds": [
+          "rotation.compatibility",
+          "rotation.climate",
+          "rotation.climate",
+          "rotation.climate",
+          "water.crop-settings",
+          "water.effective-rainfall-scope",
+          "water.season-data",
+          "water.balance",
+          "water.season-data",
+          "water.balance",
+          "water.season-data",
+          "water.balance",
+          "biofirewall.reported-hazard",
+          "biofirewall.equipment-exposure"
+        ],
+        "climate": {
+          "source": "NASA POWER",
+          "period": {
+            "start": "20250101",
+            "end": "20251231",
+            "startIso": "2025-01-01",
+            "endIso": "2025-12-31"
+          },
+          "storage": "MongoDB",
+          "provenance": {
+            "kind": "stored_daily",
+            "directCalculationInput": true,
+            "source": "/api/demo-field",
+            "period": {
+              "start": "20250101",
+              "end": "20251231",
+              "startIso": "2025-01-01",
+              "endIso": "2025-12-31"
+            },
+            "timeStandard": "LST"
+          }
+        },
+        "field": {
+          "areaHa": 22.187560600766858,
+          "fieldScope": "demo:scottsbluff_gering_ne:csb1825:311825012125041",
+          "demoFieldId": "scottsbluff_gering_ne:csb1825:311825012125041"
+        }
+      }
+    ],
+    "keyResults": [
+      {
+        "rotationIndex": 0,
+        "overallStatus": "UNKNOWN",
+        "checks": [
+          {
+            "ruleId": "rotation.sequence",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "season": 2
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "season": 3
+          },
+          {
+            "ruleId": "rotation.diversity",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.legume",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.history",
+            "status": "WARNING",
+            "season": 1
+          },
+          {
+            "ruleId": "rotation.compatibility",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "water.field-area",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "water.budget",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "water.climate-support",
+            "status": "WARNING",
+            "season": null
+          },
+          {
+            "ruleId": "water.crop-settings",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "water.effective-rainfall-scope",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "biofirewall.reported-hazard",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "biofirewall.equipment-exposure",
+            "status": "UNKNOWN",
+            "season": null
+          }
+        ]
+      },
+      {
+        "rotationIndex": 1,
+        "overallStatus": "UNKNOWN",
+        "checks": [
+          {
+            "ruleId": "rotation.sequence",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "season": 2
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "WARNING",
+            "season": 3
+          },
+          {
+            "ruleId": "rotation.diversity",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.legume",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.history",
+            "status": "WARNING",
+            "season": 1
+          },
+          {
+            "ruleId": "rotation.compatibility",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "water.field-area",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "water.budget",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "water.climate-support",
+            "status": "WARNING",
+            "season": null
+          },
+          {
+            "ruleId": "water.crop-settings",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "water.effective-rainfall-scope",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "biofirewall.reported-hazard",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "biofirewall.equipment-exposure",
+            "status": "UNKNOWN",
+            "season": null
+          }
+        ]
+      },
+      {
+        "rotationIndex": 2,
+        "overallStatus": "UNKNOWN",
+        "checks": [
+          {
+            "ruleId": "rotation.sequence",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "season": 2
+          },
+          {
+            "ruleId": "rotation.family",
+            "status": "PASS",
+            "season": 3
+          },
+          {
+            "ruleId": "rotation.diversity",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.legume",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.history",
+            "status": "PASS",
+            "season": 1
+          },
+          {
+            "ruleId": "rotation.compatibility",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "rotation.climate",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "water.field-area",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "water.budget",
+            "status": "PASS",
+            "season": null
+          },
+          {
+            "ruleId": "water.climate-support",
+            "status": "WARNING",
+            "season": null
+          },
+          {
+            "ruleId": "water.crop-settings",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "water.effective-rainfall-scope",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 1
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 2
+          },
+          {
+            "ruleId": "water.season-data",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "water.balance",
+            "status": "UNKNOWN",
+            "season": 3
+          },
+          {
+            "ruleId": "biofirewall.reported-hazard",
+            "status": "UNKNOWN",
+            "season": null
+          },
+          {
+            "ruleId": "biofirewall.equipment-exposure",
+            "status": "UNKNOWN",
+            "season": null
+          }
+        ]
+      }
+    ],
+    "unknownConditions": [
+      "rotation.compatibility",
+      "rotation.climate",
+      "water.crop-settings",
+      "water.effective-rainfall-scope",
+      "water.season-data",
+      "water.balance",
+      "biofirewall.reported-hazard",
+      "biofirewall.equipment-exposure"
+    ],
+    "reproducibility": {
+      "fingerprint": "[{\"sequence\":[\"wheat\",\"soy\",\"wheat\"],\"overallStatus\":\"UNKNOWN\",\"checks\":[{\"ruleId\":\"rotation.sequence\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.family\",\"status\":\"PASS\",\"season\":2},{\"ruleId\":\"rotation.family\",\"status\":\"PASS\",\"season\":3},{\"ruleId\":\"rotation.diversity\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.legume\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.history\",\"status\":\"WARNING\",\"season\":1},{\"ruleId\":\"rotation.compatibility\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"water.field-area\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"water.budget\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"water.climate-support\",\"status\":\"WARNING\",\"season\":null},{\"ruleId\":\"water.crop-settings\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"water.effective-rainfall-scope\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"biofirewall.reported-hazard\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"biofirewall.equipment-exposure\",\"status\":\"UNKNOWN\",\"season\":null}]},{\"sequence\":[\"wheat\",\"soy\",\"chickpea\"],\"overallStatus\":\"UNKNOWN\",\"checks\":[{\"ruleId\":\"rotation.sequence\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.family\",\"status\":\"PASS\",\"season\":2},{\"ruleId\":\"rotation.family\",\"status\":\"WARNING\",\"season\":3},{\"ruleId\":\"rotation.diversity\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.legume\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.history\",\"status\":\"WARNING\",\"season\":1},{\"ruleId\":\"rotation.compatibility\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"water.field-area\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"water.budget\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"water.climate-support\",\"status\":\"WARNING\",\"season\":null},{\"ruleId\":\"water.crop-settings\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"water.effective-rainfall-scope\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"biofirewall.reported-hazard\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"biofirewall.equipment-exposure\",\"status\":\"UNKNOWN\",\"season\":null}]},{\"sequence\":[\"sunflower\",\"wheat\",\"soy\"],\"overallStatus\":\"UNKNOWN\",\"checks\":[{\"ruleId\":\"rotation.sequence\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.family\",\"status\":\"PASS\",\"season\":2},{\"ruleId\":\"rotation.family\",\"status\":\"PASS\",\"season\":3},{\"ruleId\":\"rotation.diversity\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.legume\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"rotation.history\",\"status\":\"PASS\",\"season\":1},{\"ruleId\":\"rotation.compatibility\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"rotation.climate\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"water.field-area\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"water.budget\",\"status\":\"PASS\",\"season\":null},{\"ruleId\":\"water.climate-support\",\"status\":\"WARNING\",\"season\":null},{\"ruleId\":\"water.crop-settings\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"water.effective-rainfall-scope\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":1},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":2},{\"ruleId\":\"water.season-data\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"water.balance\",\"status\":\"UNKNOWN\",\"season\":3},{\"ruleId\":\"biofirewall.reported-hazard\",\"status\":\"UNKNOWN\",\"season\":null},{\"ruleId\":\"biofirewall.equipment-exposure\",\"status\":\"UNKNOWN\",\"season\":null}]}]"
+    }
+  },
+  "decisionSnapshotArchive": null,
+  "country": "USA",
+  "scenario": "ssp245",
+  "period": "2040-2059",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -103.60723783560144,
+          41.809078716744935
+        ],
+        [
+          -103.60777682526569,
+          41.80925837927258
+        ],
+        [
+          -103.60804631958578,
+          41.809258379335176
+        ],
+        [
+          -103.60831581400284,
+          41.80925837972523
+        ],
+        [
+          -103.60894463504101,
+          41.808809221555265
+        ],
+        [
+          -103.61002261310699,
+          41.808449895890156
+        ],
+        [
+          -103.61020227568405,
+          41.80836006446572
+        ],
+        [
+          -103.61083109696726,
+          41.80791090619441
+        ],
+        [
+          -103.61137008567266,
+          41.808000737741416
+        ],
+        [
+          -103.61137008552164,
+          41.807731243797214
+        ],
+        [
+          -103.61154974880759,
+          41.807551580203594
+        ],
+        [
+          -103.61201123225773,
+          41.80726628378428
+        ],
+        [
+          -103.61370570591428,
+          41.807371916948334
+        ],
+        [
+          -103.61379553743453,
+          41.807371917235116
+        ],
+        [
+          -103.61384397242904,
+          41.806677301902994
+        ],
+        [
+          -103.6130333842235,
+          41.80636165771634
+        ],
+        [
+          -103.61202433628078,
+          41.80622375266772
+        ],
+        [
+          -103.6117832866698,
+          41.805713005584366
+        ],
+        [
+          -103.611339370701,
+          41.80542633881468
+        ],
+        [
+          -103.61084723835629,
+          41.8047949524995
+        ],
+        [
+          -103.61044658197491,
+          41.8037660781269
+        ],
+        [
+          -103.61029830276885,
+          41.80348584278533
+        ],
+        [
+          -103.6095622707278,
+          41.80313848586455
+        ],
+        [
+          -103.60728280594263,
+          41.80301679882955
+        ],
+        [
+          -103.607237835729,
+          41.805215960914225
+        ],
+        [
+          -103.60723783520318,
+          41.80620410711261
+        ],
+        [
+          -103.60723783515647,
+          41.80800073853801
+        ],
+        [
+          -103.60723783527247,
+          41.808360064167445
+        ],
+        [
+          -103.60723783554822,
+          41.80898888503019
+        ],
+        [
+          -103.60723783560144,
+          41.809078716744935
+        ]
+      ]
+    ]
+  },
+  "areaHa": 22.187560600766858,
+  "method": "Spherical WGS84 approximation, radius 6371008.8 m; user-defined boundary. Refresh environmental sources."
+}

@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-11-15T03:06:49.105Z",
+  "referenceScreenshots": "qa/screenshots/batch08b3",
+  "automatedVerified": 23,
+  "totalSteps": 23,
+  "partial": [],
+  "unverified": [],
+  "manualOnly": [
+    "Pixel-level screenshot regression vs batch08b3 (truncation/overlap)",
+    "Draw polygon with map clicks (not coordinates paste)",
+    "Pan/zoom/orbit terrain and DEM tiles",
+    "Keyboard focus order and screen-reader pass",
+    "Network payload inspection in DevTools"
+  ],
+  "demoQa": {
+    "passed": 17,
+    "total": 17
+  },
+  "liveNasa": {
+    "passed": 6,
+    "total": 6,
+    "blocked": false,
+    "liveNasa": true
+  }
+}

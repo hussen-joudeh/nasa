@@ -1,0 +1,23 @@
+
+> fieldshift-mongodb-demo@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ canonical counts, unique string IDs, references and asset hashes (12.1872ms)
+✔ canonical field, null budget, numeric types and full LST dates (1.1811ms)
+✔ GET transport contract with canonical fixture (not a MongoDB success test) (34.2284ms)
+✔ unsupported methods do not query storage (18.1415ms)
+✔ missing field returns 404 (3.7964ms)
+✔ storage failure is controlled and redacts internal error (4.52ms)
+✔ climate seasonal and crop profile contracts reject bad LST or status (0.6628ms)
+✔ crop compatibility lists proposed mappings without activating crosswalk (0.2625ms)
+✔ GET /api/health and supplemental evidence routes (41.1776ms)
+✔ malformed supplemental evidence returns 422 without fabrication (4.2253ms)
+✔ rejects unsupported methods and query parameters (7.9633ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 361.2752

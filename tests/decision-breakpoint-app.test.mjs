@@ -7,9 +7,16 @@ import * as view from '../src/rotation-view.mjs';
 import {runPreflight} from '../src/preflight.mjs';
 import {analyzeDecisionSensitivity} from '../src/decision-breakpoint.mjs';
 import * as biofirewall from '../src/biofirewall.mjs';
-import {renderPreflightPanel as renderPreflightPanelHtml} from '../src/preflight-view.mjs';
+import {renderPreflightPanel as renderPreflightPanelHtml,renderStalePreflightResults,renderPreflightResultsSection} from '../src/preflight-view.mjs';
 import {messages} from '../src/i18n.mjs';
 import * as explorer from '../src/map-explorer.mjs';
+import * as farmerInputs from '../src/farmer-inputs.mjs';
+import * as farmerInputView from '../src/farmer-input-view.mjs';
+import * as decisionTrace from '../src/decision-trace.mjs';
+import * as decisionSnapshot from '../src/decision-snapshot.mjs';
+import * as decisionSnapshotValidity from '../src/decision-snapshot-validity.mjs';
+import * as decisionTraceView from '../src/decision-trace-view.mjs';
+import { DEMO_FIELD_ID } from '../src/demo-evidence.mjs';
 
 const source=(await readFile(new URL('../src/app.mjs',import.meta.url),'utf8')).replace(/^import .*;\r?\n/gm,'').replace(/render\(\);\s*$/,'');
 function climate(){
@@ -24,7 +31,7 @@ function climate(){
 function harness(){
   const elements=new Map();
   const document={getElementById(id){if(!elements.has(id))elements.set(id,{innerHTML:'',value:'',checked:false,classList:{toggle(){}},textContent:''});return elements.get(id);},querySelectorAll(){return [];}};
-  const context=vm.createContext({...explorer,...domain,...view,...biofirewall,runPreflight,analyzeDecisionSensitivity,renderPreflightPanelHtml,messages,document,Intl,URL,console});
+  const context=vm.createContext({DEMO_FIELD_ID,...explorer,...domain,...view,...biofirewall,...farmerInputs,...farmerInputView,...decisionTrace,...decisionSnapshot,...decisionSnapshotValidity,...decisionTraceView,runPreflight,analyzeDecisionSensitivity,renderPreflightPanelHtml,renderStalePreflightResults,renderPreflightResultsSection,messages,document,Intl,URL,console});
   vm.runInContext(source,context);
   return {context,elements,run:code=>vm.runInContext(code,context)};
 }

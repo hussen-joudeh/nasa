@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "name": "demo-analyze",
+      "result": "pass"
+    },
+    {
+      "name": "rotation-a-wheat-soy-wheat",
+      "result": "fail",
+      "error": "locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for locator('#illustrative-crop-settings')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" id=\"illustrative-crop-settings\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - forcing action\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n"
+    },
+    {
+      "name": "below-threshold-warning",
+      "result": "fail",
+      "error": "Expected WARNING in season 1 card: Season 1 · Wheat\nUNKNOWN\n\nHistorical analogue crop window: 2025-04-20 — Unavaila"
+    },
+    {
+      "name": "at-threshold-pass",
+      "result": "fail",
+      "error": "Expected water.balance season 1 PASS, got UNKNOWN"
+    },
+    {
+      "name": "above-threshold-pass",
+      "result": "fail",
+      "error": "Expected water.balance season 1 PASS above threshold, got UNKNOWN"
+    },
+    {
+      "name": "breakpoint-card",
+      "result": "pass"
+    },
+    {
+      "name": "unknown-checks-remain",
+      "result": "pass"
+    }
+  ],
+  "proofThresholdMm": 623.8591556593612
+}

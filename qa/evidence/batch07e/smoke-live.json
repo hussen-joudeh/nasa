@@ -1,0 +1,9 @@
+{
+  "startedAt": "2026-11-15T08:43:36.730Z",
+  "api": "http://127.0.0.1:59998",
+  "frontend": "http://127.0.0.1:59997",
+  "checks": [],
+  "passed": false,
+  "error": "fetch failed",
+  "finishedAt": "2026-11-15T08:43:36.811Z"
+}

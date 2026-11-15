@@ -1,12 +1,17 @@
 // Camera and overlay helpers for the MapLibre explorer. Pure functions: no map, DOM or network access.
-export const CAMERA={pitch3d:55,bearing3d:-18,maxPitch:72,maxZoom:15,duration:900,focusDuration:1900,revealDuration:1700,orbitStep:45,orbitDuration:800};
+// maxZoom caps automatic framing at the Sentinel-2 source's real maxzoom (14); manual zoom is limited only by the map itself.
+// V4B: a moderate tilt near north keeps 2D and 3D the same way up; one short settle per selection; approachZoom is where a distant parcel is jumped to before that settle; terrainWait bounds the wait for DEM tiles.
+export const CAMERA={pitch3d:45,bearing3d:-18,maxPitch:72,maxZoom:14,duration:900,focusDuration:1100,revealDuration:1200,orbitStep:45,orbitDuration:800,approachZoom:12.5,terrainWait:2000};
 // Room reserved for the data overlay (inline start), tools (inline end), layer switch (top) and draw tools + attribution (bottom).
 const PADDING={wide:{top:160,bottom:145,start:285,end:300},compact:{top:104,bottom:120,start:22,end:66}};
+// Visual V2 docked shell: nothing floats over the map except the slim tool column (inline end) and the bottom action row.
+const DOCKED={wide:{top:72,bottom:104,start:72,end:92},compact:{top:72,bottom:104,start:24,end:68}};
 // Resting boundary style. The reveal animates towards exactly these values, so the settled map always matches them.
-export const FIELD_PAINT={'field-mask':{'fill-opacity':.25},'field-shadow':{'line-opacity':.55},'field-fill':{'fill-opacity':.12},'field-inner':{'line-opacity':.2},'field-glow':{'line-width':16,'line-opacity':.7},'field-casing':{'line-width':6},'field-line':{'line-width':3}};
-const REVEAL_START={'field-mask':{'fill-opacity':0},'field-shadow':{'line-opacity':0},'field-fill':{'fill-opacity':.3},'field-inner':{'line-opacity':.95},'field-glow':{'line-width':34,'line-opacity':.95},'field-casing':{'line-width':9},'field-line':{'line-width':5}};
+// V4B: a thin light edge on a dark casing carries the contrast; glow, inner band and fill are kept to a hint.
+export const FIELD_PAINT={'field-mask':{'fill-opacity':.2},'field-shadow':{'line-opacity':.3},'field-fill':{'fill-opacity':.07},'field-inner':{'line-opacity':0},'field-glow':{'line-width':5,'line-opacity':.2},'field-casing':{'line-width':4},'field-line':{'line-width':1.75}};
+const REVEAL_START={'field-mask':{'fill-opacity':0},'field-shadow':{'line-opacity':0},'field-fill':{'fill-opacity':.16},'field-inner':{'line-opacity':.3},'field-glow':{'line-width':10,'line-opacity':.5},'field-casing':{'line-width':5},'field-line':{'line-width':2.75}};
 const easeInOut=t=>t<.5?4*t*t*t:1-(-2*t+2)**3/2;
-// View bearing that lays the parcel's longest real edge across the screen, so the oblique view looks along its short side.
+// View bearing that would lay the parcel's longest real edge across the screen. Kept as a measurement helper; since V4B automatic framing stays near north instead.
 export function parcelBearing(polygon){
   if(!Array.isArray(polygon)||polygon.length<3)return 0;
   let best=0,azimuth=90;
@@ -22,11 +27,24 @@ const pitch=state=>state?.terrain?CAMERA.pitch3d:0;
 export function polygonBounds(polygon){const lons=polygon.map(p=>p[0]),lats=polygon.map(p=>p[1]);return [[Math.min(...lons),Math.min(...lats)],[Math.max(...lons),Math.max(...lats)]];}
 export function focusCamera(polygon,state={}){
   if(!Array.isArray(polygon)||polygon.length<3)return null;
-  return {bounds:polygonBounds(polygon),options:{padding:focusPadding(state),maxZoom:CAMERA.maxZoom,pitch:pitch(state),bearing:state.terrain?parcelBearing(polygon)+CAMERA.bearing3d:0,duration:duration(state)&&CAMERA.focusDuration,easing:easeInOut,curve:1.25}};
+  return {bounds:polygonBounds(polygon),options:{padding:focusPadding(state),maxZoom:CAMERA.maxZoom,pitch:pitch(state),bearing:state.terrain?CAMERA.bearing3d:0,duration:duration(state)&&CAMERA.focusDuration,easing:easeInOut,curve:1.25}};
+}
+// Layout change (inspector, language, viewport): the same parcel frame for the new map, at the current view angle, never animated. A hidden map is left alone.
+export function reframeCamera(polygon,state={},current={}){
+  if(Array.isArray(state.size)&&(state.size[0]===0||state.size[1]===0))return null;
+  const focus=focusCamera(polygon,state);
+  if(!focus)return null;
+  return {bounds:focus.bounds,options:{...focus.options,bearing:Number.isFinite(current.bearing)?current.bearing:focus.options.bearing,pitch:Number.isFinite(current.pitch)?current.pitch:focus.options.pitch,duration:0}};
+}
+// A parcel outside the current view is first jumped to at its real centre, so the visible motion is one short settle and the DEM under it can load before the oblique fit.
+export function approachCamera(polygon){
+  if(!Array.isArray(polygon)||polygon.length<3)return null;
+  const [[west,south],[east,north]]=polygonBounds(polygon);
+  return {center:[(west+east)/2,(south+north)/2],zoom:CAMERA.approachZoom};
 }
 // Padding never takes more than 60% of either map dimension, so MapLibre can always fit the parcel.
 export function focusPadding(state={}){
-  const base=state.compact?PADDING.compact:PADDING.wide;
+  const set=state.docked?DOCKED:PADDING,base=state.compact?set.compact:set.wide;
   let {top,bottom}=base,left=state.rtl?base.end:base.start,right=state.rtl?base.start:base.end;
   const [width,height]=Array.isArray(state.size)?state.size:[];
   if(width>0&&left+right>width*.6){const k=width*.6/(left+right);left*=k;right*=k;}
@@ -44,6 +62,10 @@ export function nextStep({polygon,nasaClimate,evaluations}={}){
   if(!Array.isArray(polygon)||polygon.length<3)return null;
   if(!nasaClimate)return 'analyze';
   return Array.isArray(evaluations)&&evaluations.length>0?'review':'preflight';
+}
+/** World mask spotlight is 2D-only; draped on terrain it covers the pitched view. */
+export function shouldShowFieldMask({terrain=false,drawing=false,hasField=false}={}) {
+  return !(terrain && hasField && !drawing);
 }
 // Moving highlight for the one-off boundary trace. Fully transparent at rest, so it never changes the settled boundary.
 export function traceGradient(progress){

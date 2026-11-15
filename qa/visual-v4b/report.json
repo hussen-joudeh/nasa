@@ -1,0 +1,5145 @@
+{
+  "suite": "visual-v4b",
+  "startedAt": "2026-11-15T07:15:00.164Z",
+  "base": "http://127.0.0.1:5173/",
+  "headed": false,
+  "channel": "chrome",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "environment": {
+    "chrome": "157.0.8103.51",
+    "loadMs": 2739,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "devicePixelRatio": 1,
+    "webglRenderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "maplibreVersion": "5.3.0",
+    "maplibreApi": {
+      "setTerrain": "function",
+      "getTerrain": "function",
+      "setSky": "function",
+      "setLight": "function",
+      "setFog": "undefined",
+      "fitBounds": "function",
+      "easeTo": "function",
+      "flyTo": "function",
+      "jumpTo": "function",
+      "stop": "function",
+      "resize": "function",
+      "isMoving": "function"
+    },
+    "hookError": null
+  },
+  "steps": [
+    {
+      "name": "01-desktop-2d",
+      "file": "screenshots/01-desktop-2d.png",
+      "mapFile": "screenshots/map/01-desktop-2d.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 12,
+        "pitch": 0,
+        "bearing": 0,
+        "center": [
+          -119.95,
+          36.78
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": null,
+        "demSource": false,
+        "mask": "visible",
+        "layer": "satellite",
+        "boundaryFeatures": 0,
+        "box": null,
+        "covered": false,
+        "inView": false,
+        "boxCentre": null
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1071,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 1071,
+          "right": 1411,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "2d",
+        "field": "0",
+        "loadingHidden": true,
+        "terrainPressed": "false",
+        "terrainStatus": "",
+        "overlayMode": "2D map",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": true,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 93.9,
+        "darkRatio": 0.0047
+      }
+    },
+    {
+      "name": "02-desktop-3d",
+      "file": "screenshots/02-desktop-3d.png",
+      "mapFile": "screenshots/map/02-desktop-3d.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 12,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -119.95000000000016,
+          36.78000000000074
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "visible",
+        "layer": "satellite",
+        "boundaryFeatures": 0,
+        "box": null,
+        "covered": false,
+        "inView": false,
+        "boxCentre": null
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1071,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 1071,
+          "right": 1411,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "3d",
+        "field": "0",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "Real DEM · 1× vertical scale",
+        "overlayMode": "3D · Real DEM · 1×",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": true,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 94.1,
+        "darkRatio": 0.001
+      }
+    },
+    {
+      "name": "03-post-selection-fit",
+      "file": "screenshots/03-post-selection-fit.png",
+      "mapFile": "screenshots/map/03-post-selection-fit.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 0,
+        "bearing": 0,
+        "center": [
+          -103.61011175035037,
+          41.805625834524136
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": null,
+        "demSource": true,
+        "mask": "visible",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 434.03292225865704,
+          "right": 587.967077741343,
+          "top": 238.44266185435382,
+          "bottom": 433.55733814519465
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          511,
+          335.9999999997742
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1071,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 1071,
+          "right": 1411,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "2d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "false",
+        "terrainStatus": "",
+        "overlayMode": "2D map",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 61.5,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 62,
+          "edgeLuma": 249.79339999999996,
+          "nearLuma": 47.5696,
+          "contrast": 202.2
+        }
+      }
+    },
+    {
+      "name": "04-selected-field-3d",
+      "file": "screenshots/04-selected-field-3d.png",
+      "mapFile": "screenshots/map/04-selected-field-3d.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.61011175034946,
+          41.80562583452348
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 451.1568521331109,
+          "right": 612.9565051683908,
+          "top": 289.2254516294199,
+          "bottom": 425.5602347992856
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          532.0566786507509,
+          357.39284321435275
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1071,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 1071,
+          "right": 1411,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "3d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "Real DEM · 1× vertical scale",
+        "overlayMode": "3D · Real DEM · 1×",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 80.1,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 234.653,
+          "nearLuma": 46.245200000000004,
+          "contrast": 188.4
+        }
+      }
+    },
+    {
+      "name": "05-2d-after-toggle",
+      "file": "screenshots/05-2d-after-toggle.png",
+      "mapFile": "screenshots/map/05-2d-after-toggle.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 0,
+        "bearing": 0,
+        "center": [
+          -103.61011175034935,
+          41.805625834522004
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": null,
+        "demSource": true,
+        "mask": "visible",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 434.03292223495066,
+          "right": 587.9670777176366,
+          "top": 238.44266178752437,
+          "bottom": 433.5573380783652
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          510.9999999762936,
+          335.9999999329448
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1071,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 1071,
+          "right": 1411,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "2d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "false",
+        "terrainStatus": "",
+        "overlayMode": "2D map",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 61.5,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 62,
+          "edgeLuma": 249.79339999999996,
+          "nearLuma": 47.5696,
+          "contrast": 202.2
+        }
+      }
+    },
+    {
+      "name": "06-relief-3d",
+      "file": "screenshots/06-relief-3d.png",
+      "mapFile": "screenshots/map/06-relief-3d.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.60992056948385,
+          41.8057497384319
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "relief",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 445.8125513427938,
+          "right": 607.9369743600537,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          526.8747628514237,
+          359.02512233724326
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1071,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 1071,
+          "right": 1411,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "3d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "Real DEM · 1× vertical scale",
+        "overlayMode": "3D · Real DEM · 1×",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Terrain © EOX; OpenStreetMap contributors, NASA, USGS, Copernicus, GEBCO",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 220.8,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 235.86559999999997,
+          "nearLuma": 222.06479999999996,
+          "contrast": 13.8
+        }
+      }
+    },
+    {
+      "name": "07-satellite-3d",
+      "file": "screenshots/07-satellite-3d.png",
+      "mapFile": "screenshots/map/07-satellite-3d.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.60992056948385,
+          41.8057497384319
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 445.8125513427938,
+          "right": 607.9369743600537,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          526.8747628514237,
+          359.02512233724326
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1071,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 1071,
+          "right": 1411,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "3d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "Real DEM · 1× vertical scale",
+        "overlayMode": "3D · Real DEM · 1×",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 80.2,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 233.7934,
+          "nearLuma": 47.33789999999999,
+          "contrast": 186.5
+        }
+      }
+    },
+    {
+      "name": "08-inspector-collapsed",
+      "file": "screenshots/08-inspector-collapsed.png",
+      "mapFile": "screenshots/map/08-inspector-collapsed.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.60992056948385,
+          41.8057497384319
+        ],
+        "size": [
+          1382,
+          704
+        ],
+        "canvasCss": [
+          1382,
+          704
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 615.8125513427411,
+          "right": 777.936974359816,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          696.8747628512785,
+          359.02512233724326
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1411,
+          "width": 1382,
+          "height": 704
+        },
+        "inspector": null,
+        "tools": {
+          "left": 1351,
+          "right": 1399,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "closed",
+        "mode": "3d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "Real DEM · 1× vertical scale",
+        "overlayMode": "3D · Real DEM · 1×",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 82.8,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 233.7934,
+          "nearLuma": 47.33789999999999,
+          "contrast": 186.5
+        }
+      }
+    },
+    {
+      "name": "09-arabic-rtl",
+      "file": "screenshots/09-arabic-rtl.png",
+      "mapFile": "screenshots/map/09-arabic-rtl.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.61073686783959,
+          41.805552032215246
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 465.10413598063894,
+          "right": 626.8986666759992,
+          "top": 290.83066933016727,
+          "bottom": 427.5929744046835
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          546.001401328319,
+          359.2118218674254
+        ]
+      },
+      "layout": {
+        "dir": "rtl",
+        "lang": "ar",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 369,
+          "right": 1411,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 29,
+          "right": 369,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 381,
+          "right": 429,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 1208,
+          "right": 1399,
+          "width": 191,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "3d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "بيانات ارتفاع حقيقية · مقياس رأسي ×1",
+        "overlayMode": "ثلاثي الأبعاد · ارتفاع حقيقي · ×1",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 108,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 106,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 74,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 48,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 80.1,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 46,
+          "edgeLuma": 230.58079999999998,
+          "nearLuma": 48.195499999999996,
+          "contrast": 182.4
+        }
+      }
+    },
+    {
+      "name": "10-tablet-3d",
+      "file": "screenshots/10-tablet-3d.png",
+      "mapFile": "screenshots/map/10-tablet-3d.png",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.6101117503498,
+          41.80562583452354
+        ],
+        "size": [
+          762,
+          620
+        ],
+        "canvasCss": [
+          762,
+          620
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 311.5085528752939,
+          "right": 472.30785484698674,
+          "top": 247.7333524488959,
+          "bottom": 384.2724895826259
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          391.90820386114035,
+          316.0029210157609
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 820,
+        "scrollWidth": 820,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 792,
+          "width": 764,
+          "height": 1364
+        },
+        "stage": {
+          "left": 29,
+          "right": 791,
+          "width": 762,
+          "height": 620
+        },
+        "inspector": {
+          "left": 29,
+          "right": 791,
+          "width": 762,
+          "height": 571
+        },
+        "tools": {
+          "left": 727,
+          "right": 779,
+          "width": 52,
+          "height": 381
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 52
+        },
+        "inspectorState": "open",
+        "mode": "3d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "Real DEM · 1× vertical scale",
+        "overlayMode": "3D · Real DEM · 1×",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 44
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 44
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 44
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 44
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 83.6,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 233.653,
+          "nearLuma": 47.26769999999999,
+          "contrast": 186.4
+        }
+      }
+    },
+    {
+      "name": "11-mobile-3d",
+      "file": "screenshots/11-mobile-3d.png",
+      "mapFile": "screenshots/map/11-mobile-3d.png",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.60959676621951,
+          41.805625834523056
+        ],
+        "size": [
+          349,
+          487
+        ],
+        "canvasCss": [
+          349,
+          487
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 95.25767730277832,
+          "right": 253.53244942678964,
+          "top": 180.12025796612917,
+          "bottom": 316.2144665801474
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          174.395063364784,
+          248.16736227313828
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 375,
+        "scrollWidth": 375,
+        "overflowX": false,
+        "console": {
+          "left": 12,
+          "right": 363,
+          "width": 351,
+          "height": 1715
+        },
+        "stage": {
+          "left": 13,
+          "right": 362,
+          "width": 349,
+          "height": 487
+        },
+        "inspector": {
+          "left": 13,
+          "right": 362,
+          "width": 349,
+          "height": 1035
+        },
+        "tools": {
+          "left": 302,
+          "right": 354,
+          "width": 52,
+          "height": 190
+        },
+        "layers": {
+          "left": 21,
+          "right": 183,
+          "width": 162,
+          "height": 52
+        },
+        "inspectorState": "open",
+        "mode": "3d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "Real DEM · 1× vertical scale",
+        "overlayMode": "3D · Real DEM · 1×",
+        "controls": {
+          "zoom-in": {
+            "visible": false,
+            "disabled": false,
+            "width": 0,
+            "height": 0
+          },
+          "zoom-out": {
+            "visible": false,
+            "disabled": false,
+            "width": 0,
+            "height": 0
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "orbit-left": {
+            "visible": false,
+            "disabled": false,
+            "width": 0,
+            "height": 0
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "reset-view": {
+            "visible": false,
+            "disabled": false,
+            "width": 0,
+            "height": 0
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 44,
+            "height": 44
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 44
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 44
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 44
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 79.1,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 43,
+          "edgeLuma": 239.8656,
+          "nearLuma": 47.2001,
+          "contrast": 192.7
+        }
+      }
+    },
+    {
+      "name": "12-reduced-motion",
+      "file": "screenshots/12-reduced-motion.png",
+      "mapFile": "screenshots/map/12-reduced-motion.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.60992056948386,
+          41.8057497384319
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 445.8125513430115,
+          "right": 607.9369743602679,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          526.8747628516396,
+          359.02512233724326
+        ]
+      },
+      "layout": {
+        "dir": "ltr",
+        "lang": "en",
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "overflowX": false,
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "stage": {
+          "left": 29,
+          "right": 1071,
+          "width": 1042,
+          "height": 704
+        },
+        "inspector": {
+          "left": 1071,
+          "right": 1411,
+          "width": 340,
+          "height": 704
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        },
+        "layers": {
+          "left": 41,
+          "right": 203,
+          "width": 162,
+          "height": 48
+        },
+        "inspectorState": "open",
+        "mode": "3d",
+        "field": "1",
+        "loadingHidden": true,
+        "terrainPressed": "true",
+        "terrainStatus": "Real DEM · 1× vertical scale",
+        "overlayMode": "3D · Real DEM · 1×",
+        "controls": {
+          "zoom-in": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "zoom-out": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "north": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "terrain": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-left": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "orbit-right": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "reset-view": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "fit": {
+            "visible": true,
+            "disabled": false,
+            "width": 40,
+            "height": 40
+          },
+          "draw": {
+            "visible": true,
+            "disabled": false,
+            "width": 138,
+            "height": 40
+          },
+          "satellite": {
+            "visible": true,
+            "disabled": false,
+            "width": 96,
+            "height": 40
+          },
+          "relief": {
+            "visible": true,
+            "disabled": false,
+            "width": 57,
+            "height": 40
+          },
+          "clear": {
+            "visible": true,
+            "disabled": false,
+            "width": 55,
+            "height": 40
+          }
+        },
+        "attribution": {
+          "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+          "visible": true
+        }
+      },
+      "pixels": {
+        "ok": true,
+        "meanLuma": 80.2,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 233.7934,
+          "nearLuma": 47.33789999999999,
+          "contrast": 186.5
+        }
+      }
+    }
+  ],
+  "probes": [
+    {
+      "name": "toggle-anchor:user-view",
+      "on": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 45,
+        "bearing": -18
+      },
+      "roundTrip": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "name": "autofocus-cancel:pointer",
+      "inFlightWhenInterrupted": true,
+      "stoppedAt": {
+        "metres": 856.85,
+        "zoom": -0.018,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "driftAfterStop": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "reachedAutoTarget": false
+    },
+    {
+      "name": "autofocus-cancel:wheel",
+      "inFlightWhenInterrupted": true,
+      "stoppedAt": {
+        "metres": 578.39,
+        "zoom": 0.253,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "driftAfterStop": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "reachedAutoTarget": false
+    },
+    {
+      "name": "autofocus-cancel:keyboard",
+      "inFlightWhenInterrupted": true,
+      "stoppedAt": {
+        "metres": 1062.55,
+        "zoom": -0.027,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "driftAfterStop": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "reachedAutoTarget": false
+    },
+    {
+      "name": "language-switch:user-view",
+      "delta": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "name": "selection-3d-auto",
+      "calls": [
+        {
+          "name": "jumpTo",
+          "t": 3039,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "stop",
+          "t": 3039,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "fitBounds",
+          "t": 4988,
+          "duration": 1100,
+          "maxZoom": 14
+        },
+        {
+          "name": "flyTo",
+          "t": 4990,
+          "duration": 1100,
+          "maxZoom": 14
+        },
+        {
+          "name": "stop",
+          "t": 4990,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "stop",
+          "t": 6113,
+          "duration": null,
+          "maxZoom": null
+        }
+      ],
+      "camera": {
+        "maps": 1,
+        "zoom": 14,
+        "pitch": 45,
+        "bearing": -18,
+        "center": [
+          -103.60992056948385,
+          41.8057497384319
+        ],
+        "size": [
+          1042,
+          704
+        ],
+        "canvasCss": [
+          1042,
+          704
+        ],
+        "moving": false,
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "demSource": true,
+        "mask": "none",
+        "layer": "satellite",
+        "boundaryFeatures": 2,
+        "box": {
+          "left": 445.8125513427938,
+          "right": 607.9369743600537,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "covered": false,
+        "inView": true,
+        "boxCentre": [
+          526.8747628514237,
+          359.02512233724326
+        ]
+      }
+    },
+    {
+      "name": "pending-autofocus-cancel:wheel",
+      "demPendingWhenUserActed": true,
+      "metresFromHome": 1513102,
+      "metresFromParcel": 90
+    },
+    {
+      "name": "autofocus-cancel:touch",
+      "inFlightWhenInterrupted": true,
+      "stoppedAt": {
+        "metres": 874.21,
+        "zoom": -0.092,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "driftAfterStop": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "reachedAutoTarget": false
+    },
+    {
+      "name": "reduced-motion",
+      "calls": [
+        {
+          "name": "jumpTo",
+          "t": 2417,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "stop",
+          "t": 2417,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "fitBounds",
+          "t": 2440,
+          "duration": 0,
+          "maxZoom": 14
+        },
+        {
+          "name": "flyTo",
+          "t": 2441,
+          "duration": 0,
+          "maxZoom": 14
+        },
+        {
+          "name": "jumpTo",
+          "t": 2441,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "stop",
+          "t": 2441,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "easeTo",
+          "t": 6549,
+          "duration": 0,
+          "maxZoom": null
+        },
+        {
+          "name": "fitBounds",
+          "t": 8245,
+          "duration": 0,
+          "maxZoom": 14
+        },
+        {
+          "name": "easeTo",
+          "t": 8246,
+          "duration": 0,
+          "maxZoom": 14
+        },
+        {
+          "name": "fitBounds",
+          "t": 8557,
+          "duration": 0,
+          "maxZoom": 14
+        },
+        {
+          "name": "easeTo",
+          "t": 8558,
+          "duration": 0,
+          "maxZoom": 14
+        },
+        {
+          "name": "easeTo",
+          "t": 8661,
+          "duration": 0,
+          "maxZoom": null
+        },
+        {
+          "name": "fitBounds",
+          "t": 8837,
+          "duration": 0,
+          "maxZoom": 14
+        },
+        {
+          "name": "flyTo",
+          "t": 8837,
+          "duration": 0,
+          "maxZoom": 14
+        },
+        {
+          "name": "jumpTo",
+          "t": 8837,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "stop",
+          "t": 8837,
+          "duration": null,
+          "maxZoom": null
+        }
+      ],
+      "runningCssAnimations": 0
+    }
+  ],
+  "checks": [
+    {
+      "step": "environment",
+      "name": "runtime MapLibre exposes the camera/terrain APIs the app uses",
+      "pass": true,
+      "detail": {
+        "setTerrain": "function",
+        "getTerrain": "function",
+        "setSky": "function",
+        "setLight": "function",
+        "setFog": "undefined",
+        "fitBounds": "function",
+        "easeTo": "function",
+        "flyTo": "function",
+        "jumpTo": "function",
+        "stop": "function",
+        "resize": "function",
+        "isMoving": "function"
+      }
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 93.9,
+        "darkRatio": 0.0047
+      }
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": true,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "terrain is off and the view is flat",
+      "pass": true,
+      "detail": {
+        "terrain": null,
+        "pitch": 0
+      }
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "satellite layer is shown",
+      "pass": true,
+      "detail": "satellite"
+    },
+    {
+      "step": "01-desktop-2d",
+      "name": "document direction is ltr",
+      "pass": true,
+      "detail": "ltr"
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 94.1,
+        "darkRatio": 0.001
+      }
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": true,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "Real DEM · 1× vertical scale"
+      }
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "visible"
+    },
+    {
+      "step": "02-desktop-3d",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 61.5,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 62,
+          "edgeLuma": 249.79339999999996,
+          "nearLuma": 47.5696,
+          "contrast": 202.2
+        }
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "terrain is off and the view is flat",
+      "pass": true,
+      "detail": {
+        "terrain": null,
+        "pitch": 0
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 434.03292225865704,
+          "right": 587.967077741343,
+          "top": 238.44266185435382,
+          "bottom": 433.55733814519465
+        },
+        "size": [
+          1042,
+          704
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 62,
+        "edgeLuma": 249.79339999999996,
+        "nearLuma": 47.5696,
+        "contrast": 202.2
+      }
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "selection frames the parcel exactly once",
+      "pass": true,
+      "detail": [
+        {
+          "name": "jumpTo",
+          "t": 10825,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "stop",
+          "t": 10825,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "fitBounds",
+          "t": 10874,
+          "duration": 1100,
+          "maxZoom": 14
+        },
+        {
+          "name": "flyTo",
+          "t": 10874,
+          "duration": 1100,
+          "maxZoom": 14
+        },
+        {
+          "name": "stop",
+          "t": 10874,
+          "duration": null,
+          "maxZoom": null
+        },
+        {
+          "name": "stop",
+          "t": 11981,
+          "duration": null,
+          "maxZoom": null
+        }
+      ]
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "selection motion is short (≤ 1.5 s)",
+      "pass": true,
+      "detail": [
+        {
+          "name": "fitBounds",
+          "t": 10874,
+          "duration": 1100,
+          "maxZoom": 14
+        }
+      ]
+    },
+    {
+      "step": "03-post-selection-fit",
+      "name": "parcel centre is the real stored centroid",
+      "pass": true,
+      "detail": {
+        "centre": [
+          -103.61011175035037,
+          41.805625834524136
+        ],
+        "centroid": [
+          -103.60945551066851,
+          41.8061477513674
+        ]
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 80.1,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 234.653,
+          "nearLuma": 46.245200000000004,
+          "contrast": 188.4
+        }
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "Real DEM · 1× vertical scale"
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 451.1568521331109,
+          "right": 612.9565051683908,
+          "top": 289.2254516294199,
+          "bottom": 425.5602347992856
+        },
+        "size": [
+          1042,
+          704
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 45,
+        "edgeLuma": 234.653,
+        "nearLuma": 46.245200000000004,
+        "contrast": 188.4
+      }
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "3D view keeps a near-north bearing (|bearing| ≤ 30°)",
+      "pass": true,
+      "detail": -18
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "3D pitch is moderate (35°–55°)",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "04-selected-field-3d",
+      "name": "parcel stays where it was on screen when 3D turns on (≤ 60 px)",
+      "pass": true,
+      "detail": {
+        "before": [
+          511,
+          335.9999999997742
+        ],
+        "after": [
+          532.0566786507509,
+          357.39284321435275
+        ]
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 61.5,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 62,
+          "edgeLuma": 249.79339999999996,
+          "nearLuma": 47.5696,
+          "contrast": 202.2
+        }
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "terrain is off and the view is flat",
+      "pass": true,
+      "detail": {
+        "terrain": null,
+        "pitch": 0
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 434.03292223495066,
+          "right": 587.9670777176366,
+          "top": 238.44266178752437,
+          "bottom": 433.5573380783652
+        },
+        "size": [
+          1042,
+          704
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 62,
+        "edgeLuma": 249.79339999999996,
+        "nearLuma": 47.5696,
+        "contrast": 202.2
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "3D → 2D returns to the same geographic framing",
+      "pass": true,
+      "detail": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "05-2d-after-toggle",
+      "name": "spotlight mask returns in 2D",
+      "pass": true,
+      "detail": "visible"
+    },
+    {
+      "step": "toggle-anchor",
+      "name": "toggle keeps the user’s centre and zoom when they have moved the map",
+      "pass": true,
+      "detail": {
+        "on": {
+          "metres": 0,
+          "zoom": 0,
+          "pitch": 45,
+          "bearing": -18
+        },
+        "roundTrip": {
+          "metres": 0,
+          "zoom": 0,
+          "pitch": 0,
+          "bearing": 0
+        }
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 220.8,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 235.86559999999997,
+          "nearLuma": 222.06479999999996,
+          "contrast": 13.8
+        }
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Terrain © EOX; OpenStreetMap contributors, NASA, USGS, Copernicus, GEBCO",
+        "visible": true
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "Real DEM · 1× vertical scale"
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 445.8125513427938,
+          "right": 607.9369743600537,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "size": [
+          1042,
+          704
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 45,
+        "edgeLuma": 235.86559999999997,
+        "nearLuma": 222.06479999999996,
+        "contrast": 13.8
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "relief layer is shown",
+      "pass": true,
+      "detail": "relief"
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 80.2,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 233.7934,
+          "nearLuma": 47.33789999999999,
+          "contrast": 186.5
+        }
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "Real DEM · 1× vertical scale"
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 445.8125513427938,
+          "right": 607.9369743600537,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "size": [
+          1042,
+          704
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 45,
+        "edgeLuma": 233.7934,
+        "nearLuma": 47.33789999999999,
+        "contrast": 186.5
+      }
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "07-satellite-3d",
+      "name": "satellite layer is shown",
+      "pass": true,
+      "detail": "satellite"
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "layer switch does not move the camera",
+      "pass": true,
+      "detail": {
+        "relief": {
+          "metres": 0,
+          "zoom": 0,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "satellite": {
+          "metres": 0,
+          "zoom": 0,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "calls": []
+      }
+    },
+    {
+      "step": "06-relief-3d",
+      "name": "layer switch keeps the same map instance",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "step": "autofocus-cancel:pointer",
+      "name": "automatic fit was in flight when the user acted",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "step": "autofocus-cancel:pointer",
+      "name": "automatic fit stopped and did not finish",
+      "pass": true,
+      "detail": {
+        "metres": 856.85,
+        "zoom": -0.018,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "autofocus-cancel:pointer",
+      "name": "camera is left alone after the user input",
+      "pass": true,
+      "detail": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "autofocus-cancel:pointer",
+      "name": "motion stops immediately on press",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "step": "autofocus-cancel:wheel",
+      "name": "automatic fit was in flight when the user acted",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "step": "autofocus-cancel:wheel",
+      "name": "automatic fit stopped and did not finish",
+      "pass": true,
+      "detail": {
+        "metres": 578.39,
+        "zoom": 0.253,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "autofocus-cancel:wheel",
+      "name": "camera is left alone after the user input",
+      "pass": true,
+      "detail": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "autofocus-cancel:keyboard",
+      "name": "automatic fit was in flight when the user acted",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "step": "autofocus-cancel:keyboard",
+      "name": "automatic fit stopped and did not finish",
+      "pass": true,
+      "detail": {
+        "metres": 1062.55,
+        "zoom": -0.027,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "autofocus-cancel:keyboard",
+      "name": "camera is left alone after the user input",
+      "pass": true,
+      "detail": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1382,
+          704
+        ],
+        "canvas": [
+          1382,
+          704
+        ]
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 82.8,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 233.7934,
+          "nearLuma": 47.33789999999999,
+          "contrast": 186.5
+        }
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1351,
+          "right": 1399,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "Real DEM · 1× vertical scale"
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 615.8125513427411,
+          "right": 777.936974359816,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "size": [
+          1382,
+          704
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 45,
+        "edgeLuma": 233.7934,
+        "nearLuma": 47.33789999999999,
+        "contrast": 186.5
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "map uses the freed width",
+      "pass": true,
+      "detail": {
+        "before": [
+          1042,
+          704
+        ],
+        "after": [
+          1382,
+          704
+        ]
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "same map instance, zoom, pitch and bearing",
+      "pass": true,
+      "detail": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "parcel stays centred in the wider map (≤ 40 px from the padded centre)",
+      "pass": true,
+      "detail": {
+        "boxCentre": [
+          696.8747628512785,
+          359.02512233724326
+        ],
+        "size": [
+          1382,
+          704
+        ]
+      }
+    },
+    {
+      "step": "08-inspector-collapsed",
+      "name": "reopening the inspector restores the framing",
+      "pass": true,
+      "detail": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 80.1,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 46,
+          "edgeLuma": 230.58079999999998,
+          "nearLuma": 48.195499999999996,
+          "contrast": 182.4
+        }
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 381,
+          "right": 429,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 108,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 106,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 74,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "بيانات ارتفاع حقيقية · مقياس رأسي ×1"
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 465.10413598063894,
+          "right": 626.8986666759992,
+          "top": 290.83066933016727,
+          "bottom": 427.5929744046835
+        },
+        "size": [
+          1042,
+          704
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 46,
+        "edgeLuma": 230.58079999999998,
+        "nearLuma": 48.195499999999996,
+        "contrast": 182.4
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "document direction is rtl",
+      "pass": true,
+      "detail": "rtl"
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "language switch keeps the same map instance and zoom",
+      "pass": true,
+      "detail": {
+        "metres": 71.14,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "language switch does not override a camera the user chose",
+      "pass": true,
+      "detail": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "09-arabic-rtl",
+      "name": "terrain and hidden mask survive language switches",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "source": "dem",
+          "exaggeration": 1
+        },
+        "mask": "none"
+      }
+    },
+    {
+      "step": "selection-3d-auto",
+      "name": "a typed boundary loads the real DEM and frames the parcel once, obliquely",
+      "pass": true,
+      "detail": {
+        "fits": [
+          {
+            "name": "fitBounds",
+            "t": 4988,
+            "duration": 1100,
+            "maxZoom": 14
+          }
+        ],
+        "zoom": 14,
+        "pitch": 45,
+        "inView": true,
+        "mask": "none"
+      }
+    },
+    {
+      "step": "pending-autofocus-cancel",
+      "name": "the DEM was still pending when the user scrolled",
+      "pass": true,
+      "detail": "false"
+    },
+    {
+      "step": "pending-autofocus-cancel",
+      "name": "a pending automatic fit never overrides the user’s view",
+      "pass": true,
+      "detail": {
+        "cameraCallsAfterInput": [],
+        "metresMovedAfterInput": 0,
+        "pitch": 0,
+        "metresFromParcel": 90
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          762,
+          620
+        ],
+        "canvas": [
+          762,
+          620
+        ]
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 83.6,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 233.653,
+          "nearLuma": 47.26769999999999,
+          "contrast": 186.4
+        }
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 820,
+        "viewport": 820
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 792,
+          "width": 764,
+          "height": 1364
+        },
+        "tools": {
+          "left": 727,
+          "right": 779,
+          "width": 52,
+          "height": 381
+        }
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 44,
+          "height": 44
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 44,
+          "height": 44
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 44,
+          "height": 44
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 44
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 44
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 44
+        }
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "Real DEM · 1× vertical scale"
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 311.5085528752939,
+          "right": 472.30785484698674,
+          "top": 247.7333524488959,
+          "bottom": 384.2724895826259
+        },
+        "size": [
+          762,
+          620
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 45,
+        "edgeLuma": 233.653,
+        "nearLuma": 47.26769999999999,
+        "contrast": 186.4
+      }
+    },
+    {
+      "step": "10-tablet-3d",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          349,
+          487
+        ],
+        "canvas": [
+          349,
+          487
+        ]
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 79.1,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 43,
+          "edgeLuma": 239.8656,
+          "nearLuma": 47.2001,
+          "contrast": 192.7
+        }
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 375,
+        "viewport": 375
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 12,
+          "right": 363,
+          "width": 351,
+          "height": 1715
+        },
+        "tools": {
+          "left": 302,
+          "right": 354,
+          "width": 52,
+          "height": 190
+        }
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 44,
+          "height": 44
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 44,
+          "height": 44
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 44,
+          "height": 44
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 44,
+          "height": 44
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 44
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 44
+        }
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "touch targets are at least 44px",
+      "pass": true,
+      "detail": {
+        "terrain": [
+          44,
+          44
+        ],
+        "fit": [
+          44,
+          44
+        ],
+        "north": [
+          44,
+          44
+        ],
+        "draw": [
+          44,
+          44
+        ],
+        "satellite": [
+          96,
+          44
+        ],
+        "relief": [
+          57,
+          44
+        ]
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "Real DEM · 1× vertical scale"
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 95.25767730277832,
+          "right": 253.53244942678964,
+          "top": 180.12025796612917,
+          "bottom": 316.2144665801474
+        },
+        "size": [
+          349,
+          487
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 43,
+        "edgeLuma": 239.8656,
+        "nearLuma": 47.2001,
+        "contrast": 192.7
+      }
+    },
+    {
+      "step": "11-mobile-3d",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "autofocus-cancel:touch",
+      "name": "automatic fit was in flight when the user acted",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "step": "autofocus-cancel:touch",
+      "name": "automatic fit stopped and did not finish",
+      "pass": true,
+      "detail": {
+        "metres": 874.21,
+        "zoom": -0.092,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "autofocus-cancel:touch",
+      "name": "camera is left alone after the user input",
+      "pass": true,
+      "detail": {
+        "metres": 0,
+        "zoom": 0,
+        "pitch": 0,
+        "bearing": 0
+      }
+    },
+    {
+      "step": "autofocus-cancel:touch",
+      "name": "motion stops immediately on press",
+      "pass": true,
+      "detail": false
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "map loaded (loading veil hidden, canvas present)",
+      "pass": true
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "map canvas matches its container",
+      "pass": true,
+      "detail": {
+        "container": [
+          1042,
+          704
+        ],
+        "canvas": [
+          1042,
+          704
+        ]
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "rendered map is not black",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "meanLuma": 80.2,
+        "darkRatio": 0,
+        "boundary": {
+          "samples": 45,
+          "edgeLuma": 233.7934,
+          "nearLuma": 47.33789999999999,
+          "contrast": 186.5
+        }
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "no horizontal page overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "console and tool column stay inside the viewport",
+      "pass": true,
+      "detail": {
+        "console": {
+          "left": 28,
+          "right": 1412,
+          "width": 1384,
+          "height": 822
+        },
+        "tools": {
+          "left": 1011,
+          "right": 1059,
+          "width": 48,
+          "height": 349
+        }
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "attribution is present",
+      "pass": true,
+      "detail": {
+        "text": "Elevation: Mapzen / AWS · USGS and other DEM contributors | Sentinel-2 cloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2024) · CC BY-NC-SA 4.0",
+        "visible": true
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "core map controls are visible and enabled",
+      "pass": true,
+      "detail": {
+        "terrain": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "fit": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "north": {
+          "visible": true,
+          "disabled": false,
+          "width": 40,
+          "height": 40
+        },
+        "draw": {
+          "visible": true,
+          "disabled": false,
+          "width": 138,
+          "height": 40
+        },
+        "satellite": {
+          "visible": true,
+          "disabled": false,
+          "width": 96,
+          "height": 40
+        },
+        "relief": {
+          "visible": true,
+          "disabled": false,
+          "width": 57,
+          "height": 40
+        }
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "real DEM active at 1×",
+      "pass": true,
+      "detail": {
+        "source": "dem",
+        "exaggeration": 1
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "UI states the real DEM mode",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "mode": "3d",
+        "status": "Real DEM · 1× vertical scale"
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "2D spotlight mask is hidden over terrain",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "view is pitched",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "field boundary is rendered",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "whole parcel is inside the map and clear of controls",
+      "pass": true,
+      "detail": {
+        "box": {
+          "left": 445.8125513430115,
+          "right": 607.9369743602679,
+          "top": 290.6439809261806,
+          "bottom": 427.4062637483059
+        },
+        "size": [
+          1042,
+          704
+        ],
+        "covered": false
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "boundary edge is brighter than its surroundings",
+      "pass": true,
+      "detail": {
+        "samples": 45,
+        "edgeLuma": 233.7934,
+        "nearLuma": 47.33789999999999,
+        "contrast": 186.5
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "auto-fit stays at or below imagery maxzoom 14",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "every camera call is instant (duration 0)",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "the map is never mid-animation after an action",
+      "pass": true,
+      "detail": {
+        "movingAfterSelect": false,
+        "movingAfterOrbit": false,
+        "movingAfterFit": false
+      }
+    },
+    {
+      "step": "12-reduced-motion",
+      "name": "no CSS animation is running",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "step": "network",
+      "name": "no hard HTTP or network failures for tiles, DEM or the map library",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "step": "network",
+      "name": "imagery and DEM tiles were actually served",
+      "pass": true,
+      "detail": {
+        "unpkg.com": 12,
+        "tiles.maps.eox.at": 252,
+        "elevation-tiles-prod": 440
+      }
+    },
+    {
+      "step": "console",
+      "name": "no console errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "step": "console",
+      "name": "no uncaught page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "step": "console",
+      "name": "no \"cannot fit\" camera warnings",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "network": {
+    "tilesOk": {
+      "unpkg.com": 12,
+      "tiles.maps.eox.at": 252,
+      "elevation-tiles-prod": 440
+    },
+    "aborted": 99,
+    "abortedSamples": [
+      {
+        "tag": "desktop",
+        "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/684/1598.png"
+      },
+      {
+        "tag": "desktop",
+        "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/684/1598.png"
+      },
+      {
+        "tag": "desktop",
+        "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/684/1598.png"
+      },
+      {
+        "tag": "desktop",
+        "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/681/1595.png"
+      },
+      {
+        "tag": "desktop",
+        "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/684/1598.png"
+      }
+    ],
+    "hardFailures": [],
+    "otherHttpErrors": []
+  },
+  "console": {
+    "errors": [],
+    "warnings": [],
+    "pageErrors": []
+  },
+  "demoField": {
+    "id": "scottsbluff_gering_ne:csb1825:311825012125041",
+    "vertices": 29,
+    "centroid": [
+      -103.60945551066851,
+      41.8061477513674
+    ],
+    "storage": "MongoDB"
+  },
+  "finishedAt": "2026-11-15T07:17:10.207Z",
+  "summary": {
+    "ok": true,
+    "screenshots": 12,
+    "checks": 213,
+    "failed": 0,
+    "abortedTileRequests": 99,
+    "hardFailures": 0,
+    "consoleErrors": 0,
+    "pageErrors": 0
+  }
+}

@@ -1,0 +1,5 @@
+Visual V2.1 lint comparison — 2026-11-15
+Pre-V2 baseline (qa/visual-v1/baseline/lint-baseline.txt): 15 errors (same file list).
+Current npm run lint: 15 errors (unchanged).
+New V2.1-introduced errors: 0.
+Pre-existing only (scripts + frozen water-truth + historical app.mjs unused imports).

@@ -1,0 +1,302 @@
+{
+  "collections": [
+    {
+      "name": "scenarios",
+      "count": 2,
+      "uniqueIds": 2,
+      "indexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ]
+    },
+    {
+      "name": "crop_history",
+      "count": 3,
+      "uniqueIds": 3,
+      "indexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "field_id": 1,
+            "year": 1
+          },
+          "name": "field_id_1_year_1"
+        }
+      ]
+    },
+    {
+      "name": "crop_profiles",
+      "count": 8,
+      "uniqueIds": 8,
+      "indexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ]
+    },
+    {
+      "name": "climate_seasonal",
+      "count": 2,
+      "uniqueIds": 2,
+      "indexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ]
+    },
+    {
+      "name": "climate_daily",
+      "count": 1096,
+      "uniqueIds": 1096,
+      "indexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "field_id": 1,
+            "date": 1
+          },
+          "name": "field_id_1_date_1"
+        }
+      ]
+    },
+    {
+      "name": "field_soils",
+      "count": 26,
+      "uniqueIds": 26,
+      "indexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "field_id": 1
+          },
+          "name": "field_id_1"
+        }
+      ]
+    },
+    {
+      "name": "fields",
+      "count": 1,
+      "uniqueIds": 1,
+      "indexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ]
+    }
+  ],
+  "fieldId": "scottsbluff_gering_ne:csb1825:311825012125041",
+  "climate": {
+    "precipitationAnnualMm": 394.04,
+    "temperatureMeanMaxC": 19.083506849315054,
+    "temperatureMeanMinC": 4.65380821917808,
+    "solarRadiationMeanDailyMj": 16.45717808219178
+  },
+  "preflight": [
+    {
+      "rotation": [
+        "wheat",
+        "maize",
+        "wheat"
+      ],
+      "budget": {
+        "ruleId": "water.budget",
+        "status": "UNKNOWN",
+        "explanation": "The irrigation budget, unit, period, or field area is missing or invalid.",
+        "season": null,
+        "evidence": {
+          "source": "NASA POWER",
+          "dataset": "NASA/POWER Source Native Resolution Daily Data",
+          "period": {
+            "start": "20250101",
+            "end": "20251231",
+            "startIso": "2025-01-01",
+            "endIso": "2025-12-31"
+          },
+          "coordinates": {
+            "latitude": 41.806,
+            "longitude": -103.609,
+            "elevation": 1336.29
+          },
+          "timeStandard": "LST"
+        },
+        "inputs": {
+          "budget": null,
+          "areaHa": 22.187560600766858
+        },
+        "missingInformation": [
+          "availableIrrigationBudget",
+          "budgetUnit",
+          "budgetPeriod"
+        ],
+        "nextStep": "Enter the available field-applied water amount, unit, and applicable period."
+      },
+      "comparison": {
+        "period": null,
+        "status": "UNKNOWN",
+        "needMm": {
+          "min": 891.6102949295646,
+          "max": 931.2883288118642
+        },
+        "needM3": {
+          "min": 197826.57451017323,
+          "max": 206630.1623230013
+        },
+        "budgetMm": null,
+        "budgetM3": null,
+        "remainingMm": null,
+        "remainingM3": null,
+        "deficitMm": null,
+        "deficitM3": null
+      },
+      "status": "UNKNOWN"
+    },
+    {
+      "rotation": [
+        "wheat",
+        "soy",
+        "sunflower"
+      ],
+      "budget": {
+        "ruleId": "water.budget",
+        "status": "UNKNOWN",
+        "explanation": "The irrigation budget, unit, period, or field area is missing or invalid.",
+        "season": null,
+        "evidence": {
+          "source": "NASA POWER",
+          "dataset": "NASA/POWER Source Native Resolution Daily Data",
+          "period": {
+            "start": "20250101",
+            "end": "20251231",
+            "startIso": "2025-01-01",
+            "endIso": "2025-12-31"
+          },
+          "coordinates": {
+            "latitude": 41.806,
+            "longitude": -103.609,
+            "elevation": 1336.29
+          },
+          "timeStandard": "LST"
+        },
+        "inputs": {
+          "budget": null,
+          "areaHa": 22.187560600766858
+        },
+        "missingInformation": [
+          "availableIrrigationBudget",
+          "budgetUnit",
+          "budgetPeriod"
+        ],
+        "nextStep": "Enter the available field-applied water amount, unit, and applicable period."
+      },
+      "comparison": {
+        "period": null,
+        "status": "UNKNOWN",
+        "needMm": {
+          "min": 842.7876201906281,
+          "max": 882.9049406568505
+        },
+        "needM3": {
+          "min": 186994.0139655564,
+          "max": 195895.0687554034
+        },
+        "budgetMm": null,
+        "budgetM3": null,
+        "remainingMm": null,
+        "remainingM3": null,
+        "deficitMm": null,
+        "deficitM3": null
+      },
+      "status": "UNKNOWN"
+    },
+    {
+      "rotation": [
+        "chickpea",
+        "wheat",
+        "soy"
+      ],
+      "budget": {
+        "ruleId": "water.budget",
+        "status": "UNKNOWN",
+        "explanation": "The irrigation budget, unit, period, or field area is missing or invalid.",
+        "season": null,
+        "evidence": {
+          "source": "NASA POWER",
+          "dataset": "NASA/POWER Source Native Resolution Daily Data",
+          "period": {
+            "start": "20250101",
+            "end": "20251231",
+            "startIso": "2025-01-01",
+            "endIso": "2025-12-31"
+          },
+          "coordinates": {
+            "latitude": 41.806,
+            "longitude": -103.609,
+            "elevation": 1336.29
+          },
+          "timeStandard": "LST"
+        },
+        "inputs": {
+          "budget": null,
+          "areaHa": 22.187560600766858
+        },
+        "missingInformation": [
+          "availableIrrigationBudget",
+          "budgetUnit",
+          "budgetPeriod"
+        ],
+        "nextStep": "Enter the available field-applied water amount, unit, and applicable period."
+      },
+      "comparison": {
+        "period": null,
+        "status": "UNKNOWN",
+        "needMm": null,
+        "needM3": null,
+        "budgetMm": null,
+        "budgetM3": null,
+        "remainingMm": null,
+        "remainingM3": null,
+        "deficitMm": null,
+        "deficitM3": null
+      },
+      "status": "UNKNOWN"
+    }
+  ]
+}

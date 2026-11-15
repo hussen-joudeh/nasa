@@ -1,0 +1,108 @@
+{
+  "base": "http://127.0.0.1:5173/",
+  "checks": [
+    {
+      "name": "rail-empty-state",
+      "result": "pass",
+      "detail": "current,pending,pending,pending"
+    },
+    {
+      "name": "search-coordinates",
+      "result": "pass",
+      "detail": "36.78, -119.95"
+    },
+    {
+      "name": "draw-controls-toggle",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "name": "demo-field-and-inspector",
+      "result": "pass",
+      "detail": {
+        "area": "22.19 ha",
+        "stored": "Area from source record (equal-area stored geometry): 22.220372 ha",
+        "demoStatus": "Proposed field boundary · Area from source record: 22.220372 ha · Area calculated from proposed boundary (spherical WGS84): 22.19 ha · Tap Analyze this field to load climate."
+      }
+    },
+    {
+      "name": "map-controls-work",
+      "result": "pass",
+      "detail": {
+        "scaleBefore": "500 m",
+        "reliefPressed": "true"
+      }
+    },
+    {
+      "name": "analyze-advances-rail",
+      "result": "pass",
+      "detail": "done,done,current,pending"
+    },
+    {
+      "name": "rail-navigation-keeps-inputs",
+      "result": "pass",
+      "detail": {
+        "crop": "soy",
+        "budget": "622",
+        "area": "22.19 ha"
+      }
+    },
+    {
+      "name": "keyboard-rail",
+      "result": "pass",
+      "detail": [
+        "1Explore — done",
+        "2Analyze — done",
+        "3Compare — current stage",
+        "4Preflight — upcoming"
+      ]
+    },
+    {
+      "name": "inspector-collapse-keeps-map-interactive",
+      "result": "pass",
+      "detail": {
+        "closed": {
+          "state": "closed",
+          "mapW": 1382,
+          "canvasW": 1382
+        },
+        "open": {
+          "state": "open",
+          "sameCanvas": true,
+          "area": "22.19 ha"
+        },
+        "terrainPressedWhileCollapsed": "true"
+      }
+    },
+    {
+      "name": "language-switch-keeps-state",
+      "result": "pass",
+      "detail": {
+        "dir": "rtl",
+        "sameCanvas": true,
+        "area": "22.19 هكتار",
+        "crop": "soy",
+        "stages": [
+          "استكشف",
+          "حلّل",
+          "قارن",
+          "الفحص المسبق"
+        ],
+        "wordmark": "ltr",
+        "inspectorSide": "left"
+      }
+    },
+    {
+      "name": "save-clear-restore",
+      "result": "pass",
+      "detail": {
+        "area": "22.19 ha"
+      }
+    },
+    {
+      "name": "no-page-errors",
+      "result": "pass",
+      "detail": null
+    }
+  ]
+}

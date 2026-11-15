@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" role="img" aria-labelledby="fs-logo-h-title">
+  <title id="fs-logo-h-title">FieldShift</title>
+  <defs>
+    <linearGradient id="fs-field-h" x1="12" y1="68" x2="52" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B5D3B"/>
+      <stop offset=".55" stop-color="#17834f"/>
+      <stop offset="1" stop-color="#A3E635"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0,-4) scale(.78)">
+    <path fill="url(#fs-field-h)" d="M32 3.5 57 18.2v23.8c0 18.5-11.2 27.8-25 27.8S7 60.5 7 42V18.2L32 3.5z"/>
+    <path fill="none" stroke="#063d28" stroke-width="1.4" stroke-linecap="round" d="M13 49.5q19-5 38 0M11 43.5q21-5.5 42 0M9 37.5q23-6 44 0"/>
+    <path fill="#fff" d="M27.2 52.2 31.6 26.5l.4 2.2 3.6-2.2.4-2.2-4.8 28.1z"/>
+    <path fill="#fff" d="M29.8 28.8 18.2 36.8l3.2-.2 8.4-7.8zm4.4-1.6 11.6 8-3.2-.2-8.4-7.8z"/>
+    <g fill="#fff">
+      <rect x="15.5" y="17.5" width="7" height="3.2" rx=".8" transform="rotate(-35 19 19)"/>
+      <circle cx="14.8" cy="22.8" r="2.1"/>
+      <path fill="none" stroke="#fff" stroke-width="1.35" stroke-linecap="round" d="M10.5 20.2a5.5 5.5 0 0 1 9.2-4.1M8.2 16.8a8.5 8.5 0 0 1 12.6-3.2M6.2 13.2a11.5 11.5 0 0 1 15.8-1.8"/>
+    </g>
+  </g>
+  <text x="62" y="42" font-family="Montserrat,Segoe UI,sans-serif" font-size="30" font-weight="700" letter-spacing="-.5">
+    <tspan fill="#1F2933">Field</tspan><tspan fill="#0B5D3B">Shift</tspan>
+  </text>
+</svg>

@@ -1,0 +1,48 @@
+{
+  "base": "http://127.0.0.1:5173/",
+  "captures": [
+    "desktop-1440-rotation-compare",
+    "desktop-1440-preflight-overview",
+    "desktop-1440-breakpoint-anchor",
+    "desktop-1440-unknown-expanded",
+    "desktop-1440-provenance-drawer",
+    "desktop-1440-rotation-b-selected",
+    "desktop-1440-stale-results",
+    "desktop-1600-preflight-hub",
+    "tablet-768-preflight-hub",
+    "mobile-375-en-preflight-hub",
+    "mobile-375-ar-rtl-preflight-hub"
+  ],
+  "metrics": [
+    {
+      "label": "desktop-1440-after",
+      "hub": {
+        "height": 7600.046875,
+        "scrollHeight": 7600
+      },
+      "panel": {
+        "height": 8944.140625,
+        "scrollHeight": 8942
+      },
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      }
+    },
+    {
+      "label": "desktop-1600-after",
+      "hub": {
+        "height": 7600.046875,
+        "scrollHeight": 7600
+      },
+      "panel": {
+        "height": 8944.140625,
+        "scrollHeight": 8942
+      },
+      "viewport": {
+        "w": 1600,
+        "h": 1000
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Cinematic farmland artwork
+Original AI-generated illustrative landscape created for Field Shift with OpenAI image generation, Batch 06E. Not geographic imagery or scientific evidence. No supplied reference screenshot is embedded in the artwork. Runtime asset: cinematic-farmland.webp (optimized from the generated PNG). The introduction visibly labels the artwork in English and Arabic. The original source PNG is retained for future authoring.
