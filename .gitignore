@@ -1,12 +1,10 @@
 node_modules
 .npm-cache
-dist
 coverage
-*.log
-qa/source-probe/docs/worldcover-head.bin
-.expo/
-.claude/
 fieldshift.env
 .env
 .env.*
-qa/**/worktree-snapshot.tar.gz
+
+# Local logs outside QA remain machine-specific.
+*.log
+!qa/**/*.log

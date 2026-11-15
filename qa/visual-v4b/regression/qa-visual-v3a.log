@@ -1,0 +1,8 @@
+
+> field-shift@0.1.0 qa:visual-v3a
+> node scripts/qa-visual-v3a.mjs
+
+{
+  "ok": true,
+  "captures": 8
+}

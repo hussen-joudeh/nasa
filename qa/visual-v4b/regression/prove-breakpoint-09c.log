@@ -1,0 +1,139 @@
+
+> field-shift@0.1.0 prove:breakpoint-09c
+> node scripts/prove-breakpoint-09c.mjs
+
+{
+  "ok": true,
+  "field": {
+    "id": "scottsbluff_gering_ne:csb1825:311825012125041",
+    "approval": "proposed",
+    "areaHaStored": 22.220372,
+    "areaHaCalculated": 22.187560600766858,
+    "centroid": [
+      -103.60945551066851,
+      41.8061477513674
+    ],
+    "elevationM": 1336.29
+  },
+  "climate": {
+    "source": "MongoDB archive · NASA POWER daily",
+    "period": {
+      "start": "20250101",
+      "end": "20251231",
+      "startIso": "2025-01-01",
+      "endIso": "2025-12-31"
+    },
+    "precipAnnualMm": 394.04,
+    "notForecast": true
+  },
+  "assumptions": {
+    "rotationA": [
+      "wheat",
+      "soy",
+      "wheat"
+    ],
+    "plantingDates": [
+      "2025-04-20",
+      "2025-05-01",
+      "2025-05-15"
+    ],
+    "illustrativeCropSettings": true,
+    "effectiveRainfallSlopeConfirmed": true,
+    "previousCrop": null,
+    "labels": "Illustrative FAO-56 crop settings; spring planting within 2025 historical window — not farmer-confirmed."
+  },
+  "threshold": {
+    "mm": 623.8591556593612,
+    "m3": 138419.12822535323,
+    "inclusive": true,
+    "ruleId": "water.balance",
+    "season": 1,
+    "crop": "wheat"
+  },
+  "probesMm": {
+    "below": {
+      "amountMm": 622,
+      "status": "WARNING"
+    },
+    "at": {
+      "amountMm": 623.8591556593612,
+      "status": "PASS"
+    },
+    "above": {
+      "amountMm": 624,
+      "status": "PASS"
+    }
+  },
+  "demoScriptBudgetMm": {
+    "below": 622,
+    "at": 623.86,
+    "above": 624
+  },
+  "findingClassification": "DECISION-SENSITIVE",
+  "transitions": [
+    {
+      "atMm": 614.9036479412865,
+      "atM3": 136432.11952329904,
+      "statusAt": "WARNING",
+      "statusBelow": "WARNING"
+    },
+    {
+      "atMm": 623.8591556593612,
+      "atM3": 138419.12822535323,
+      "statusAt": "PASS",
+      "statusBelow": "WARNING"
+    }
+  ],
+  "season1Need": {
+    "min": 614.9036479412865,
+    "max": 623.8591556593612
+  },
+  "overallStatusBaseline": "UNKNOWN",
+  "unresolvedChecks": [
+    {
+      "ruleId": "rotation.history",
+      "season": 1
+    },
+    {
+      "ruleId": "rotation.compatibility",
+      "season": null
+    },
+    {
+      "ruleId": "rotation.climate",
+      "season": 1
+    },
+    {
+      "ruleId": "rotation.climate",
+      "season": 2
+    },
+    {
+      "ruleId": "rotation.climate",
+      "season": 3
+    },
+    {
+      "ruleId": "water.budget",
+      "season": null
+    },
+    {
+      "ruleId": "water.balance",
+      "season": 1
+    },
+    {
+      "ruleId": "water.balance",
+      "season": 2
+    },
+    {
+      "ruleId": "water.balance",
+      "season": 3
+    },
+    {
+      "ruleId": "biofirewall.reported-hazard",
+      "season": null
+    },
+    {
+      "ruleId": "biofirewall.equipment-exposure",
+      "season": null
+    }
+  ],
+  "overallAfterAtThreshold": "UNKNOWN"
+}

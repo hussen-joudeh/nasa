@@ -1,0 +1,226 @@
+{
+  "schema_contract": "FieldShift_API_Data_Reference.md v1.1",
+  "packaged_date": "2026-11-14",
+  "region_id": "scottsbluff_gering_ne",
+  "field_id": "scottsbluff_gering_ne:csb1825:311825012125041",
+  "field_status": "proposed",
+  "bbox": [
+    -103.76,
+    41.79,
+    -103.55,
+    41.93
+  ],
+  "centroid": {
+    "type": "Point",
+    "coordinates": [
+      -103.60945551066851,
+      41.8061477513674
+    ]
+  },
+  "area_ha": 22.220372,
+  "mongo_import": {
+    "format": "UTF-8 JSONL",
+    "mode": "upsert",
+    "key": "_id",
+    "scope": "Only entries with a target_collection are canonical candidates. Review proposed identifiers and field before loading."
+  },
+  "exports": [
+    {
+      "file": "assets/demo_field.geojson",
+      "target_collection": null,
+      "record_count": 1,
+      "coverage": {
+        "scope": "source grid or field geometry as documented in referencing record"
+      },
+      "unresolved_gaps": [],
+      "disposition": "interchange_asset",
+      "sha256": "d2ffdd02bc19d6c07c473108aa25031d39a99547e267419b1472b118b29d0e6a"
+    },
+    {
+      "file": "assets/usda_cdl_2023_regional_subset.tif",
+      "target_collection": null,
+      "record_count": 1,
+      "coverage": {
+        "scope": "source grid or field geometry as documented in referencing record"
+      },
+      "unresolved_gaps": [],
+      "disposition": "interchange_asset",
+      "sha256": "1b46e0337b7ca667056729e8f0cb902f44798ed673760fcdf5cb8938620dd85f"
+    },
+    {
+      "file": "assets/usda_cdl_2024_regional_subset.tif",
+      "target_collection": null,
+      "record_count": 1,
+      "coverage": {
+        "scope": "source grid or field geometry as documented in referencing record"
+      },
+      "unresolved_gaps": [],
+      "disposition": "interchange_asset",
+      "sha256": "559d17945deab6944b34687c8955b36b9c9fc4acd25acdb5679accb42e1f45f1"
+    },
+    {
+      "file": "assets/usda_cdl_2025_regional_subset.tif",
+      "target_collection": null,
+      "record_count": 1,
+      "coverage": {
+        "scope": "source grid or field geometry as documented in referencing record"
+      },
+      "unresolved_gaps": [],
+      "disposition": "interchange_asset",
+      "sha256": "7d9fa4dbfc766e2b45b3cb3227fafadc51cd03f556a97c2b9eb70efd65e5ac8a"
+    },
+    {
+      "file": "climate_daily.jsonl",
+      "target_collection": "climate_daily",
+      "record_count": 1096,
+      "coverage": {
+        "start": "2023-01-01",
+        "end": "2025-12-31",
+        "expected_dates": 1096,
+        "complete_dates": 1096,
+        "time_standard": "LST"
+      },
+      "unresolved_gaps": [],
+      "disposition": "canonical_review"
+    },
+    {
+      "file": "climate_seasonal.jsonl",
+      "target_collection": "climate_seasonal",
+      "record_count": 2,
+      "coverage": {
+        "windows": [
+          {
+            "year": 2023,
+            "period_start": "2023-05-01",
+            "period_end": "2023-09-30",
+            "valid_days": 153,
+            "expected_days": 153
+          },
+          {
+            "year": 2024,
+            "period_start": "2024-05-01",
+            "period_end": "2024-09-30",
+            "valid_days": 153,
+            "expected_days": 153
+          }
+        ]
+      },
+      "unresolved_gaps": [],
+      "disposition": "canonical_review"
+    },
+    {
+      "file": "criteria_mapping.csv",
+      "target_collection": null,
+      "record_count": 16,
+      "coverage": {
+        "scope": "dataset-to-output mappings"
+      },
+      "unresolved_gaps": [
+        "Criterion labels and supplemental schemas pending team review."
+      ],
+      "disposition": "review_mapping"
+    },
+    {
+      "file": "crop_history.jsonl",
+      "target_collection": "crop_history",
+      "record_count": 3,
+      "coverage": {
+        "years": [
+          2023,
+          2024,
+          2025
+        ],
+        "class_codes": [
+          36,
+          1,
+          42
+        ]
+      },
+      "unresolved_gaps": [
+        "Engine IDs pending. The crop-history crop_id values are null and optional proposed IDs link to draft profiles."
+      ],
+      "disposition": "canonical_review"
+    },
+    {
+      "file": "crop_profiles.jsonl",
+      "target_collection": "crop_profiles",
+      "record_count": 8,
+      "coverage": {
+        "profile_ids": [
+          "corn",
+          "barley",
+          "winter_wheat",
+          "alfalfa",
+          "sugar_beet",
+          "dry_bean",
+          "chickpea",
+          "lentil"
+        ]
+      },
+      "unresolved_gaps": [
+        "Engine plans and IDs were unavailable. The illustrative pitch names wheat, lentil, barley and chickpea and leaves vegetable and cover-crop species unspecified. Winter wheat is a proposed local interpretation of generic wheat. The barley range is from NDSU Extension. Lentil and chickpea ranges are specific to a USDA trial in Colorado."
+      ],
+      "disposition": "canonical_review"
+    },
+    {
+      "file": "field_soils.jsonl",
+      "target_collection": "field_soils",
+      "record_count": 26,
+      "coverage": {
+        "map_units": 6,
+        "area_fraction": 1.000000158,
+        "rows_with_depth_interval": 26
+      },
+      "unresolved_gaps": [
+        "Some component/horizon attributes are absent in SSURGO. Map-unit fractions repeat by horizon and are not component area fractions."
+      ],
+      "disposition": "canonical_review"
+    },
+    {
+      "file": "fields.jsonl",
+      "target_collection": "fields",
+      "record_count": 1,
+      "coverage": {
+        "bbox": [
+          -103.76,
+          41.79,
+          -103.55,
+          41.93
+        ],
+        "epsg": 4326
+      },
+      "unresolved_gaps": [
+        "Team approval pending.",
+        "The 2005 mapped center pivot is historical irrigation evidence. Current irrigation, allocation, and 2019 canal service are unverified.",
+        "Farmer irrigation budget pending."
+      ],
+      "disposition": "canonical_review"
+    },
+    {
+      "file": "scenarios.jsonl",
+      "target_collection": "scenarios",
+      "record_count": 2,
+      "coverage": {
+        "historical_event": "2019-07-17/2019-08-28",
+        "what_if": "2024-05-01/2024-09-30"
+      },
+      "unresolved_gaps": [
+        "Field service during the 2019 outage and farmer baseline budget are unverified."
+      ],
+      "disposition": "canonical_review"
+    }
+  ],
+  "unresolved_gaps": [
+    "The NASA Space Apps challenge resources tab was inaccessible through web retrieval. Official providers were used directly.",
+    "The shared field is proposed and team approval is pending. Historical center-pivot overlap supports historical irrigation evidence. The state permitted-acres service timed out and current irrigation is unverified.",
+    "Engine crop catalog, plan definitions and agreed criterion taxonomy were unavailable. Actual crop history classifications are present; crop_id is null and draft profiles use proposed IDs. Criteria rows are flagged for review.",
+    "The illustrative pitch shows generic wheat, lentil, barley, chickpea, irrigated vegetables and fallow/cover. Winter wheat is a proposed local interpretation. The last two plan categories have no species-level identity. Barley, lentil and chickpea ranges carry their original regional or experimental scope.",
+    "The farmer’s actual irrigation budget and this field’s 2019 district service remain unverified.",
+    "OpenET polygon API returned 403 (Not authenticated); Earth Engine alternative returned 401. Original 70-month custom polygon series remains available in the third source archive.",
+    "GEDI CMR found 27 candidate granules intersecting the region. The HDF5 GET returned HTTP 401 after redirect and shot coverage and quality remain unknown.",
+    "SMAP, GPM, MODIS, VIIRS, SRTM and ECOSTRESS candidate science reads returned 401. The ORNL MODIS subset check timed out. USGS Landsat STAC returned scene metadata, and its band request returned sign-in HTML. USDA Ag Data Commons remains a catalog pointer.",
+    "GAEZ RES05-SXX is a continuous native 0–10000 index. RES05-SIX has native categorical codes and nodata 0. Exact class captions remain pending for SIX.",
+    "Historical PRISM and POWER midpoint responses and regional CDL evidence are in the original evidence directories of the source archives."
+  ],
+  "challenge_resources_url": "https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/?tab=resources"
+}

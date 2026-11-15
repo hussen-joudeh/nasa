@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap');
+:root{
+  --brand-primary:#0B5D3B;
+  --brand-ink:#1F2933;
+  --brand-accent:#A3E635;
+  --brand-border:#E5E7EB;
+  --brand-surface:#F8FAFC;
+  --brand-white:#FFFFFF;
+  --font-display:Montserrat,Segoe UI,system-ui,sans-serif;
+  --font-body:Inter,'Segoe UI',Tahoma,Arial,sans-serif;
+  --brand-focus:color-mix(in srgb,var(--brand-accent) 55%,white);
+}

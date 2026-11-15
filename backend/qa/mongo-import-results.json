@@ -1,0 +1,61 @@
+{
+  "database": "fieldshift_demo",
+  "fieldId": "scottsbluff_gering_ne:csb1825:311825012125041",
+  "importedAt": "2026-11-15T00:46:52.796Z",
+  "collections": [
+    {
+      "collection": "fields",
+      "expected": 1,
+      "actual": 1,
+      "upserted": 0,
+      "matched": 1
+    },
+    {
+      "collection": "crop_profiles",
+      "expected": 8,
+      "actual": 8,
+      "upserted": 0,
+      "matched": 8
+    },
+    {
+      "collection": "climate_daily",
+      "expected": 1096,
+      "actual": 1096,
+      "upserted": 0,
+      "matched": 1096
+    },
+    {
+      "collection": "climate_seasonal",
+      "expected": 2,
+      "actual": 2,
+      "upserted": 0,
+      "matched": 2
+    },
+    {
+      "collection": "crop_history",
+      "expected": 3,
+      "actual": 3,
+      "upserted": 0,
+      "matched": 3
+    },
+    {
+      "collection": "field_soils",
+      "expected": 26,
+      "actual": 26,
+      "upserted": 0,
+      "matched": 26
+    },
+    {
+      "collection": "scenarios",
+      "expected": 2,
+      "actual": 2,
+      "upserted": 0,
+      "matched": 2
+    }
+  ],
+  "demoQueries": {
+    "climate2025": 365,
+    "cropHistory": 3,
+    "soils": 26
+  }
+}

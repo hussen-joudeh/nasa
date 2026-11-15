@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FieldShift brand preview</title>
+  <link rel="stylesheet" href="../../brand-tokens.css" />
+  <style>
+    body{margin:0;padding:24px;font:500 14px/1.5 var(--font-body);color:var(--brand-ink)}
+    h1{font:700 22px/1.2 var(--font-display)}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:20px}
+  .card{padding:20px;border:1px solid var(--brand-border);border-radius:12px;background:var(--brand-surface)}
+  .dark{background:#0d1f18;border-color:#2f4a3c;color:#e8f3ee}
+  .row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:12px}
+  img{display:block;max-width:100%;height:auto}
+  .sizes img{width:48px;height:auto}
+  .og{width:600px;max-width:100%;aspect-ratio:1200/630;background:linear-gradient(135deg,#0B5D3B,#123927);border-radius:14px;display:grid;place-items:center;padding:24px;box-sizing:border-box}
+  .og img{width:min(420px,90%)}
+  </style>
+</head>
+<body>
+  <h1>FieldShift brand preview</h1>
+  <p>Vector logos on light and dark surfaces. Verify clipping at 32/48px.</p>
+  <div class="grid">
+    <section class="card" id="light">
+      <h2>Light</h2>
+      <img src="./fieldshift-logo-horizontal.svg" alt="FieldShift horizontal" width="280" />
+      <div class="row sizes">
+        <img src="./fieldshift-mark.svg" alt="" width="32" height="36" />
+        <img src="./fieldshift-mark.svg" alt="" width="48" height="54" />
+      </div>
+    </section>
+    <section class="card dark" id="dark">
+      <h2>Dark</h2>
+      <img src="./fieldshift-logo-dark.svg" alt="FieldShift on dark" width="280" />
+      <div class="row sizes">
+        <img src="./fieldshift-mark.svg" alt="" width="32" height="36" />
+        <img src="./favicon.svg" alt="" width="48" height="48" />
+      </div>
+    </section>
+  </div>
+  <section class="card" style="margin-top:16px">
+    <h2>OG card (export target)</h2>
+    <div class="og" id="og-card">
+      <img src="./fieldshift-logo-dark.svg" alt="FieldShift" />
+    </div>
+  </section>
+</body>
+</html>

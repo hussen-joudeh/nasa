@@ -1,0 +1,9 @@
+
+> field-shift@0.1.0 qa:visual-v2-journey
+> node scripts/qa-visual-v2-journey.mjs
+
+{
+  "ok": true,
+  "checks": 12,
+  "failed": []
+}

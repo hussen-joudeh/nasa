@@ -1,0 +1,32 @@
+
+> field-shift@0.1.0 qa:visual-v4b
+> node scripts/qa-visual-v4b.mjs
+
+Desktop 1440×900
+  ✓ captured 01-desktop-2d — z12.00 pitch 0 bearing 0 2D
+  ✓ captured 02-desktop-3d — z12.00 pitch 45 bearing -18 3D
+  ✓ captured 03-post-selection-fit — z14.00 pitch 0 bearing 0 2D
+  ✓ captured 04-selected-field-3d — z14.00 pitch 45 bearing -18 3D
+  ✓ captured 05-2d-after-toggle — z14.00 pitch 0 bearing 0 2D
+  ✓ captured 06-relief-3d — z14.00 pitch 45 bearing -18 3D
+  ✓ captured 07-satellite-3d — z14.00 pitch 45 bearing -18 3D
+  ✓ captured 08-inspector-collapsed — z14.00 pitch 45 bearing -18 3D
+  ✓ captured 09-arabic-rtl — z14.00 pitch 45 bearing -18 3D
+Pending-autofocus probes
+Tablet 820×1180
+  ✓ captured 10-tablet-3d — z14.00 pitch 45 bearing -18 3D
+Mobile 375×812
+  ✓ captured 11-mobile-3d — z14.00 pitch 45 bearing -18 3D
+Reduced motion 1440×900
+  ✓ captured 12-reduced-motion — z14.00 pitch 45 bearing -18 3D
+{
+  "ok": true,
+  "screenshots": 12,
+  "checks": 213,
+  "failed": 0,
+  "abortedTileRequests": 99,
+  "hardFailures": 0,
+  "consoleErrors": 0,
+  "pageErrors": 0,
+  "failedChecks": []
+}

@@ -1,0 +1,4 @@
+{
+  "query": "SELECT sac.areasymbol,sac.saversion,sac.saverest,mu.mukey,mu.musym,mu.muname,c.cokey,c.compname,c.comppct_r,c.majcompflag,c.compkind,c.drainagecl,c.hydgrp,\n h.chkey,h.hzname,h.hzdept_r,h.hzdepb_r,h.awc_l,h.awc_r,h.awc_h,h.sandtotal_r,h.silttotal_r,h.claytotal_r,h.ph1to1h2o_r,h.ec_r,h.om_r,h.ksat_r,\n tex.chtgkey,tex.texture,tex.texdesc,tex.rvindicator\n FROM mapunit mu JOIN legend l ON l.lkey=mu.lkey JOIN sacatalog sac ON sac.areasymbol=l.areasymbol\n LEFT JOIN component c ON c.mukey=mu.mukey LEFT JOIN chorizon h ON h.cokey=c.cokey\n OUTER APPLY (SELECT TOP 1 t.chtgkey,t.texture,t.texdesc,t.rvindicator FROM chtexturegrp t WHERE t.chkey=h.chkey AND t.rvindicator='Yes' ORDER BY t.chtgkey) tex\n WHERE mu.mukey IN ('1653701','1653736','1653766','1653767','1653773','1653774') ORDER BY mu.mukey,c.comppct_r DESC,c.cokey,h.hzdept_r,h.chkey",
+  "format": "JSON+COLUMNNAME"
+}

@@ -1,0 +1,9 @@
+
+> field-shift@0.1.0 qa:visual-v4a
+> node scripts/qa-visual-v4a.mjs
+
+{
+  "ok": true,
+  "verified": true,
+  "steps": 4
+}

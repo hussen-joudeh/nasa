@@ -1,0 +1,18 @@
+[
+  {
+    "method": "GET",
+    "status": 503,
+    "allow": null,
+    "body": {
+      "error": "Local MongoDB is unavailable. Start MongoDB and run npm run db:import, then retry."
+    }
+  },
+  {
+    "method": "POST",
+    "status": 405,
+    "allow": "GET",
+    "body": {
+      "error": "This endpoint is read-only. Use GET."
+    }
+  }
+]

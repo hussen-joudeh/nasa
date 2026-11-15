@@ -1,0 +1,36 @@
+{
+  "region_id": "scottsbluff_gering_ne",
+  "field_id": "scottsbluff_gering_ne:csb1825:311825012125041",
+  "bbox": [
+    -103.76,
+    41.79,
+    -103.55,
+    41.93
+  ],
+  "source_properties": {
+    "object_id": 12124815,
+    "CSBID": "311825012125041",
+    "CSBYEARS": "1825",
+    "CSBACRES": 54.9076866801485,
+    "CDL2018": 36,
+    "CDL2019": 36,
+    "CDL2020": 36,
+    "CDL2021": 36,
+    "CDL2022": 36,
+    "CDL2023": 36,
+    "CDL2024": 1,
+    "CDL2025": 42,
+    "STATEFIPS": "31",
+    "STATEASD": "3110",
+    "ASD": "10",
+    "CNTY": "Scotts Bluff",
+    "CNTYFIPS": "157",
+    "INSIDE_X": -627067.2971,
+    "INSIDE_Y": 2114343.7211,
+    "ORIG_FID": null,
+    "Shape_Length": 2172.397926437027,
+    "Shape_Area": 222203.72091842588
+  },
+  "candidate_count": 24,
+  "selection_method": "Filtered to whole agricultural polygons inside the demo box with three usable annual classes and 20–100 ha. Preferred high overlap with a mapped center pivot, crop diversity, and strong overlap."
+}

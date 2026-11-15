@@ -1,0 +1,9 @@
+
+> field-shift@0.1.0 qa:visual-v2
+> node scripts/qa-visual-v2.mjs
+
+{
+  "ok": true,
+  "captures": 6,
+  "failed": []
+}

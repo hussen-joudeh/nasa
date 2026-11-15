@@ -1,6 +1,11 @@
 node_modules/
 .local/
-qa/
 
 .env
 .env.*
+
+# Publish canonical source files, never runtime database storage.
+!.local/
+.local/*
+!.local/canonical/
+!qa/**/*.log

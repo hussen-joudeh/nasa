@@ -1,0 +1,18 @@
+
+> fieldshift-mongodb-demo@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ canonical counts, unique string IDs, references and asset hashes (22.8843ms)
+✔ canonical field, null budget, numeric types and full LST dates (1.4808ms)
+✔ GET transport contract with canonical fixture (not a MongoDB success test) (59.1118ms)
+✔ unsupported methods do not query storage (50.8428ms)
+✔ missing field returns 404 (5.8344ms)
+✔ storage failure is controlled and redacts internal error (4.8405ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 658.5295

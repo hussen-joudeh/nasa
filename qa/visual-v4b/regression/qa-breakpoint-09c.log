@@ -1,0 +1,37 @@
+
+> field-shift@0.1.0 qa:breakpoint-09c
+> node scripts/qa-breakpoint-demo-09c.mjs
+
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "demo-analyze",
+      "result": "pass"
+    },
+    {
+      "name": "rotation-a-wheat-soy-wheat",
+      "result": "pass"
+    },
+    {
+      "name": "below-threshold-warning",
+      "result": "pass"
+    },
+    {
+      "name": "at-threshold-pass",
+      "result": "pass"
+    },
+    {
+      "name": "above-threshold-pass",
+      "result": "pass"
+    },
+    {
+      "name": "breakpoint-card",
+      "result": "pass"
+    },
+    {
+      "name": "unknown-checks-remain",
+      "result": "pass"
+    }
+  ]
+}
